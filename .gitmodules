@@ -1,0 +1,12 @@
+[submodule "converter"]
+	path = converter
+	url = https://github.com/npp-plugins/converter
+[submodule "mimetools"]
+	path = mimetools
+	url = https://github.com/npp-plugins/mimetools
+[submodule "plugindemo"]
+	path = plugindemo
+	url = https://github.com/npp-plugins/plugindemo
+[submodule "notepad-plus-plus"]
+	path = notepad-plus-plus
+	url = https://github.com/notepad-plus-plus/notepad-plus-plus
