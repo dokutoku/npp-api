@@ -4,7 +4,7 @@ NPP API is a D language Notepad ++ plugin development library.
 This library is a **development version** created by a **novice programming**.
 Note that **destructive changes** can be **added in sequence**.
 
-The original text of this document is written in [Japanese](README-ja.md).
+The original text of this document is written in [Japanese](https://gitlab.com/dokutoku/npp-api/blob/master/README-ja.md).
 
 ## Characteristic
 ### Automatic definition generation
