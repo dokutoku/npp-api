@@ -1,0 +1,34 @@
+{
+	"name": "converter",
+	"authors":
+	[
+	],
+	"description": "",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"stringImportPaths": ["./"],
+	"dependencies": {
+		"npp_api": {
+			"path": "../../"
+		}
+	},
+	"configurations":
+	[
+		{
+			"name": "x86",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86"],
+			"targetPath": "plugins/NppConverter-x86",
+			"targetName": "NppConverter-x86",
+			"sourceFiles":["./conversionPanel.res"]
+		},
+		{
+			"name": "x64",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86_64"],
+			"targetPath": "plugins/NppConverter-x64",
+			"targetName": "NppConverter-x64",
+			"sourceFiles":["./conversionPanel.res"]
+		}
+	]
+}

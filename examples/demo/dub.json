@@ -1,0 +1,33 @@
+{
+	"name": "npp_demo",
+	"authors":
+	[
+	],
+	"description": "",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"dependencies": {
+		"npp_api": {
+			"path": "../../"
+		}
+	},
+	"configurations":
+	[
+		{
+			"name": "x86",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86"],
+			"targetPath": "plugins/demo-x86",
+			"targetName": "demo-x86",
+			"sourceFiles":["./NppPluginDemo.res"]
+		},
+		{
+			"name": "x64",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86_64"],
+			"targetPath": "plugins/demo-x64",
+			"targetName": "demo-x64",
+			"sourceFiles":["./NppPluginDemo.res"]
+		}
+	]
+}

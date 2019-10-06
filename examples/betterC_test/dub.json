@@ -1,0 +1,39 @@
+{
+	"name": "betterc_test",
+	"authors":
+	[
+		"dokutoku"
+	],
+	"description": "Notepad++ plugin betterC test",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"dependencies": {
+		"npp_api": {
+			"path": "../../"
+		}
+	},
+	"buildTypes": {
+		"release_sample": {
+			"buildOptions": ["betterC", "releaseMode", "optimize", "inline", "noBoundsCheck"]
+		}
+	},
+	"configurations":
+	[
+		{
+			"name": "betterC_test1",
+			"platforms": ["windows"],
+			"targetType": "dynamicLibrary",
+			"versions": ["betterC_test1"],
+			"targetPath": "plugins/betterC_test1",
+			"targetName": "betterC_test1"
+		},
+		{
+			"name": "betterC_test2",
+			"platforms": ["windows"],
+			"targetType": "dynamicLibrary",
+			"versions": ["betterC_test2"],
+			"targetPath": "plugins/betterC_test2",
+			"targetName": "betterC_test2"
+		}
+	]
+}

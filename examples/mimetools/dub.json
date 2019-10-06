@@ -1,0 +1,33 @@
+{
+	"name": "mimetools",
+	"authors":
+	[
+	],
+	"description": "",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"dependencies": {
+		"npp_api": {
+			"path": "../../"
+		}
+	},
+	"configurations":
+	[
+		{
+			"name": "x86",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86"],
+			"targetPath": "plugins/mimeTools-x86",
+			"targetName": "mimeTools-x86",
+			"sourceFiles":["./mimeTools.res"]
+		},
+		{
+			"name": "x64",
+			"targetType": "dynamicLibrary",
+			"platforms": ["windows-x86_64"],
+			"targetPath": "plugins/mimeTools-x64",
+			"targetName": "mimeTools-x64",
+			"sourceFiles":["./mimeTools.res"]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "npp_api",
+	"authors":
+	[
+		"dokutoku"
+	],
+	"description": "Notepad++ plugin library written in D.",
+	"version": "0.1.0-dev",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"configurations":
+	[
+		{
+			"name": "library",
+			"targetType": "sourceLibrary",
+			"versions": ["Not_betterC"]
+		},
+		{
+			"name": "betterC_library",
+			"targetType": "sourceLibrary"
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"name": "hello_plugin_sample",
+	"authors":
+	[
+		"dokutoku"
+	],
+	"description": "Notepad++ hello plugin sample",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "GPL-2.0 or later",
+	"dependencies": {
+		"npp_api": {
+			"path": "../../"
+		}
+	},
+	"configurations":
+	[
+		{
+			"name": "x86",
+			"platforms": ["windows-x86"],
+			"targetType": "dynamicLibrary",
+			"targetPath": "plugins/hello-x86",
+			"targetName": "hello-x86"
+		},
+		{
+			"name": "x64",
+			"platforms": ["windows-x86_64"],
+			"targetType": "dynamicLibrary",
+			"targetPath": "plugins/hello-x64",
+			"targetName": "hello-x64"
+		}
+	]
+}
