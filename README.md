@@ -1,5 +1,5 @@
 # NPP API
-NPP API is a D language Notepad ++ plugin development library.
+NPP API is a D language Notepad++ plugin development library.
 
 This library is a **development version** created by a **novice programming**.
 Note that **destructive changes** can be **added in sequence**.
@@ -10,7 +10,7 @@ The original text of this document is written in [Japanese](https://gitlab.com/d
 ### Automatic definition generation
 This library can automatically generate processing for the following items:
 
-- Functions required for Notepad ++ plugin
+- Functions required for Notepad++ plugin
 - Main menu
 - Sub menu
 - Generate configuration file
@@ -25,7 +25,7 @@ Being able to support BetterC is very important.
 By using BetterC, you can achieve the same execution speed as C language.
 
 ### Message wrapper function
-Introduced functions to pass messages to Notepad ++ and Scintilla. This is advantageous in the following points.
+Introduced functions to pass messages to Notepad++ and Scintilla. This is advantageous in the following points.
 
 - Don't worry about SendMessageA or SendMessageW
 - No need to think about the location of parameters passed to SendMessage
@@ -49,9 +49,9 @@ hello world plugin sample
 ### mimetools
 [mimetools](https://github.com/npp-plugins/mimetools) Plugin
 
-## How to publish Notepad ++ plugin
-To publish Notepad ++ plugins, you need to register in [nppPluginList](https://github.com/notepad-plus-plus/nppPluginList).
-[nppPluginList](https://github.com/notepad-plus-plus/nppPluginList) plugin is a plugin manager that comes with Notepad ++.
+## How to publish Notepad++ plugin
+To publish Notepad++ plugins, you need to register in [nppPluginList](https://github.com/notepad-plus-plus/nppPluginList).
+[nppPluginList](https://github.com/notepad-plus-plus/nppPluginList) plugin is a plugin manager that comes with Notepad++.
 By registering with this, you can let the user download the plugin.
 
 #### Create res file
@@ -85,18 +85,19 @@ After compression, change the zip file name to the same name as the plugin dll.
 ### Create a SHA-256 file hash
 Create a SHA-256 file hash of each created zip file.
 
-### Send a pull request
+### Create a JSON file
+Create a JSON file that describes the plugin information.
 Download the JSON file from the [nppPluginList](https://github.com/notepad-plus-plus/nppPluginList) repository.
 The role of the JSON file is as follows.
 
-- [pl.x86.json](https://github.com/notepad-plus-plus/nppPluginList/blob/master/src/pl.x86.json) (32bit)
-- [pl.x64.json](https://github.com/notepad-plus-plus/nppPluginList/blob/master/src/pl.x64.json) (64bit)
+- [pl.x86.json](https://github.com/notepad-plus-plus/nppPluginList/blob/master/src/pl.x86.json)(32bit)
+- [pl.x64.json](https://github.com/notepad-plus-plus/nppPluginList/blob/master/src/pl.x64.json)(64bit)
 
 After downloading the JSON file, add your plugin information.
 
 | Item | Description |
 | --- | --- |
-| folder-name | Name of the folder to be created under the Notepad ++ plugin folder. **Must be the same as the plugin dll name**. |
+| folder-name | Name of the folder to be created under the Notepad++ plugin folder. **Must be the same as the plugin dll name.Do not duplicate the folder-name of other plugins.** |
 | display-name | Name of the plugin |
 | version | plugin version |
 | id | SHA-256 hash of the zip file |
@@ -105,6 +106,30 @@ After downloading the JSON file, add your plugin information.
 | author | plugin author |
 | homepage | Plugin homepage |
 
+### Testing
+After creating the JSON file, test it with Notepad++ for debugging.
+Download the debug file.
+
+- [Notepad++ 7.6.1.0 32bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x86.zip)(Wayback Machine)
+- [Notepad++ 7.6.1.0 64bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x64.zip)(Wayback Machine)
+- [wingup 32bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.zip)
+- [wingup 64bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.x64.zip)
+
+Place the downloaded file and the generated JSON file in the Notepad++ folder.
+
+| Name | Where to place | Operation |
+| --- | --- | --- |
+| notepad++.exe | Notepad++ folder | Replace notepad++.exe with notepad++.exe for debugging. |
+| GUP.exe | updater folder | Replace GUP.exe with GUP.exe for debugging. |
+nppPluginList.json | plugins/config folder | Rename pl.x64.json or pl.x86.json to nppPluginList.json. |
+
+Once placed, launch Notepad++ and check if the JSON file is correct.
+Let's see if your plugin has been added from "Plugins" → "Plugin Admin".
+
+### Send a pull request
+After confirming that there is no problem with the JSON file, send a pull request to [nppPluginList](https://github.com/notepad-plus-plus/nppPluginList).
+Wait for the request to be approved.
+
 ## Donation
 The project is soliciting donations to continue development.
 Please refer to the following site for details.
@@ -112,11 +137,11 @@ Please refer to the following site for details.
 https://dokutoku.gitlab.io/donation/donation-en.html
 
 ## Project status
-I spend a lot of time [NPP API](https://gitlab.com/dokutoku/npp-api) and [RDMD for Notepadd ++](https://gitlab.com/dokutoku/rdmd-for-npp) Spent on development. And I was able to implement the functions I wanted.
+I spend a lot of time [NPP API](https://gitlab.com/dokutoku/npp-api) and [RDMD for Notepadd++](https://gitlab.com/dokutoku/rdmd-for-npp) Spent on development. And I was able to implement the functions I wanted.
 
 So if there is no donation, we will stop development.
 
 ## Sites that may be helpful for plugin production
 - [Plugin Development](https://web.archive.org/web/20190717193010/http://docs.notepad-plus-plus.org/index.php?title=Plugin_Development)
-- [Plugin Development | Notepad ++ Community](https://community.notepad-plus-plus.org/category/5/plugin-development)
-- [Introduction | Notepad ++ User Manual](https://npp-user-manual.org)
+- [Plugin Development | Notepad++ Community](https://community.notepad-plus-plus.org/category/5/plugin-development)
+- [Introduction | Notepad++ User Manual](https://npp-user-manual.org)

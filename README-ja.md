@@ -77,7 +77,7 @@ dub build --arch=x86_64 --build=release
 ```
 
 ### zipファイルを作成する
-生成されたプラグインファイルを**ディレクトリに入れないで直接**zipファイルに圧縮します。
+生成されたプラグインファイルを**フォルダに入れないで直接**zipファイルに圧縮します。
 zipファイルは32bitと64bitを別々にする必要があります。
 
 圧縮したらzipファイル名を**プラグインのdllの名前と同じ名前**にします。
@@ -85,7 +85,8 @@ zipファイルは32bitと64bitを別々にする必要があります。
 ### SHA-256ファイルハッシュを作成する
 作成したそれぞれのzipファイルのSHA-256ファイルハッシュを作成します。
 
-### pullリクエストを送る
+### JSONファイルを作成する
+プラグインの情報を記述したJSONファイルを作成します。
 [nppPluginList](https://github.com/notepad-plus-plus/nppPluginList)のレポジトリからJSONファイルをダウンロードします。
 JSONファイルの役割は以下のようになっています。
 
@@ -96,7 +97,7 @@ JSONファイルをダウンロードしたらあなたのプラグインの情�
 
 | 項目 | 説明 |
 | --- | --- |
-| folder-name | Notepad++のpluginフォルダ以下に作成するフォルダの名前。**プラグインのdllの名前と同じである必要があります**。 |
+| folder-name | Notepad++のpluginフォルダ以下に作成するフォルダの名前。**プラグインのdllの名前と同じである必要があります。他のプラグインのfolder-nameと重複してもいけません。** |
 | display-name | プラグインの名前 |
 | version | プラグインのバージョン |
 | id | zipファイルのSHA-256ハッシュ |
@@ -104,6 +105,30 @@ JSONファイルをダウンロードしたらあなたのプラグインの情�
 | description | プラグインの概要 |
 | author | プラグイン作成者 |
 | homepage | プラグインのホームページ |
+
+### テストする
+JSONファイルを作成したらデバッグ用のNotepad++でテストします。
+デバッグ用のファイルをダウンロードします。
+
+- [Notepad++ 7.6.1.0 32bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x86.zip)(Wayback Machine)
+- [Notepad++ 7.6.1.0 64bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x64.zip)(Wayback Machine)
+- [wingup 32bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.zip)
+- [wingup 64bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.x64.zip)
+
+ダウンロードしたファイルと生成したJSONファイルをNotepad++のフォルダに配置します。
+
+| 名前 | 配置する場所 | 操作 |
+| --- | --- | --- |
+| notepad++.exe | Notepad++をインストールしたフォルダ | notepad++.exeをデバッグ用のnotepad++.exeに置き換える。 |
+| GUP.exe | updaterフォルダ | GUP.exeをデバッグ用のGUP.exeに置き換える。 |
+| nppPluginList.json | plugins/configフォルダ | pl.x64.jsonかpl.x86.jsonをnppPluginList.jsonへとリネームする。 |
+
+配置したらNotepad++を起動してJSONファイルが正しいかどうかをチェックします。
+「プラグイン」→「プラグイン管理」からあなたのプラグインが追加されているかどうかを見てみましょう。
+
+### プルリクエストを送る
+JSONファイルに問題がないことが確認できたら、[nppPluginList](https://github.com/notepad-plus-plus/nppPluginList)にプルリクエストを送ります。
+リクエストが承認されるのを待ちましょう。
 
 ## 寄付
 このプロジェクトでは開発継続のための寄付を募っています。
