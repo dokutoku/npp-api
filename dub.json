@@ -1,11 +1,11 @@
 {
-	"name": "npp_api",
+	"name": "npp-api",
 	"authors":
 	[
 		"dokutoku"
 	],
 	"description": "Notepad++ plugin library written in D.",
-	"version": "0.1.0-dev",
+	"homepage": "https://gitlab.com/dokutoku/npp-api",
 	"copyright": "Copyright © 2019, dokutoku",
 	"license": "GPL-2.0 or later",
 	"configurations":
