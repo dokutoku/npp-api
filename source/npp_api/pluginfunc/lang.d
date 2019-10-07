@@ -2074,7 +2074,7 @@ version (Windows) {
 					return null;
 
 				case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_D:
-					return "%HOMEDRIVE%\\D\\dmd2\\windows\\bin\\dmd.exe";
+					return "%HOMEDRIVE%/D/dmd2/windows/bin/dmd.exe";
 
 				case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_POWERSHELL:
 					return null;
@@ -2199,10 +2199,10 @@ version (Windows) {
 			switch (extension) {
 				case ".dub":
 				case ".sdl":
-					return "%HOMEDRIVE%\\D\\dmd2\\windows\\bin\\dub.exe";
+					return "%HOMEDRIVE%/D/dmd2/windows/bin/dub.exe";
 
 				case ".go":
-					return "%HOMEDRIVE%\\Go\\bin\\go.exe";
+					return "%HOMEDRIVE%/Go/bin/go.exe";
 
 				default:
 					break;

@@ -278,7 +278,7 @@ wstring search_exe(const wchar[] exe_name, wstring default_name = null)
 		assert(exe_name.length != 0);
 
 		for (size_t i = 0; i < exe_name.length; i++) {
-			assert(exe_name[i] != '\\');
+			assert((exe_name[i] != '\\') && (exe_name[i] != '/'));
 		}
 	}
 
@@ -338,7 +338,7 @@ string search_exe(const char[] exe_name, string default_name = null)
 		assert(exe_name.length != 0);
 
 		for (size_t i = 0; i < exe_name.length; i++) {
-			assert(exe_name[i] != '\\');
+			assert((exe_name[i] != '\\') && (exe_name[i] != '/'));
 		}
 	}
 
