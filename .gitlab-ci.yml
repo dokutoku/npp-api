@@ -134,7 +134,7 @@ create_plugin:
         - sha256sum -b 'mimeTools-x64.zip' | tee -a 'SHA256SUMS'
         - sha512sum -b 'mimeTools-x64.zip' | tee -a 'SHA512SUMS'
 
-        - rm './*.dll'
+        - rm ./*.dll
         - ls -als './'
 
     artifacts:
