@@ -170,7 +170,7 @@ public:
 		}
 
 	nothrow @nogc
-	void setValueExcept(int exceptID, size_t value)
+	void setValueExcept(int exceptID, ulong value)
 
 		do
 		{
