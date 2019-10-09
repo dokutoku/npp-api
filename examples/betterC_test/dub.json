@@ -8,7 +8,7 @@
 	"copyright": "Copyright © 2019, dokutoku",
 	"license": "GPL-2.0 or later",
 	"dependencies": {
-		"npp_api": {
+		"npp-api": {
 			"path": "../../"
 		}
 	},
