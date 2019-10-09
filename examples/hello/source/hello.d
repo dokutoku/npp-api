@@ -26,6 +26,9 @@ version (Windows):
 
 import npp_api.pluginfunc;
 
+extern (C)
+npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData nppData;
+
 /**
  * plugin config
  */
