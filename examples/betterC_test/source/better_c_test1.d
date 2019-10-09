@@ -43,7 +43,7 @@ extern (C)
 pure nothrow @safe @nogc
 void dummy_func()
 
-	body
+	do
 	{
 	}
 
@@ -52,7 +52,7 @@ extern (Windows)
 pure nothrow @safe @nogc
 core.sys.windows.windef.BOOL DllMain(core.sys.windows.basetsd.HANDLE hModule, core.sys.windows.windef.DWORD reasonForCall, core.sys.windows.winnt.LPVOID lpReserved)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 
@@ -64,7 +64,7 @@ extern (C)
 pure nothrow @safe @nogc
 export const (core.sys.windows.winnt.WCHAR)* getName()
 
-	body
+	do
 	{
 		return &("BetterC test1\0"w[0]);
 	}
@@ -74,7 +74,7 @@ extern (C)
 nothrow @nogc
 export const (npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem)* getFuncsArray(int* nbF)
 
-	body
+	do
 	{
 		if (nbF == null) {
 			return null;
@@ -90,7 +90,7 @@ extern (C)
 pure nothrow @safe @nogc
 export core.sys.windows.windef.BOOL isUnicode()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 
@@ -102,7 +102,7 @@ extern (C)
 nothrow @nogc
 export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-	body
+	do
 	{
 		.nppData = notpadPlusData;
 		.main_menu._itemName = "dummy menu\0"w;
@@ -117,7 +117,7 @@ extern (C)
 pure nothrow @safe @nogc
 export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-	body
+	do
 	{
 	}
 
@@ -126,7 +126,7 @@ extern (C)
 pure nothrow @safe @nogc
 export core.sys.windows.windef.LRESULT messageProc(core.sys.windows.windef.UINT Message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 

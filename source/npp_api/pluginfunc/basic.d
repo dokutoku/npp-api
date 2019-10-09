@@ -64,7 +64,7 @@ mixin template plugin_messageBox(wstring plugin_name)
 			std.exception.assertNotThrown(std.utf.validate(message));
 		}
 
-		body
+		do
 		{
 			static import core.sys.windows.winuser;
 			static import std.utf;
@@ -84,7 +84,7 @@ mixin template plugin_messageBox(wstring plugin_name)
 			assert(c_string[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			static import core.sys.windows.winuser;
 
@@ -97,7 +97,7 @@ mixin template plugin_messageBox(wstring plugin_name)
 	nothrow @nogc
 	void show_windows_error(core.sys.windows.windef.DWORD lang_id = 0)
 
-		body
+		do
 		{
 			static import core.sys.windows.winbase;
 			static import core.sys.windows.windef;
@@ -124,7 +124,7 @@ mixin template plugin_messageBox(wstring plugin_name)
 	pure nothrow @safe @nogc
 	void debug_format_msgbox(wstring format, A...)(A value)
 
-		body
+		do
 		{
 			static import core.sys.windows.winuser;
 			static import std.format;
@@ -156,7 +156,7 @@ void msgbox(C1, C2)(const (C1)[] message, const (C2)[] title)
 		std.exception.assertNotThrown(std.utf.validate(message));
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winuser;
 		static import std.utf;
@@ -179,7 +179,7 @@ void show_windows_error(core.sys.windows.windef.HWND _nppHandle, const wchar[] t
 		assert(title[$ - 1] == '\0');
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import core.sys.windows.windef;
@@ -212,7 +212,7 @@ void debug_format_msgbox(wstring format, A...)(core.sys.windows.windef.HWND _npp
 		assert(title[$ - 1] == '\0');
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winuser;
 		static import std.format;

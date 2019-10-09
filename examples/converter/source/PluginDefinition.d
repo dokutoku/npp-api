@@ -89,7 +89,7 @@ pragma(inline, true)
 nothrow
 void pluginInit(core.sys.windows.basetsd.HANDLE hModule)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_converter.conversionpanel;
@@ -107,7 +107,7 @@ void pluginInit(core.sys.windows.basetsd.HANDLE hModule)
 nothrow @nogc
 core.sys.windows.windef.HWND getCurrentScintillaHandle()
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.npp_msgs;
 
@@ -123,7 +123,7 @@ public:
 	nothrow
 	this()
 
-		body
+		do
 		{
 			this._str = null;
 			this._selStartPos = 0;
@@ -157,7 +157,7 @@ public:
 	pure nothrow @safe
 	string getStr()
 
-		body
+		do
 		{
 			return this._str.idup;
 		}
@@ -165,7 +165,7 @@ public:
 	pure nothrow @safe @nogc
 	size_t length()
 
-		body
+		do
 		{
 			if (this._str != null) {
 				return (this._selEndPos - this._selStartPos);
@@ -177,7 +177,7 @@ public:
 	pure nothrow @safe @nogc
 	size_t getSelStartPos()
 
-		body
+		do
 		{
 			return this._selStartPos;
 		}
@@ -185,7 +185,7 @@ public:
 	pure nothrow @safe @nogc
 	size_t getSelEndPos()
 
-		body
+		do
 		{
 			return this._selEndPos;
 		}
@@ -193,7 +193,7 @@ public:
 	pure nothrow @safe @nogc
 	int getChar(size_t i)
 
-		body
+		do
 		{
 			if (i >= (this._selEndPos - this._selStartPos)) {
 				return -1;
@@ -221,7 +221,7 @@ public:
 	nothrow @nogc
 	bool toAscii()
 
-		body
+		do
 		{
 			size_t l = this.length();
 			bool hasWs = false;
@@ -346,7 +346,7 @@ void getCmdsFromConf(const ref core.sys.windows.winnt.WCHAR[] c_confPath, ref Pa
 		assert(c_confPath[$ - 1] == '\0');
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import core.sys.windows.windef;
@@ -372,7 +372,7 @@ void getCmdsFromConf(const ref core.sys.windows.winnt.WCHAR[] c_confPath, ref Pa
 nothrow
 void loadConfFile()
 
-	body
+	do
 	{
 		static import core.stdc.stdio;
 		static import core.sys.windows.shlwapi;
@@ -421,7 +421,7 @@ pragma(inline, true)
 nothrow
 void pluginSetInfo(ref npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-	body
+	do
 	{
 		.loadConfFile();
 	}
@@ -429,7 +429,7 @@ void pluginSetInfo(ref npp_api.powereditor.misc.pluginsmanager.plugininterface.N
 nothrow
 void ascii2hex(bool insertSpace, bool isMaj, size_t nbCharPerLine)
 
-	body
+	do
 	{
 		static import core.stdc.stdio;
 		static import core.sys.windows.windef;
@@ -508,7 +508,7 @@ extern (C)
 nothrow
 void ascii2Hex()
 
-	body
+	do
 	{
 		.ascii2hex(.param._insertSpace, .param._isMaj, .param._nbCharPerLine);
 	}
@@ -523,7 +523,7 @@ enum hexStat
 pure nothrow @safe @nogc
 int getTrueHexValue(char c)
 
-	body
+	do
 	{
 		switch (c) {
 			case '0': .. case '9':
@@ -562,7 +562,7 @@ extern (C)
 nothrow
 void hex2Ascii()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -593,7 +593,7 @@ extern (C)
 nothrow @nogc
 void about()
 
-	body
+	do
 	{
 		static import core.sys.windows.winuser;
 		static import npp_api.pluginfunc.string;
@@ -605,7 +605,7 @@ extern (C)
 nothrow
 void editConf()
 
-	body
+	do
 	{
 		static import core.sys.windows.winnt;
 		static import core.sys.windows.winuser;
@@ -627,7 +627,7 @@ extern (C)
 nothrow
 void conversionPanel()
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.npp_msgs;
 		static import npp_converter.conversionpanel;

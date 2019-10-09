@@ -45,7 +45,7 @@ public:
 	pure nothrow @safe @nogc
 	this()
 
-		body
+		do
 		{
 			this.lock = false;
 			super(npp_converter.resource.IDD_CONVERSION_PANEL);
@@ -54,7 +54,7 @@ public:
 	nothrow @nogc
 	override void display(bool toShow = true)
 
-		body
+		do
 		{
 			super.display(toShow);
 
@@ -66,7 +66,7 @@ public:
 	pure nothrow @safe @nogc
 	void setParent(core.sys.windows.windef.HWND parent2set)
 
-		body
+		do
 		{
 			this._hParent = parent2set;
 		}
@@ -74,7 +74,7 @@ public:
 	nothrow @nogc
 	void resetExcept(int exceptID)
 
-		body
+		do
 		{
 			if (exceptID != npp_converter.resource.ID_ASCII_EDIT) {
 				core.sys.windows.winuser.SendDlgItemMessageW(this._hSelf, npp_converter.resource.ID_ASCII_EDIT, core.sys.windows.winuser.WM_SETTEXT, 0, cast(core.sys.windows.windef.LPARAM)(&("\0"w[0])));
@@ -100,7 +100,7 @@ public:
 	nothrow @nogc
 	void setValueFrom(int id)
 
-		body
+		do
 		{
 			enum int inStrSize = 256;
 			this.lock = true;
@@ -172,7 +172,7 @@ public:
 	nothrow @nogc
 	void setValueExcept(int exceptID, size_t value)
 
-		body
+		do
 		{
 			enum strLen = 1024;
 			core.sys.windows.winnt.WCHAR[strLen] str2Display = '\0';
@@ -221,7 +221,7 @@ public:
 	nothrow @nogc
 	bool qualified(core.sys.windows.winnt.WCHAR* str, int id)
 
-		body
+		do
 		{
 			for (int i = 0 ; i < core.sys.windows.winbase.lstrlenW(str) ; i++) {
 				if (id == npp_converter.resource.ID_ASCII_EDIT) {
@@ -262,7 +262,7 @@ public:
 			}
 		}
 
-		body
+		do
 		{
 			switch (value) {
 				case 0:
@@ -389,7 +389,7 @@ public:
 	nothrow @nogc
 	void insertToNppFrom(int id)
 
-		body
+		do
 		{
 			enum inStrSize = 256;
 			char[inStrSize] intStr;
@@ -401,7 +401,7 @@ public:
 	nothrow @nogc
 	int getAsciiUcharFromDec()
 
-		body
+		do
 		{
 			enum inStrSize = 256;
 			core.sys.windows.winnt.WCHAR[inStrSize] intStr;
@@ -418,7 +418,7 @@ public:
 	nothrow @nogc
 	void copyToClipboardFrom(int id)
 
-		body
+		do
 		{
 			enum intStrMaxSize = 256;
 			char[intStrMaxSize] intStr;
@@ -495,7 +495,7 @@ protected:
 	nothrow @nogc
 	override core.sys.windows.basetsd.INT_PTR run_dlgProc(core.sys.windows.windef.UINT message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-		body
+		do
 		{
 			switch (message) {
 				case core.sys.windows.winuser.WM_INITDIALOG:
@@ -599,7 +599,7 @@ private:
 	nothrow @nogc
 	int getLine()
 
-		body
+		do
 		{
 			core.sys.windows.windef.BOOL isSuccessful;
 			int line = core.sys.windows.winuser.GetDlgItemInt(this._hSelf, npp_converter.resource.ID_ASCII_EDIT, &isSuccessful, core.sys.windows.windef.FALSE);

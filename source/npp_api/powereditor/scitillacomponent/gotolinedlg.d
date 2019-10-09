@@ -57,7 +57,7 @@ public:
 	pure nothrow @safe @nogc
 	this()
 
-		body
+		do
 		{
 			super();
 		}
@@ -65,7 +65,7 @@ public:
 	version (none) {
 		void initialize(core.sys.windows.windef.HINSTANCE hInst, core.sys.windows.windef.HWND hPere, ScintillaEditView** ppEditView)
 
-			body
+			do
 			{
 				super.initialize(hInst, hPere);
 
@@ -80,7 +80,7 @@ public:
 	nothrow @nogc
 	override void initialize(core.sys.windows.windef.HINSTANCE hInst, core.sys.windows.windef.HWND parent)
 
-		body
+		do
 		{
 			super.initialize(hInst, parent);
 		}
@@ -92,14 +92,14 @@ public:
 			assert(dialog_p != null);
 		}
 
-		body
+		do
 		{
 			super.create(dialog_p, dialogID, isRTL, msgDestParent);
 		}
 
 	void doDialog(void* dialog_p, bool isRTL = false)
 
-		body
+		do
 		{
 			if (!super.isCreated()) {
 				this.create(dialog_p, npp_api.powereditor.resource.IDD_GOLINE, isRTL);
@@ -111,7 +111,7 @@ public:
 	nothrow @nogc
 	override void display(bool toShow = true)
 
-		body
+		do
 		{
 			super.display(toShow);
 
@@ -132,7 +132,7 @@ protected:
 	nothrow @nogc
 	override core.sys.windows.basetsd.INT_PTR run_dlgProc(core.sys.windows.windef.UINT message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-		body
+		do
 		{
 			switch (message) {
 				case core.sys.windows.winuser.WM_INITDIALOG:
@@ -210,7 +210,7 @@ private:
 	nothrow @nogc
 	void updateLinesNumbers()
 
-		body
+		do
 		{
 			uint current = 0;
 			uint limit = 0;
@@ -232,7 +232,7 @@ private:
 	nothrow @nogc
 	void cleanLineEdit()
 
-		body
+		do
 		{
 			core.sys.windows.winuser.SetDlgItemTextW(this._hSelf, npp_api.powereditor.resource.ID_GOLINE_EDIT, &("\0"w[0]));
 		}
@@ -244,7 +244,7 @@ private:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.BOOL isSuccessful;
 			npp_api.pluginfunc.scintilla_msg.line line = core.sys.windows.winuser.GetDlgItemInt(this._hSelf, npp_api.powereditor.resource.ID_GOLINE_EDIT, &isSuccessful, core.sys.windows.windef.FALSE);

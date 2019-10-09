@@ -59,7 +59,7 @@ private void internal_create_sub_menu_actions(ref .menu_action[] output, ref siz
 		assert(sub_menu != null);
 	}
 
-	body
+	do
 	{
 		.menu_action output_temp;
 
@@ -80,7 +80,7 @@ private void internal_create_sub_menu_actions(ref .menu_action[] output, ref siz
 pure nothrow @safe
 .menu_action[] create_sub_menu_actions(.menu_item_t[] menu_container)
 
-	body
+	do
 	{
 		.menu_action[] output = new .menu_action[.count_sub_menu_identifiers(menu_container)];
 
@@ -101,7 +101,7 @@ pure nothrow @safe
 nothrow
 bool sub_menu_action(size_t actions_length)(const int cmdID, const ref .menu_action[actions_length] menu_actions)
 
-	body
+	do
 	{
 		foreach (menu_func; menu_actions) {
 			if (cmdID == menu_func._cmdID) {
@@ -156,11 +156,11 @@ size_t max_identifier_length(bool is_c_string)(const .menu_item_t[] menu_contain
 		assert(menu_container.length != 0);
 	}
 
-	body
+	do
 	{
 		void max_identifier_length_internal(const .menu_item_t[] menu_items, ref size_t i)
 
-			body
+			do
 			{
 				foreach (menu_item; menu_items) {
 					i = (menu_item.identifier.length > i) ? (menu_item.identifier.length) : (i);
@@ -227,7 +227,7 @@ int allocate_sub_menu_length(const .sub_menu_index[] menu_index)
 		assert(max_submenu_length >= result);
 	}
 
-	body
+	do
 	{
 		size_t alloc_count = 0;
 
@@ -247,7 +247,7 @@ int allocate_sub_menu_length(const .sub_menu_index[] menu_index)
  */
 private void create_menu_index_internal(size_t OUTPUT_LENGTH)(.menu_item_t[] menu_items, ref .sub_menu_index[OUTPUT_LENGTH] output, ref size_t i, size_t depth, size_t parent_index)
 
-	body
+	do
 	{
 		static import std.utf;
 		static import npp_api.pluginfunc.auto_pFunc;
@@ -292,7 +292,7 @@ private void create_menu_index_internal(size_t OUTPUT_LENGTH)(.menu_item_t[] men
 		assert(OUTPUT_LENGTH == .count_all_menu_items(menu_container));
 	}
 
-	body
+	do
 	{
 		static import std.utf;
 		static import std.string;
@@ -310,7 +310,7 @@ pure nothrow @safe @nogc
 size_t search_menu_index(menu_t)(const menu_t menu_index, string identifier)
 	if (std.traits.isArray!(menu_t))
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -336,7 +336,7 @@ size_t search_index(menu_t)(const menu_t menu_index, string identifier)
 		assert(identifier.length != 0);
 	}
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -372,11 +372,11 @@ int allocate_sub_menu_length(const .menu_item_t[] menu_container)
 		assert(max_submenu_length >= result);
 	}
 
-	body
+	do
 	{
 		void internal_count(const .menu_item_t[] sub_menu, ref size_t i)
 
-			body
+			do
 			{
 				foreach (menu; sub_menu) {
 					i++;
@@ -419,11 +419,11 @@ int count_all_menu_items(const .menu_item_t[] menu_container)
 		assert(max_count >= result);
 	}
 
-	body
+	do
 	{
 		void internal_count(const .menu_item_t[] sub_menu, ref size_t i)
 
-			body
+			do
 			{
 				foreach (menu; sub_menu) {
 					i++;
@@ -458,11 +458,11 @@ size_t count_menu_identifiers(const .menu_item_t[] menu_container)
 		assert(menu_container != null);
 	}
 
-	body
+	do
 	{
 		void internal_count(const .menu_item_t[] menu_list, ref size_t i)
 
-			body
+			do
 			{
 				foreach (menu; menu_list) {
 					if (menu.identifier != null) {
@@ -493,11 +493,11 @@ size_t count_sub_menu_identifiers(const .menu_item_t[] menu_container)
 		assert(menu_container != null);
 	}
 
-	body
+	do
 	{
 		void internal_count(const .menu_item_t[] menu_list, ref size_t i)
 
-			body
+			do
 			{
 				foreach (menu; menu_list) {
 					if (menu.identifier != null) {
@@ -524,7 +524,7 @@ size_t count_sub_menu_identifiers(const .menu_item_t[] menu_container)
 pure nothrow @safe @nogc
 bool is_sub_menu_exists(.menu_item_t[] menu_container)
 
-	body
+	do
 	{
 		foreach (menu; menu_container) {
 			if (menu.sub_menu != null) {
@@ -541,7 +541,7 @@ bool is_sub_menu_exists(.menu_item_t[] menu_container)
 pure nothrow @safe @nogc
 npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem[menu_length] create_main_menu(size_t menu_length)(.menu_item_t[] main_menu_items)
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.plugininterface;
 		static import npp_api.pluginfunc.string;
@@ -562,7 +562,7 @@ npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem[menu_length] cr
 pure nothrow @safe @nogc
 bool[output_length] create_main_menu_checked(size_t output_length)(const .sub_menu_index[] menu_index)
 
-	body
+	do
 	{
 		bool[output_length] output;
 
@@ -579,7 +579,7 @@ bool[output_length] create_main_menu_checked(size_t output_length)(const .sub_me
 pure nothrow @safe @nogc
 bool[output_length] create_menu_index_checked(size_t output_length)(const .sub_menu_index[] menu_index)
 
-	body
+	do
 	{
 		bool[output_length] output;
 
@@ -594,7 +594,7 @@ bool[output_length] create_menu_index_checked(size_t output_length)(const .sub_m
 pure nothrow @safe
 wstring[] create_main_menu_checked_identifier(const .sub_menu_index[] menu_index)
 
-	body
+	do
 	{
 		wstring[] output;
 
@@ -610,7 +610,7 @@ wstring[] create_main_menu_checked_identifier(const .sub_menu_index[] menu_index
 pure nothrow @safe
 wstring[] create_menu_index_checked_identifier(const .sub_menu_index[] menu_index)
 
-	body
+	do
 	{
 		wstring[] output;
 
@@ -631,7 +631,7 @@ size_t first_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_inde
 		assert(LENGTH >= (search_index(menu_index, identifier)));
 	}
 
-	body
+	do
 	{
 		size_t i = search_index(menu_index, identifier);
 		size_t depth = menu_index[i].depth;
@@ -658,7 +658,7 @@ size_t end_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index,
 		assert(LENGTH >= (search_index(menu_index, identifier)));
 	}
 
-	body
+	do
 	{
 		size_t i = search_index(menu_index, identifier);
 		size_t depth = menu_index[i].depth;
@@ -685,7 +685,7 @@ size_t sub_menu_length(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, 
 		assert(LENGTH >= (search_index(menu_index, identifier)));
 	}
 
-	body
+	do
 	{
 		size_t i = search_index(menu_index, identifier);
 		size_t depth = menu_index[i].depth;
@@ -701,7 +701,7 @@ pragma(inline, true)
 nothrow @nogc
 void enable_check(core.sys.windows.windef.HWND _nppHandle, ref npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem menu_item)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.pluginfunc.npp_msgs;
@@ -714,7 +714,7 @@ pragma(inline, true)
 nothrow @nogc
 void disable_check(core.sys.windows.windef.HWND _nppHandle, ref npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem menu_item)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.pluginfunc.npp_msgs;
@@ -727,7 +727,7 @@ pragma(inline, true)
 nothrow @nogc
 void change_check(core.sys.windows.windef.HWND _nppHandle, ref npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem menu_item)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.pluginfunc.npp_msgs;
@@ -752,7 +752,7 @@ void enable_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .menu_item_t
 		assert(sub_menu_items.length >= menu_index);
 	}
 
-	body
+	do
 	{
 		for (size_t i = 0; i < sub_menu_items.length; i++) {
 			if (i == menu_index) {
@@ -774,7 +774,7 @@ void disable_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .menu_item_
 		assert(sub_menu_items.length >= menu_index);
 	}
 
-	body
+	do
 	{
 		for (size_t i = 0; i < sub_menu_items.length; i++) {
 			if (sub_menu_items[i].func_item._pFunc != null) {
@@ -792,7 +792,7 @@ void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .menu_item_t
 		assert(sub_menu_items.length >= menu_index);
 	}
 
-	body
+	do
 	{
 		for (size_t i = 0; i < sub_menu_items.length; i++) {
 			if (i == menu_index) {
@@ -816,7 +816,7 @@ void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .sub_menu_in
 		assert(index_list.length >= search_index(index_list, enable_identifier));
 	}
 
-	body
+	do
 	{
 		size_t index = search_index(index_list, enable_identifier);
 		size_t depth = index_list[index].depth;
@@ -848,7 +848,7 @@ void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .sub_menu_in
 		assert(end >= pos);
 	}
 
-	body
+	do
 	{
 		for (size_t i = start; i <= end; i++) {
 			if (i == pos) {
@@ -862,7 +862,7 @@ void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .sub_menu_in
 pure nothrow @safe @nogc
 bool is_chid_menu_checked(const .sub_menu_index[] menu_index_list, size_t parent_menu_pos)
 
-	body
+	do
 	{
 		size_t i = parent_menu_pos + 1; 
 
@@ -897,7 +897,7 @@ size_t same_menu_start_pos(const .sub_menu_index[] menu_index, size_t pos)
 		assert(pos >= result);
 	}
 
-	body
+	do
 	{
 		size_t depth = menu_index[pos].depth;
 		size_t i = pos;
@@ -927,7 +927,7 @@ size_t same_menu_end_pos(const .sub_menu_index[] menu_index, size_t pos)
 		assert(result >= pos);
 	}
 
-	body
+	do
 	{
 		size_t depth = menu_index[pos].depth;
 		size_t i = pos;
@@ -980,7 +980,7 @@ private void init_sub_menu_internal(size_t menu_index_length, size_t actions_len
 	{
 	}
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.string;
 		static import core.sys.windows.winuser;
@@ -1050,7 +1050,7 @@ void init_submenu(size_t main_menu_length, size_t menu_index_length, size_t acti
 		assert(required_length == allocate_sub_menu_length(menu_index_list));
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;

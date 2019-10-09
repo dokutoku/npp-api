@@ -94,7 +94,7 @@ struct npp_plugin_info_item
 
 	void update_id(string input_file)
 
-		body
+		do
 		{
 			if (!std.file.exists(input_file) || !std.file.isFile(input_file)) {
 				throw new Exception(`Unknown input file.`);
@@ -106,7 +106,7 @@ struct npp_plugin_info_item
 	@disable
 	void update_json(std.json.JSONValue input)
 
-		body
+		do
 		{
 			/+
 			foreach (item_value; this.tupleof) {
@@ -121,7 +121,7 @@ struct npp_plugin_info_item
 			static assert(key_names.length == this.tupleof.length);
 		}
 
-		body
+		do
 		{
 			auto output = std.array.appender!(string);
 
@@ -161,7 +161,7 @@ string create_plugin_list_json(A...)(A a)
 		}
 	}
 
-	body
+	do
 	{
 		auto output = std.array.appender!(string);
 

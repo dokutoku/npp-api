@@ -32,7 +32,7 @@ size_t AsciiToUrl(ref char[] dest, const char[] src, bool encodeAll)
 		assert(dest.length > 2);
 	}
 
-	body
+	do
 	{
 		static import core.stdc.ctype;
 		static import core.stdc.string;
@@ -63,7 +63,7 @@ size_t AsciiToUrl(ref char[] dest, const char[] src, bool encodeAll)
 pure nothrow @safe @nogc
 size_t UrlToAscii(ref char[] dest, const char[] src)
 
-	body
+	do
 	{
 		static import core.stdc.ctype;
 

@@ -48,7 +48,7 @@ enum OS_MAX_PATH = 32768;
 nothrow @nogc
 bool get_full_current_path(core.sys.windows.windef.HWND _nppHandle, ref core.sys.windows.winnt.WCHAR[.OS_MAX_PATH] path_temp)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.powereditor.misc.pluginsmanager.plugininterface;
@@ -66,7 +66,7 @@ bool get_full_current_path(core.sys.windows.windef.HWND _nppHandle, ref core.sys
 nothrow
 wstring get_file_path(core.sys.windows.windef.HWND _nppHandle)
 
-	body
+	do
 	{
 		static import core.sys.windows.winnt;
 		static import npp_api.pluginfunc.string;
@@ -83,7 +83,7 @@ wstring get_file_path(core.sys.windows.windef.HWND _nppHandle)
 nothrow
 wstring get_directory_path(core.sys.windows.windef.HWND _nppHandle)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winnt;
@@ -102,7 +102,7 @@ wstring get_directory_path(core.sys.windows.windef.HWND _nppHandle)
 pure nothrow @safe
 private immutable (C)[][] c_names(C)(const C[][] input)
 
-	body
+	do
 	{
 		immutable (C)[][] output = new immutable (C)[][input.length];
 
@@ -116,7 +116,7 @@ private immutable (C)[][] c_names(C)(const C[][] input)
 pure nothrow @safe
 private immutable (C)[][] create_variable_identifiers(C)(const C[][] input)
 
-	body
+	do
 	{
 		immutable (C)[][] output = new immutable (C)[][input.length];
 
@@ -176,7 +176,7 @@ enum wstring[] windows_variables = create_variable_identifiers!(wchar)(windows_v
 pure nothrow @safe @nogc
 private size_t max_length(wstring[] list)
 
-	body
+	do
 	{
 		size_t max_length = 0;
 
@@ -192,7 +192,7 @@ private size_t max_length(wstring[] list)
 nothrow
 wstring echo_variables(wstring name)
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import std.algorithm;
@@ -222,7 +222,7 @@ wstring echo_variables(wstring name)
 nothrow
 wstring repalce_variables(wstring path)
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import std.algorithm;
@@ -282,7 +282,7 @@ wstring search_exe(const wchar[] exe_name, wstring default_name = null)
 		}
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winnt;
 		static import core.sys.windows.winbase;
@@ -342,7 +342,7 @@ string search_exe(const char[] exe_name, string default_name = null)
 		}
 	}
 
-	body
+	do
 	{
 		static import std.array;
 		static import std.file;

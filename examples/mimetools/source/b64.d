@@ -74,7 +74,7 @@ static immutable int[] base64CharMap =
 pure nothrow @safe @nogc
 int base64Encode(ref char[] resultString, const char[] asciiString, size_t asciiStringLength, size_t wrapLength, bool padFlag, bool byLineFlag)
 
-	body
+	do
 	{
 		// input string index
 		size_t index;
@@ -164,7 +164,7 @@ int base64Encode(ref char[] resultString, const char[] asciiString, size_t ascii
 pure nothrow @safe @nogc
 int base64Decode(ref char[] resultString, const char[] encodedString, size_t encodedStringLength, bool strictFlag, bool whitespaceReset)
 
-	body
+	do
 	{
 		// input string index
 		size_t index;

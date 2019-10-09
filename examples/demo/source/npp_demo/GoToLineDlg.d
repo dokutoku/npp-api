@@ -43,7 +43,7 @@ class demo_dlg : npp_api.powereditor.wincontrols.dockingwnd.dockingdlginterface.
 	pure nothrow @safe @nogc
 	this()
 
-		body
+		do
 		{
 			super(npp_demo.resource.IDD_PLUGINGOLINE_DEMO);
 		}
@@ -51,7 +51,7 @@ class demo_dlg : npp_api.powereditor.wincontrols.dockingwnd.dockingdlginterface.
 	nothrow @nogc
 	override void display(bool toShow = true)
 
-		body
+		do
 		{
 			super.display(toShow);
 
@@ -63,7 +63,7 @@ class demo_dlg : npp_api.powereditor.wincontrols.dockingwnd.dockingdlginterface.
 	nothrow @nogc
 	void setParent(core.sys.windows.windef.HWND parent2set)
 
-		body
+		do
 		{
 			this._hParent = parent2set;
 		}
@@ -73,7 +73,7 @@ protected:
 	nothrow @nogc
 	override core.sys.windows.basetsd.INT_PTR run_dlgProc(core.sys.windows.windef.UINT message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-		body
+		do
 		{
 			switch (message) {
 				case core.sys.windows.winuser.WM_COMMAND:
@@ -113,7 +113,7 @@ private:
 	nothrow @nogc
 	npp_api.pluginfunc.scintilla_msg.line getLine()
 
-		body
+		do
 		{
 			core.sys.windows.windef.BOOL isSuccessful;
 			npp_api.pluginfunc.scintilla_msg.line line = core.sys.windows.winuser.GetDlgItemInt(this._hSelf, npp_demo.resource.ID_GOLINE_EDIT, &isSuccessful, core.sys.windows.windef.FALSE);

@@ -52,7 +52,7 @@ struct ini_setting_item
 
 ini_setting_item[output_length] convert_setting(size_t output_length)(npp_api.pluginfunc.config_file.setting_item[] input_setting)
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.config_file;
 
@@ -87,7 +87,7 @@ ini_setting_item[output_length] convert_setting(size_t output_length)(npp_api.pl
 pure nothrow @safe
 wstring[] create_setting_idetifiers(size_t setting_length)(ini_setting_item[setting_length] setting_items)
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.string;
 
@@ -140,7 +140,7 @@ public:
 			}
 		}
 
-		body
+		do
 		{
 			this.section_name = section_name.dup;
 			this.section_name ~= "\0"w;
@@ -183,7 +183,7 @@ public:
 	pure nothrow @safe @nogc
 	bool is_valid_setting() const
 
-		body
+		do
 		{
 			return this.is_valid;
 		}
@@ -205,7 +205,7 @@ public:
 			assert(key_name.length != 0);
 		}
 
-		body
+		do
 		{
 			npp_api.pluginfunc.string.copy_string(this.setting_name_buf, key_name);
 			core.sys.windows.windef.UINT result = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), &(this.setting_name_buf[0]), int.max, &(this.config_file[0]));
@@ -220,7 +220,7 @@ public:
 	nothrow @nogc
 	void load_menu_checked(size_t menu_index_length)(ref npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index)
 
-		body
+		do
 		{
 			for (size_t i = 0; i < menu_index.length; i++) {
 				if (menu_index[i].menu_checked_identifier.length != 0) {
@@ -232,7 +232,7 @@ public:
 	nothrow
 	void auto_load(size_t setting_length)(ref .ini_setting_item[setting_length] settings) const
 
-		body
+		do
 		{
 			npp_api.pluginfunc.config_file.value_buf value_buf;
 
@@ -319,7 +319,7 @@ public:
 	nothrow
 	void auto_load(size_t setting_length, size_t menu_index_length)(ref .ini_setting_item[setting_length] settings, ref npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index)
 
-		body
+		do
 		{
 			this.auto_load(settings);
 			this.load_menu_checked(menu_index);
@@ -334,7 +334,7 @@ public:
 			assert(key_name.length != 0);
 		}
 
-		body
+		do
 		{
 			npp_api.pluginfunc.string.copy_string(this.setting_name_buf, key_name);
 			core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), &(this.setting_name_buf[0]), &(((value) ? (npp_api.pluginfunc.string.c_wstring!(`1`w)) : (npp_api.pluginfunc.string.c_wstring!(`0`w)))[0]), &(this.config_file[0]));
@@ -344,7 +344,7 @@ public:
 	nothrow @nogc
 	void write_menu_checked(size_t menu_index_length)(ref npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index)
 
-		body
+		do
 		{
 			for (size_t i = 0; i < menu_index.length; i++) {
 				if (menu_index[i].menu_checked_identifier.length != 0) {
@@ -357,7 +357,7 @@ public:
 	nothrow
 	bool auto_write(size_t setting_length)(const ref .ini_setting_item[setting_length] settings)
 
-		body
+		do
 		{
 			foreach (setting; settings) {
 				switch (setting.type) {
@@ -396,7 +396,7 @@ public:
 	nothrow
 	void auto_write(size_t setting_length, size_t menu_index_length)(ref .ini_setting_item[setting_length] settings, ref npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index)
 
-		body
+		do
 		{
 			this.auto_write(settings);
 			this.load_menu_checked(menu_index);
@@ -419,7 +419,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.UINT temp_value = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), &(key_name[0]), int.max, &(this.config_file[0]));
 
@@ -457,7 +457,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.UINT temp_value = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), &(key_name[0]), invaild_value, &(this.config_file[0]));
 
@@ -488,7 +488,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.UINT temp_value = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), &(key_name[0]), invaild_value, &(this.config_file[0]));
 
@@ -520,7 +520,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.DWORD result_temp = core.sys.windows.winbase.GetPrivateProfileStringW(&(this.section_name[0]), &(key_name[0]), &("\0"w[0]), &(result_value[0]), result_value.length, &(this.config_file[0]));
 
@@ -548,7 +548,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.UINT temp_value = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), std.utf.toUTF16z(key_name), int.max, &(this.config_file[0]));
 
@@ -586,7 +586,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.UINT temp_value = core.sys.windows.winbase.GetPrivateProfileIntW(&(this.section_name[0]), std.utf.toUTF16z(key_name), invaild_value, &(this.config_file[0]));
 
@@ -617,7 +617,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), &(key_name[0]), &(((value) ? (npp_api.pluginfunc.string.c_wstring!(`1`w)) : (npp_api.pluginfunc.string.c_wstring!(`0`w)))[0]), &(this.config_file[0])) != 0) ? (true) : (false);
 		}
@@ -641,7 +641,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), &(key_name[0]), std.utf.toUTF16z(std.conv.to!(wstring)(value)), &(this.config_file[0])) != 0) ? (true) : (false);
 		}
@@ -664,7 +664,7 @@ public:
 			assert(key_name[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 
 			return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), &(key_name[0]), (value.length != 0) ? (std.utf.toUTF16z(value)) : (core.sys.windows.windef.NULL), &(this.config_file[0])) != 0) ? (true) : (false);
@@ -688,7 +688,7 @@ public:
 			assert(key_name.length != 0);
 		}
 
-		body
+		do
 		{
 			return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), std.utf.toUTF16z(key_name), &(((value) ? (npp_api.pluginfunc.string.c_wstring!(`1`w)) : (npp_api.pluginfunc.string.c_wstring!(`0`w)))[0]), &(this.config_file[0])) != 0) ? (true) : (false);
 		}
@@ -710,7 +710,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), std.utf.toUTF16z(key_name), std.utf.toUTF16z(std.conv.to!(wstring)(value)), &(this.config_file[0])) != 0) ? (true) : (false);
 		}
@@ -731,7 +731,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			if (value.length == 0) {
 				return (core.sys.windows.winbase.WritePrivateProfileStringW(&(this.section_name[0]), std.utf.toUTF16z(key_name), core.sys.windows.windef.NULL, &(this.config_file[0])) != 0) ? (true) : (false);
@@ -749,7 +749,7 @@ public:
 	void write_config(C)(const (C)[] key_name, const npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem func_item) const
 		if (std.traits.isSomeChar!(C))
 
-		body
+		do
 		{
 			this.write_config(key_name, func_item._init2Check);
 		}
@@ -758,7 +758,7 @@ public:
 	pure nothrow @safe
 	wstring get_config_file_path() const
 
-		body
+		do
 		{
 			return this.config_file.idup;
 		}
@@ -767,7 +767,7 @@ public:
 	pure nothrow @safe
 	wstring get_config_folder_path() const
 
-		body
+		do
 		{
 			return this.plugin_config_path.idup;
 		}
@@ -784,7 +784,7 @@ public:
 			}
 		}
 
-		body
+		do
 		{
 			wstring path = std.path.buildPath(this.plugin_config_path, sub_directry);
 

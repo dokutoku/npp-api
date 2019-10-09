@@ -54,7 +54,7 @@ public:
 	pure nothrow @safe @nogc
 	this()
 
-		body
+		do
 		{
 			this._hInst = core.sys.windows.windef.NULL;
 			this._hParent = core.sys.windows.windef.NULL;
@@ -77,7 +77,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			this._hInst = hInst;
 			this._hParent = parent;
@@ -93,7 +93,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.ShowWindow(this._hSelf, (toShow) ? (core.sys.windows.winuser.SW_SHOW) : (core.sys.windows.winuser.SW_HIDE));
 		}
@@ -106,7 +106,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.MoveWindow(this._hSelf, rc.left, rc.top, rc.right, rc.bottom, core.sys.windows.windef.TRUE);
 			this.redraw();
@@ -120,7 +120,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.MoveWindow(this._hSelf, rc.left, rc.top, rc.right - rc.left, rc.bottom - rc.top, core.sys.windows.windef.TRUE);
 			this.redraw();
@@ -133,7 +133,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.InvalidateRect(this._hSelf, core.sys.windows.windef.NULL, core.sys.windows.windef.TRUE);
 
@@ -149,7 +149,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.GetClientRect(this._hSelf, &rc);
 		}
@@ -161,7 +161,7 @@ public:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.winuser.GetWindowRect(this._hSelf, &rc);
 		}
@@ -169,7 +169,7 @@ public:
 	nothrow @nogc
 	int getWidth()
 
-		body
+		do
 		{
 			core.sys.windows.windef.RECT rc;
 			core.sys.windows.winuser.GetClientRect(this._hSelf, &rc);
@@ -180,7 +180,7 @@ public:
 	nothrow @nogc
 	int getHeight()
 
-		body
+		do
 		{
 			core.sys.windows.windef.RECT rc;
 			core.sys.windows.winuser.GetClientRect(this._hSelf, &rc);
@@ -195,7 +195,7 @@ public:
 	nothrow @nogc
 	bool isVisible()
 
-		body
+		do
 		{
 			return ((core.sys.windows.winuser.IsWindowVisible(this._hSelf)) ? (true) : (false));
 		}
@@ -203,7 +203,7 @@ public:
 	pure nothrow @safe @nogc
 	core.sys.windows.windef.HWND getHSelf()
 
-		body
+		do
 		{
 			return this._hSelf;
 		}
@@ -211,7 +211,7 @@ public:
 	pure nothrow @safe @nogc
 	core.sys.windows.windef.HWND getHParent()
 
-		body
+		do
 		{
 			return this._hParent;
 		}
@@ -219,7 +219,7 @@ public:
 	nothrow @nogc
 	void getFocus()
 
-		body
+		do
 		{
 			core.sys.windows.winuser.SetFocus(this._hSelf);
 		}
@@ -232,7 +232,7 @@ public:
 			assert(this._hInst != core.sys.windows.windef.NULL);
 		}
 
-		body
+		do
 		{
 			return this._hInst;
 		}

@@ -56,7 +56,7 @@ extern (C)
 nothrow @nogc
 void hello()
 
-	body
+	do
 	{
 		MessageBoxW(.nppData._nppHandle, &(c_wstring!("Hello, Notepad++!"w)[0]), &(c_wstring!(plugin_def.name)[0]), MB_OK);
 	}
@@ -70,7 +70,7 @@ pragma(inline, true)
 nothrow
 void pluginInit(HANDLE hModule)
 
-	body
+	do
 	{
 	}
 
@@ -83,7 +83,7 @@ pragma(inline, true)
 nothrow
 void pluginCleanUp()
 
-	body
+	do
 	{
 	}
 
@@ -96,7 +96,7 @@ pragma(inline, true)
 nothrow
 void pluginSetInfo(ref NppData notpadPlusData)
 
-	body
+	do
 	{
 	}
 
@@ -109,7 +109,7 @@ pragma(inline, true)
 nothrow
 void pluginBeNotified(ref SCNotification notifyCode)
 
-	body
+	do
 	{
 		/*
 		switch (notifyCode.nmhdr.code) {
@@ -156,7 +156,7 @@ pragma(inline, true)
 nothrow
 bool pluginMessageProc(UINT Message, WPARAM wParam, LPARAM lParam)
 
-	body
+	do
 	{
 		/*
 		switwch (Message) {

@@ -95,7 +95,7 @@ public:
 	nothrow @nogc
 	~this()
 
-		body
+		do
 		{
 			if (this.isCreated()) {
 				// Prevent run_dlgProc from doing anything, since its virtual
@@ -113,7 +113,7 @@ public:
 			assert(dialog_p != null);
 		}
 
-		body
+		do
 		{
 			if (isRTL) {
 				core.sys.windows.winuser.DLGTEMPLATE* pMyDlgTemplate = core.sys.windows.windef.NULL;
@@ -135,7 +135,7 @@ public:
 	pure nothrow @safe @nogc
 	bool isCreated() const
 
-		body
+		do
 		{
 			return (this._hSelf != core.sys.windows.windef.NULL);
 		}
@@ -143,7 +143,7 @@ public:
 	nothrow @nogc
 	void goToCenter()
 
-		body
+		do
 		{
 			core.sys.windows.windef.RECT rc;
 			core.sys.windows.winuser.GetClientRect(this._hParent, &rc);
@@ -161,7 +161,7 @@ public:
 	nothrow @nogc
 	override void destroy()
 
-		body
+		do
 		{
 			npp_api.pluginfunc.npp_msgs.send_NPPM_MODELESSDIALOG(this._hParent, npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.MODELESSDIALOGREMOVE, this._hSelf);
 			core.sys.windows.winuser.DestroyWindow(this._hSelf);
@@ -170,7 +170,7 @@ public:
 	nothrow @nogc
 	override void display(bool toShow)
 
-		body
+		do
 		{
 			if (toShow) {
 				// If the user has switched from a dual monitor to a single monitor since we last
@@ -212,7 +212,7 @@ public:
 	nothrow @nogc
 	core.sys.windows.windef.POINT getTopPoint(core.sys.windows.windef.HWND hwnd, bool isLeft)
 
-		body
+		do
 		{
 			core.sys.windows.windef.RECT rc;
 			core.sys.windows.winuser.GetWindowRect(hwnd, &rc);
@@ -242,7 +242,7 @@ protected:
 		{
 		}
 
-		body
+		do
 		{
 			switch (message) {
 				case core.sys.windows.winuser.WM_INITDIALOG:
@@ -277,7 +277,7 @@ protected:
 		{
 		}
 
-		body
+		do
 		{
 			core.sys.windows.windef.RECT rc, rc2;
 			core.sys.windows.winuser.GetWindowRect(handle, &rc);
@@ -325,7 +325,7 @@ protected:
 			assert(ppMyDlgTemplate != null);
 		}
 
-		body
+		do
 		{
 			// Get Dlg Template resource
 			core.sys.windows.windef.HRSRC hDialogRC = core.sys.windows.winbase.FindResourceW(this._hInst, core.sys.windows.winuser.MAKEINTRESOURCEW(dialogID), core.sys.windows.winuser.RT_DIALOG);

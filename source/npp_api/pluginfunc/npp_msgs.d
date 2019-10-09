@@ -62,7 +62,7 @@ void send_NPPM_GETCURRENTSCINTILLA(core.sys.windows.windef.HWND _nppHandle, ref 
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -83,7 +83,7 @@ void send_NPPM_GETCURRENTLANGTYPE(core.sys.windows.windef.HWND _nppHandle, ref n
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -108,7 +108,7 @@ bool send_NPPM_SETCURRENTLANGTYPE(core.sys.windows.windef.HWND _nppHandle, npp_a
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -129,7 +129,7 @@ size_t send_NPPM_GETNBOPENFILES(core.sys.windows.windef.HWND _nppHandle, int nbT
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -151,7 +151,7 @@ size_t send_NPPM_GETOPENFILENAMES(core.sys.windows.windef.HWND _nppHandle, core.
 		assert(fileNames != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -172,7 +172,7 @@ core.sys.windows.windef.HWND send_NPPM_MODELESSDIALOG(core.sys.windows.windef.HW
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -194,7 +194,7 @@ size_t send_NPPM_GETNBSESSIONFILES(core.sys.windows.windef.HWND _nppHandle, scop
 		assert(sessionFileName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -217,7 +217,7 @@ bool send_NPPM_GETSESSIONFILES(core.sys.windows.windef.HWND _nppHandle, core.sys
 		assert(sessionFileName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -240,7 +240,7 @@ const (core.sys.windows.winnt.WCHAR)* send_NPPM_SAVESESSION(core.sys.windows.win
 		assert(sessionInfomation != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -262,7 +262,7 @@ const (core.sys.windows.winnt.WCHAR)* send_NPPM_SAVECURRENTSESSION(core.sys.wind
 		//assert(sessionFileName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -284,7 +284,7 @@ size_t send_NPPM_GETOPENFILENAMESPRIMARY(core.sys.windows.windef.HWND _nppHandle
 		assert(fileNames != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -306,7 +306,7 @@ size_t send_NPPM_GETOPENFILENAMESSECOND(core.sys.windows.windef.HWND _nppHandle,
 		assert(fileNames != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -327,7 +327,7 @@ core.sys.windows.windef.HWND send_NPPM_CREATESCINTILLAHANDLE(core.sys.windows.wi
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -348,7 +348,7 @@ bool send_NPPM_DESTROYSCINTILLAHANDLE(core.sys.windows.windef.HWND _nppHandle, c
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -370,7 +370,7 @@ int send_NPPM_GETNBUSERLANG(core.sys.windows.windef.HWND _nppHandle, int* lParam
 		assert(lParam != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -391,7 +391,7 @@ int send_NPPM_GETCURRENTDOCINDEX(core.sys.windows.windef.HWND _nppHandle, int iV
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -413,7 +413,7 @@ bool send_NPPM_SETSTATUSBAR(core.sys.windows.windef.HWND _nppHandle, core.sys.wi
 		assert(wParam != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -437,7 +437,7 @@ core.sys.windows.windef.HMENU send_NPPM_GETMENUHANDLE(core.sys.windows.windef.HW
 		assert((menuChoice == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.NPPPLUGINMENU) || (menuChoice == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.NPPMAINMENU));
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -459,7 +459,7 @@ int send_NPPM_ENCODESCI(core.sys.windows.windef.HWND _nppHandle, int wParam)
 		assert((wParam == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.MAIN_VIEW) || (wParam == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.SUB_VIEW));
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -481,7 +481,7 @@ int send_NPPM_DECODESCI(core.sys.windows.windef.HWND _nppHandle, int wParam)
 		assert((wParam == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.MAIN_VIEW) || (wParam == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.SUB_VIEW));
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -502,7 +502,7 @@ void send_NPPM_ACTIVATEDOC(core.sys.windows.windef.HWND _nppHandle, int view, in
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -525,7 +525,7 @@ void send_NPPM_LAUNCHFINDINFILESDLG(core.sys.windows.windef.HWND _nppHandle, cor
 		assert(filtre != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -546,7 +546,7 @@ void send_NPPM_DMMSHOW(core.sys.windows.windef.HWND _nppHandle, core.sys.windows
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -567,7 +567,7 @@ void send_NPPM_DMMHIDE(core.sys.windows.windef.HWND _nppHandle, core.sys.windows
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -588,7 +588,7 @@ void send_NPPM_DMMUPDATEDISPINFO(core.sys.windows.windef.HWND _nppHandle, core.s
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -609,7 +609,7 @@ void send_NPPM_DMMREGASDCKDLG(core.sys.windows.windef.HWND _nppHandle, npp_api.p
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -631,7 +631,7 @@ void send_NPPM_LOADSESSION(core.sys.windows.windef.HWND _nppHandle, scope const 
 		assert(file_name != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -653,7 +653,7 @@ void send_NPPM_DMMVIEWOTHERTAB(core.sys.windows.windef.HWND _nppHandle, core.sys
 		assert(lParam != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -675,7 +675,7 @@ bool send_NPPM_RELOADFILE(core.sys.windows.windef.HWND _nppHandle, core.sys.wind
 		assert(filePathName2Reload != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -697,7 +697,7 @@ bool send_NPPM_SWITCHTOFILE(core.sys.windows.windef.HWND _nppHandle, core.sys.wi
 		assert(filePathName2switch != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -718,7 +718,7 @@ bool send_NPPM_SAVECURRENTFILE(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -739,7 +739,7 @@ bool send_NPPM_SAVEALLFILES(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -760,7 +760,7 @@ void send_NPPM_SETMENUITEMCHECK(core.sys.windows.windef.HWND _nppHandle, core.sy
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -782,7 +782,7 @@ bool send_NPPM_ADDTOOLBARICON(core.sys.windows.windef.HWND _nppHandle, core.sys.
 		assert(icon != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -803,7 +803,7 @@ npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.winVer send_NPPM_GETWI
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -826,7 +826,7 @@ core.sys.windows.windef.HWND send_NPPM_DMMGETPLUGINHWNDBYNAME(core.sys.windows.w
 		assert(moduleName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -847,7 +847,7 @@ bool send_NPPM_MAKECURRENTBUFFERDIRTY(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -868,7 +868,7 @@ bool send_NPPM_GETENABLETHEMETEXTUREFUNC(core.sys.windows.windef.HWND _nppHandle
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -890,7 +890,7 @@ bool send_NPPM_GETPLUGINSCONFIGDIR(core.sys.windows.windef.HWND _nppHandle, size
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -912,7 +912,7 @@ bool send_NPPM_MSGTOPLUGIN(core.sys.windows.windef.HWND _nppHandle, core.sys.win
 		assert(destModuleName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -933,7 +933,7 @@ void send_NPPM_MENUCOMMAND(core.sys.windows.windef.HWND _nppHandle, int cmdID)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -954,7 +954,7 @@ void send_NPPM_TRIGGERTABBARCONTEXTMENU(core.sys.windows.windef.HWND _nppHandle,
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -975,7 +975,7 @@ int send_NPPM_GETNPPVERSION(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -996,7 +996,7 @@ bool send_NPPM_HIDETABBAR(core.sys.windows.windef.HWND _nppHandle, core.sys.wind
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1017,7 +1017,7 @@ bool send_NPPM_ISTABBARHIDDEN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1038,7 +1038,7 @@ int send_NPPM_GETPOSFROMBUFFERID(core.sys.windows.windef.HWND _nppHandle, core.s
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1060,7 +1060,7 @@ int send_NPPM_GETFULLPATHFROMBUFFERID(core.sys.windows.windef.HWND _nppHandle, c
 		assert(fullFilePath != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1081,7 +1081,7 @@ core.sys.windows.windef.LRESULT send_NPPM_GETBUFFERIDFROMPOS(core.sys.windows.wi
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1102,7 +1102,7 @@ core.sys.windows.windef.LRESULT send_NPPM_GETCURRENTBUFFERID(core.sys.windows.wi
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1123,7 +1123,7 @@ void send_NPPM_RELOADBUFFERID(core.sys.windows.windef.HWND _nppHandle, core.sys.
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1144,7 +1144,7 @@ npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType send_NPPM_GET
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1169,7 +1169,7 @@ bool send_NPPM_SETBUFFERLANGTYPE(core.sys.windows.windef.HWND _nppHandle, core.s
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1190,7 +1190,7 @@ int send_NPPM_GETBUFFERENCODING(core.sys.windows.windef.HWND _nppHandle, core.sy
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1211,7 +1211,7 @@ bool send_NPPM_SETBUFFERENCODING(core.sys.windows.windef.HWND _nppHandle, core.s
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1232,7 +1232,7 @@ int send_NPPM_GETBUFFERFORMAT(core.sys.windows.windef.HWND _nppHandle, core.sys.
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1253,7 +1253,7 @@ bool send_NPPM_SETBUFFERFORMAT(core.sys.windows.windef.HWND _nppHandle, core.sys
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1274,7 +1274,7 @@ bool send_NPPM_HIDETOOLBAR(core.sys.windows.windef.HWND _nppHandle, core.sys.win
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1295,7 +1295,7 @@ bool send_NPPM_ISTOOLBARHIDDEN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1316,7 +1316,7 @@ bool send_NPPM_HIDEMENU(core.sys.windows.windef.HWND _nppHandle, core.sys.window
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1337,7 +1337,7 @@ bool send_NPPM_ISMENUHIDDEN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1358,7 +1358,7 @@ bool send_NPPM_HIDESTATUSBAR(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1379,7 +1379,7 @@ bool send_NPPM_ISSTATUSBARHIDDEN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1400,7 +1400,7 @@ bool send_NPPM_GETSHORTCUTBYCMDID(core.sys.windows.windef.HWND _nppHandle, int c
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1422,7 +1422,7 @@ bool send_NPPM_DOOPEN(core.sys.windows.windef.HWND _nppHandle, scope const core.
 		assert(fullPathName2Open != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1444,7 +1444,7 @@ bool send_NPPM_SAVECURRENTFILEAS(core.sys.windows.windef.HWND _nppHandle, core.s
 		assert(filename != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1465,7 +1465,7 @@ int send_NPPM_GETCURRENTNATIVELANGENCODING(core.sys.windows.windef.HWND _nppHand
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1486,7 +1486,7 @@ bool send_NPPM_ALLOCATESUPPORTED(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1507,7 +1507,7 @@ bool send_NPPM_ALLOCATECMDID(core.sys.windows.windef.HWND _nppHandle, int number
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1528,7 +1528,7 @@ bool send_NPPM_ALLOCATEMARKER(core.sys.windows.windef.HWND _nppHandle, int numbe
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1550,7 +1550,7 @@ int send_NPPM_GETLANGUAGENAME(core.sys.windows.windef.HWND _nppHandle, npp_api.p
 		assert(langName != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1572,7 +1572,7 @@ int send_NPPM_GETLANGUAGEDESC(core.sys.windows.windef.HWND _nppHandle, npp_api.p
 		assert(langDesc != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1593,7 +1593,7 @@ void send_NPPM_SHOWDOCSWITCHER(core.sys.windows.windef.HWND _nppHandle, core.sys
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1614,7 +1614,7 @@ bool send_NPPM_ISDOCSWITCHERSHOWN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1635,7 +1635,7 @@ bool send_NPPM_GETAPPDATAPLUGINSALLOWED(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1656,7 +1656,7 @@ int send_NPPM_GETCURRENTVIEW(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1677,7 +1677,7 @@ void send_NPPM_DOCSWITCHERDISABLECOLUMN(core.sys.windows.windef.HWND _nppHandle,
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1698,7 +1698,7 @@ int send_NPPM_GETEDITORDEFAULTFOREGROUNDCOLOR(core.sys.windows.windef.HWND _nppH
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1719,7 +1719,7 @@ int send_NPPM_GETEDITORDEFAULTBACKGROUNDCOLOR(core.sys.windows.windef.HWND _nppH
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1740,7 +1740,7 @@ int send_NPPM_SETSMOOTHFONT(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1761,7 +1761,7 @@ void send_NPPM_SETEDITORBORDEREDGE(core.sys.windows.windef.HWND _nppHandle, core
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1783,7 +1783,7 @@ void send_NPPM_SAVEFILE(core.sys.windows.windef.HWND _nppHandle, scope const cor
 		assert(fileNameToSave != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1804,7 +1804,7 @@ void send_NPPM_DISABLEAUTOUPDATE(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1825,7 +1825,7 @@ core.stdc.config.c_long send_NPPM_REMOVESHORTCUTBYCMDID(core.sys.windows.windef.
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1847,7 +1847,7 @@ int send_NPPM_GETPLUGINHOMEPATH(core.sys.windows.windef.HWND _nppHandle, size_t 
 		assert(pluginRootPath != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1869,7 +1869,7 @@ bool send_NPPM_GETFULLCURRENTPATH(core.sys.windows.windef.HWND _nppHandle, size_
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1891,7 +1891,7 @@ bool send_NPPM_GETCURRENTDIRECTORY(core.sys.windows.windef.HWND _nppHandle, size
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1913,7 +1913,7 @@ bool send_NPPM_GETFILENAME(core.sys.windows.windef.HWND _nppHandle, size_t strLe
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1935,7 +1935,7 @@ bool send_NPPM_GETNAMEPART(core.sys.windows.windef.HWND _nppHandle, size_t strLe
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1957,7 +1957,7 @@ bool send_NPPM_GETEXTPART(core.sys.windows.windef.HWND _nppHandle, size_t strLen
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1979,7 +1979,7 @@ bool send_NPPM_GETCURRENTWORD(core.sys.windows.windef.HWND _nppHandle, size_t st
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2001,7 +2001,7 @@ bool send_NPPM_GETNPPDIRECTORY(core.sys.windows.windef.HWND _nppHandle, size_t s
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2023,7 +2023,7 @@ bool send_NPPM_GETFILENAMEATCURSOR(core.sys.windows.windef.HWND _nppHandle, size
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2044,7 +2044,7 @@ int send_NPPM_GETCURRENTLINE(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2065,7 +2065,7 @@ int send_NPPM_GETCURRENTCOLUMN(core.sys.windows.windef.HWND _nppHandle)
 		assert(_nppHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2087,7 +2087,7 @@ bool send_NPPM_GETNPPFULLFILEPATH(core.sys.windows.windef.HWND _nppHandle, size_
 		assert(str != null);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;

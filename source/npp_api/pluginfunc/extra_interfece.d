@@ -158,7 +158,7 @@ mixin template npp_autoload(npp_api.pluginfunc.config_file.config_type_t config_
 
 			size_t search_setting_identifier_index(wstring[] identifier_list, wstring identifier)
 
-				body
+				do
 				{
 					for (size_t i = 0; i < identifier_list.length; i++) {
 						if (std.algorithm.cmp(identifier_list[i], identifier) == 0) {
@@ -201,7 +201,7 @@ void update_main_menu_checked(size_t main_menu_length, size_t menu_index_length)
 	{
 	}
 
-	body
+	do
 	{
 		for (size_t i = 0, j = 0; i < menu_index.length; i++) {
 			if (menu_index[i].depth == 1) {
@@ -236,7 +236,7 @@ mixin template npp_DLLMain(npp_api.pluginfunc.config_file.config_type_t type, ws
 		extern (Windows)
 		export core.sys.windows.windef.BOOL DllMain(core.sys.windows.basetsd.HANDLE hModule, core.sys.windows.windef.DWORD reasonForCall, core.sys.windows.winnt.LPVOID lpReserved)
 
-			body
+			do
 			{
 				static import core.sys.windows.dll;
 				static import core.sys.windows.windef;
@@ -297,7 +297,7 @@ mixin template npp_setInfo(alias nppData, npp_api.pluginfunc.config_file.plugin_
 		nothrow
 		export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-			body
+			do
 			{
 				static import std.utf;
 				static import npp_api.pluginfunc.extra_interfece;
@@ -350,7 +350,7 @@ mixin template npp_beNotified(alias nppData, alias main_menu, alias menu_index, 
 			nothrow
 			export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-				body
+				do
 				{
 					static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 					static import npp_api.pluginfunc.menu;
@@ -381,7 +381,7 @@ mixin template npp_beNotified(alias nppData, alias main_menu, alias menu_index, 
 			nothrow @nogc
 			export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-				body
+				do
 				{
 					static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 					static import npp_api.pluginfunc.menu;
@@ -426,7 +426,7 @@ mixin template npp_messageProc(alias sub_menu_actions_def)
 		nothrow
 		export core.sys.windows.windef.LRESULT messageProc(core.sys.windows.windef.UINT Message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-			body
+			do
 			{
 				static import core.sys.windows.windef;
 				static import core.sys.windows.winuser;

@@ -34,7 +34,7 @@ int samlDecode(ref char[] dest, const char[] encodedSamlStr)
 		assert(dest.length != 0);
 	}
 
-	body
+	do
 	{
 		static import npp_mimetools.b64;
 		static import npp_mimetools.tinflate;

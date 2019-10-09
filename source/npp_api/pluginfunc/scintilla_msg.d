@@ -66,7 +66,7 @@ void send_SCI_START(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -86,7 +86,7 @@ void send_SCI_OPTIONAL_START(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -106,7 +106,7 @@ void send_SCI_LEXER_START(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -125,7 +125,7 @@ void send_SCI_ADDTEXT(core.sys.windows.windef.HWND _scintillaHandle, .position l
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -144,7 +144,7 @@ void send_SCI_ADDSTYLEDTEXT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -163,7 +163,7 @@ void send_SCI_INSERTTEXT(core.sys.windows.windef.HWND _scintillaHandle, .positio
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -181,7 +181,7 @@ void send_SCI_CHANGEINSERTION(core.sys.windows.windef.HWND _scintillaHandle, .po
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -199,7 +199,7 @@ void send_SCI_CLEARALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -218,7 +218,7 @@ void send_SCI_DELETERANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -238,7 +238,7 @@ void send_SCI_CLEARDOCUMENTSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -257,7 +257,7 @@ void send_SCI_CLEARDOCUMENTSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -275,7 +275,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCHARAT(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -293,7 +293,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCHARAT(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -311,7 +311,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCHARAT(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -329,7 +329,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSTYLEAT(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -347,7 +347,7 @@ void send_SCI_REDO(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -366,7 +366,7 @@ void send_SCI_SETUNDOCOLLECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -386,7 +386,7 @@ void send_SCI_SELECTALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -406,7 +406,7 @@ void send_SCI_SETSAVEPOINT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -425,7 +425,7 @@ void send_SCI_SETSAVEPOINT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -443,7 +443,7 @@ bool send_SCI_CANREDO(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -461,7 +461,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERLINEFROMHANDLE(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -480,7 +480,7 @@ void send_SCI_MARKERDELETEHANDLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -499,7 +499,7 @@ bool send_SCI_GETUNDOCOLLECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -517,7 +517,7 @@ core.stdc.stdint.intptr_t send_SCI_GETVIEWWS(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -536,7 +536,7 @@ void send_SCI_SETVIEWWS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -555,7 +555,7 @@ core.stdc.stdint.intptr_t send_SCI_GETTABDRAWMODE(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -574,7 +574,7 @@ void send_SCI_SETTABDRAWMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -593,7 +593,7 @@ void send_SCI_SETTABDRAWMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -611,7 +611,7 @@ void send_SCI_SETTABDRAWMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -629,7 +629,7 @@ void send_SCI_GOTOLINE(core.sys.windows.windef.HWND _scintillaHandle, .line line
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -647,7 +647,7 @@ void send_SCI_GOTOPOS(core.sys.windows.windef.HWND _scintillaHandle, .position c
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -666,7 +666,7 @@ void send_SCI_SETANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -685,7 +685,7 @@ void send_SCI_SETANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -703,7 +703,7 @@ void send_SCI_SETANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -722,7 +722,7 @@ void send_SCI_CONVERTEOLS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -741,7 +741,7 @@ core.stdc.stdint.intptr_t send_SCI_GETEOLMODE(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -760,7 +760,7 @@ void send_SCI_SETEOLMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -780,7 +780,7 @@ void send_SCI_STARTSTYLING(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -800,7 +800,7 @@ void send_SCI_SETSTYLING(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -819,7 +819,7 @@ bool send_SCI_GETBUFFEREDDRAW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -838,7 +838,7 @@ void send_SCI_SETBUFFEREDDRAW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -858,7 +858,7 @@ void send_SCI_SETTABWIDTH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -877,7 +877,7 @@ core.stdc.stdint.intptr_t send_SCI_GETTABWIDTH(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -896,7 +896,7 @@ void send_SCI_CLEARTABSTOPS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -916,7 +916,7 @@ void send_SCI_ADDTABSTOP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -935,7 +935,7 @@ core.stdc.stdint.intptr_t send_SCI_GETNEXTTABSTOP(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -954,7 +954,7 @@ void send_SCI_SETCODEPAGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -973,7 +973,7 @@ core.stdc.stdint.intptr_t send_SCI_GETIMEINTERACTION(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -992,7 +992,7 @@ void send_SCI_SETIMEINTERACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1012,7 +1012,7 @@ void send_SCI_MARKERDEFINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1032,7 +1032,7 @@ void send_SCI_MARKERSETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1052,7 +1052,7 @@ void send_SCI_MARKERSETBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1072,7 +1072,7 @@ void send_SCI_MARKERSETBACKSELECTED(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1092,7 +1092,7 @@ void send_SCI_MARKERENABLEHIGHLIGHT(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1111,7 +1111,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERADD(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1130,7 +1130,7 @@ void send_SCI_MARKERDELETE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1150,7 +1150,7 @@ void send_SCI_MARKERDELETEALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1169,7 +1169,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERGET(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1187,7 +1187,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERGET(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1205,7 +1205,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERGET(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1224,7 +1224,7 @@ void send_SCI_MARKERDEFINEPIXMAP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1244,7 +1244,7 @@ void send_SCI_MARKERADDSET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1264,7 +1264,7 @@ void send_SCI_MARKERSETALPHA(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1284,7 +1284,7 @@ void send_SCI_SETMARGINTYPEN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1303,7 +1303,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINTYPEN(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1322,7 +1322,7 @@ void send_SCI_SETMARGINWIDTHN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1341,7 +1341,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINWIDTHN(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1360,7 +1360,7 @@ void send_SCI_SETMARGINMASKN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1379,7 +1379,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINMASKN(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1398,7 +1398,7 @@ void send_SCI_SETMARGINSENSITIVEN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1417,7 +1417,7 @@ bool send_SCI_GETMARGINSENSITIVEN(core.sys.windows.windef.HWND _scintillaHandle,
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1436,7 +1436,7 @@ void send_SCI_SETMARGINCURSORN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1455,7 +1455,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINCURSORN(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1474,7 +1474,7 @@ void send_SCI_SETMARGINBACKN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1493,7 +1493,7 @@ void send_SCI_SETMARGINBACKN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1512,7 +1512,7 @@ void send_SCI_SETMARGINS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1531,7 +1531,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINS(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1550,7 +1550,7 @@ void send_SCI_STYLECLEARALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1570,7 +1570,7 @@ void send_SCI_STYLESETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1590,7 +1590,7 @@ void send_SCI_STYLESETBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1610,7 +1610,7 @@ void send_SCI_STYLESETBOLD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1630,7 +1630,7 @@ void send_SCI_STYLESETITALIC(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1650,7 +1650,7 @@ void send_SCI_STYLESETSIZE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1670,7 +1670,7 @@ void send_SCI_STYLESETFONT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1690,7 +1690,7 @@ void send_SCI_STYLESETEOLFILLED(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1710,7 +1710,7 @@ void send_SCI_STYLERESETDEFAULT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1730,7 +1730,7 @@ void send_SCI_STYLESETUNDERLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1749,7 +1749,7 @@ void send_SCI_STYLESETUNDERLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1767,7 +1767,7 @@ void send_SCI_STYLESETUNDERLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1785,7 +1785,7 @@ bool send_SCI_STYLEGETBOLD(core.sys.windows.windef.HWND _scintillaHandle, core.s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1803,7 +1803,7 @@ bool send_SCI_STYLEGETITALIC(core.sys.windows.windef.HWND _scintillaHandle, core
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1821,7 +1821,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETSIZE(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1839,7 +1839,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETFONT(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1857,7 +1857,7 @@ bool send_SCI_STYLEGETEOLFILLED(core.sys.windows.windef.HWND _scintillaHandle, c
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1875,7 +1875,7 @@ bool send_SCI_STYLEGETUNDERLINE(core.sys.windows.windef.HWND _scintillaHandle, c
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1893,7 +1893,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETCASE(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1911,7 +1911,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETCHARACTERSET(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1929,7 +1929,7 @@ bool send_SCI_STYLEGETVISIBLE(core.sys.windows.windef.HWND _scintillaHandle, cor
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1947,7 +1947,7 @@ bool send_SCI_STYLEGETCHANGEABLE(core.sys.windows.windef.HWND _scintillaHandle, 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1965,7 +1965,7 @@ bool send_SCI_STYLEGETHOTSPOT(core.sys.windows.windef.HWND _scintillaHandle, cor
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -1984,7 +1984,7 @@ void send_SCI_STYLESETCASE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2004,7 +2004,7 @@ void send_SCI_STYLESETSIZEFRACTIONAL(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2023,7 +2023,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETSIZEFRACTIONAL(core.sys.windows.winde
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2042,7 +2042,7 @@ void send_SCI_STYLESETWEIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2061,7 +2061,7 @@ core.stdc.stdint.intptr_t send_SCI_STYLEGETWEIGHT(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2080,7 +2080,7 @@ void send_SCI_STYLESETCHARACTERSET(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2100,7 +2100,7 @@ void send_SCI_STYLESETHOTSPOT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2120,7 +2120,7 @@ void send_SCI_SETSELFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2140,7 +2140,7 @@ void send_SCI_SETSELBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2159,7 +2159,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSELALPHA(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2178,7 +2178,7 @@ void send_SCI_SETSELALPHA(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2197,7 +2197,7 @@ bool send_SCI_GETSELEOLFILLED(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2216,7 +2216,7 @@ void send_SCI_SETSELEOLFILLED(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2236,7 +2236,7 @@ void send_SCI_SETCARETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2256,7 +2256,7 @@ void send_SCI_ASSIGNCMDKEY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2276,7 +2276,7 @@ void send_SCI_CLEARCMDKEY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2296,7 +2296,7 @@ void send_SCI_CLEARALLCMDKEYS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2316,7 +2316,7 @@ void send_SCI_SETSTYLINGEX(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2336,7 +2336,7 @@ void send_SCI_STYLESETVISIBLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2355,7 +2355,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETPERIOD(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2374,7 +2374,7 @@ void send_SCI_SETCARETPERIOD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2394,7 +2394,7 @@ void send_SCI_SETWORDCHARS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2413,7 +2413,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWORDCHARS(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2431,7 +2431,7 @@ void send_SCI_BEGINUNDOACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2449,7 +2449,7 @@ void send_SCI_ENDUNDOACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2468,7 +2468,7 @@ void send_SCI_INDICSETSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2487,7 +2487,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICGETSTYLE(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2506,7 +2506,7 @@ void send_SCI_INDICSETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2525,7 +2525,7 @@ void send_SCI_INDICSETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2544,7 +2544,7 @@ void send_SCI_INDICSETUNDER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2563,7 +2563,7 @@ bool send_SCI_INDICGETUNDER(core.sys.windows.windef.HWND _scintillaHandle, core.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2582,7 +2582,7 @@ void send_SCI_INDICSETHOVERSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2601,7 +2601,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICGETHOVERSTYLE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2620,7 +2620,7 @@ void send_SCI_INDICSETHOVERFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2639,7 +2639,7 @@ void send_SCI_INDICSETHOVERFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2658,7 +2658,7 @@ void send_SCI_INDICSETFLAGS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2677,7 +2677,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICGETFLAGS(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2696,7 +2696,7 @@ void send_SCI_SETWHITESPACEFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2716,7 +2716,7 @@ void send_SCI_SETWHITESPACEBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2736,7 +2736,7 @@ void send_SCI_SETWHITESPACESIZE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2755,7 +2755,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWHITESPACESIZE(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2774,7 +2774,7 @@ void send_SCI_SETLINESTATE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2793,7 +2793,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINESTATE(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2811,7 +2811,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMAXLINESTATE(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2829,7 +2829,7 @@ bool send_SCI_GETCARETLINEVISIBLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2848,7 +2848,7 @@ void send_SCI_SETCARETLINEVISIBLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2867,7 +2867,7 @@ void send_SCI_SETCARETLINEVISIBLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2886,7 +2886,7 @@ void send_SCI_SETCARETLINEBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2905,7 +2905,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETLINEFRAME(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2924,7 +2924,7 @@ void send_SCI_SETCARETLINEFRAME(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2944,7 +2944,7 @@ void send_SCI_STYLESETCHANGEABLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2964,7 +2964,7 @@ void send_SCI_AUTOCSHOW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -2984,7 +2984,7 @@ void send_SCI_AUTOCCANCEL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3003,7 +3003,7 @@ bool send_SCI_AUTOCACTIVE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3021,7 +3021,7 @@ bool send_SCI_AUTOCACTIVE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3040,7 +3040,7 @@ void send_SCI_AUTOCCOMPLETE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3060,7 +3060,7 @@ void send_SCI_AUTOCSTOPS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3080,7 +3080,7 @@ void send_SCI_AUTOCSETSEPARATOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3099,7 +3099,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETSEPARATOR(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3118,7 +3118,7 @@ void send_SCI_AUTOCSELECT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3138,7 +3138,7 @@ void send_SCI_AUTOCSETCANCELATSTART(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3157,7 +3157,7 @@ bool send_SCI_AUTOCGETCANCELATSTART(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3176,7 +3176,7 @@ void send_SCI_AUTOCSETFILLUPS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3196,7 +3196,7 @@ void send_SCI_AUTOCSETCHOOSESINGLE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3215,7 +3215,7 @@ bool send_SCI_AUTOCGETCHOOSESINGLE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3234,7 +3234,7 @@ void send_SCI_AUTOCSETIGNORECASE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3253,7 +3253,7 @@ bool send_SCI_AUTOCGETIGNORECASE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3272,7 +3272,7 @@ void send_SCI_USERLISTSHOW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3292,7 +3292,7 @@ void send_SCI_AUTOCSETAUTOHIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3311,7 +3311,7 @@ bool send_SCI_AUTOCGETAUTOHIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3330,7 +3330,7 @@ void send_SCI_AUTOCSETDROPRESTOFWORD(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3349,7 +3349,7 @@ bool send_SCI_AUTOCGETDROPRESTOFWORD(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3368,7 +3368,7 @@ void send_SCI_REGISTERIMAGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3388,7 +3388,7 @@ void send_SCI_CLEARREGISTEREDIMAGES(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3407,7 +3407,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETTYPESEPARATOR(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3426,7 +3426,7 @@ void send_SCI_AUTOCSETTYPESEPARATOR(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3446,7 +3446,7 @@ void send_SCI_AUTOCSETMAXWIDTH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3465,7 +3465,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETMAXWIDTH(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3484,7 +3484,7 @@ void send_SCI_AUTOCSETMAXHEIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3503,7 +3503,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETMAXHEIGHT(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3522,7 +3522,7 @@ void send_SCI_SETINDENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3541,7 +3541,7 @@ core.stdc.stdint.intptr_t send_SCI_GETINDENT(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3560,7 +3560,7 @@ void send_SCI_SETUSETABS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3579,7 +3579,7 @@ bool send_SCI_GETUSETABS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3598,7 +3598,7 @@ void send_SCI_SETLINEINDENTATION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3617,7 +3617,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEINDENTATION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3635,7 +3635,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEINDENTATION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3653,7 +3653,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEINDENTATION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3671,7 +3671,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEINDENTATION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3689,7 +3689,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEINDENTATION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3708,7 +3708,7 @@ void send_SCI_SETHSCROLLBAR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3727,7 +3727,7 @@ bool send_SCI_GETHSCROLLBAR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3746,7 +3746,7 @@ void send_SCI_SETINDENTATIONGUIDES(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3765,7 +3765,7 @@ core.stdc.stdint.intptr_t send_SCI_GETINDENTATIONGUIDES(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3784,7 +3784,7 @@ void send_SCI_SETHIGHLIGHTGUIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3803,7 +3803,7 @@ void send_SCI_SETHIGHLIGHTGUIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3821,7 +3821,7 @@ void send_SCI_SETHIGHLIGHTGUIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3839,7 +3839,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCODEPAGE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3857,7 +3857,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCODEPAGE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3875,7 +3875,7 @@ bool send_SCI_GETREADONLY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3894,7 +3894,7 @@ void send_SCI_SETCURRENTPOS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3914,7 +3914,7 @@ void send_SCI_SETSELECTIONSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3933,7 +3933,7 @@ void send_SCI_SETSELECTIONSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3952,7 +3952,7 @@ void send_SCI_SETSELECTIONEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3971,7 +3971,7 @@ void send_SCI_SETSELECTIONEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -3990,7 +3990,7 @@ void send_SCI_SETEMPTYSELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4010,7 +4010,7 @@ void send_SCI_SETPRINTMAGNIFICATION(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4029,7 +4029,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTMAGNIFICATION(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4048,7 +4048,7 @@ void send_SCI_SETPRINTCOLOURMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4067,7 +4067,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4083,7 +4083,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		static import core.sys.windows.windef;
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4101,7 +4101,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4119,7 +4119,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4137,7 +4137,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4155,7 +4155,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTCOLOURMODE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4174,7 +4174,7 @@ void send_SCI_SETMARGINLEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4193,7 +4193,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINLEFT(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4212,7 +4212,7 @@ void send_SCI_SETMARGINRIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4231,7 +4231,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINRIGHT(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4249,7 +4249,7 @@ bool send_SCI_GETMODIFY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4267,7 +4267,7 @@ void send_SCI_SETSEL(core.sys.windows.windef.HWND _scintillaHandle, .position an
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4285,7 +4285,7 @@ void send_SCI_SETSEL(core.sys.windows.windef.HWND _scintillaHandle, .position an
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4303,7 +4303,7 @@ void send_SCI_SETSEL(core.sys.windows.windef.HWND _scintillaHandle, .position an
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4321,7 +4321,7 @@ void send_SCI_SETSEL(core.sys.windows.windef.HWND _scintillaHandle, .position an
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4340,7 +4340,7 @@ void send_SCI_HIDESELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4359,7 +4359,7 @@ core.stdc.stdint.intptr_t send_SCI_POINTXFROMPOSITION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4377,7 +4377,7 @@ core.stdc.stdint.intptr_t send_SCI_POINTYFROMPOSITION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4395,7 +4395,7 @@ core.stdc.stdint.intptr_t send_SCI_POINTYFROMPOSITION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4413,7 +4413,7 @@ core.stdc.stdint.intptr_t send_SCI_POINTYFROMPOSITION(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4432,7 +4432,7 @@ void send_SCI_LINESCROLL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4452,7 +4452,7 @@ void send_SCI_SCROLLCARET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4472,7 +4472,7 @@ void send_SCI_SCROLLRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4491,7 +4491,7 @@ void send_SCI_REPLACESEL(core.sys.windows.windef.HWND _scintillaHandle, const ch
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4510,7 +4510,7 @@ void send_SCI_SETREADONLY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4530,7 +4530,7 @@ void send_SCI_NULL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4549,7 +4549,7 @@ bool send_SCI_CANPASTE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4567,7 +4567,7 @@ bool send_SCI_CANUNDO(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4586,7 +4586,7 @@ void send_SCI_EMPTYUNDOBUFFER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4605,7 +4605,7 @@ void send_SCI_UNDO(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4623,7 +4623,7 @@ void send_SCI_CUT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4641,7 +4641,7 @@ void send_SCI_COPY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4659,7 +4659,7 @@ void send_SCI_PASTE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4677,7 +4677,7 @@ void send_SCI_CLEAR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4695,7 +4695,7 @@ void send_SCI_SETTEXT(core.sys.windows.windef.HWND _scintillaHandle, const char*
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4713,7 +4713,7 @@ void send_SCI_SETTEXT(core.sys.windows.windef.HWND _scintillaHandle, const char*
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4731,7 +4731,7 @@ void send_SCI_SETTEXT(core.sys.windows.windef.HWND _scintillaHandle, const char*
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4749,7 +4749,7 @@ void send_SCI_SETTEXT(core.sys.windows.windef.HWND _scintillaHandle, const char*
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4767,7 +4767,7 @@ void send_SCI_SETTEXT(core.sys.windows.windef.HWND _scintillaHandle, const char*
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4786,7 +4786,7 @@ void send_SCI_SETOVERTYPE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4805,7 +4805,7 @@ bool send_SCI_GETOVERTYPE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4824,7 +4824,7 @@ void send_SCI_SETCARETWIDTH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4843,7 +4843,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETWIDTH(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4861,7 +4861,7 @@ void send_SCI_SETTARGETSTART(core.sys.windows.windef.HWND _scintillaHandle, .pos
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4879,7 +4879,7 @@ void send_SCI_SETTARGETSTART(core.sys.windows.windef.HWND _scintillaHandle, .pos
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4897,7 +4897,7 @@ void send_SCI_SETTARGETEND(core.sys.windows.windef.HWND _scintillaHandle, .posit
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4915,7 +4915,7 @@ void send_SCI_SETTARGETEND(core.sys.windows.windef.HWND _scintillaHandle, .posit
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4934,7 +4934,7 @@ void send_SCI_SETTARGETRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4953,7 +4953,7 @@ void send_SCI_SETTARGETRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4971,7 +4971,7 @@ void send_SCI_TARGETFROMSELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -4990,7 +4990,7 @@ void send_SCI_TARGETWHOLEDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5009,7 +5009,7 @@ void send_SCI_TARGETWHOLEDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5027,7 +5027,7 @@ void send_SCI_TARGETWHOLEDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5045,7 +5045,7 @@ void send_SCI_TARGETWHOLEDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5064,7 +5064,7 @@ void send_SCI_SETSEARCHFLAGS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5083,7 +5083,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSEARCHFLAGS(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5102,7 +5102,7 @@ void send_SCI_CALLTIPSHOW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5122,7 +5122,7 @@ void send_SCI_CALLTIPCANCEL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5141,7 +5141,7 @@ bool send_SCI_CALLTIPACTIVE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5159,7 +5159,7 @@ bool send_SCI_CALLTIPACTIVE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5178,7 +5178,7 @@ void send_SCI_CALLTIPSETPOSSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5198,7 +5198,7 @@ void send_SCI_CALLTIPSETHLT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5218,7 +5218,7 @@ void send_SCI_CALLTIPSETBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5238,7 +5238,7 @@ void send_SCI_CALLTIPSETFORE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5258,7 +5258,7 @@ void send_SCI_CALLTIPSETFOREHLT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5278,7 +5278,7 @@ void send_SCI_CALLTIPUSESTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5298,7 +5298,7 @@ void send_SCI_CALLTIPSETPOSITION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5317,7 +5317,7 @@ void send_SCI_CALLTIPSETPOSITION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5335,7 +5335,7 @@ void send_SCI_CALLTIPSETPOSITION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5353,7 +5353,7 @@ void send_SCI_CALLTIPSETPOSITION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5372,7 +5372,7 @@ void send_SCI_SETFOLDLEVEL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5391,7 +5391,7 @@ core.stdc.stdint.intptr_t send_SCI_GETFOLDLEVEL(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5409,7 +5409,7 @@ core.stdc.stdint.intptr_t send_SCI_GETFOLDLEVEL(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5427,7 +5427,7 @@ core.stdc.stdint.intptr_t send_SCI_GETFOLDLEVEL(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5446,7 +5446,7 @@ void send_SCI_SHOWLINES(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5466,7 +5466,7 @@ void send_SCI_HIDELINES(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5485,7 +5485,7 @@ bool send_SCI_GETLINEVISIBLE(core.sys.windows.windef.HWND _scintillaHandle, core
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5503,7 +5503,7 @@ bool send_SCI_GETALLLINESVISIBLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5522,7 +5522,7 @@ void send_SCI_SETFOLDEXPANDED(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5541,7 +5541,7 @@ bool send_SCI_GETFOLDEXPANDED(core.sys.windows.windef.HWND _scintillaHandle, cor
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5560,7 +5560,7 @@ void send_SCI_TOGGLEFOLD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5580,7 +5580,7 @@ void send_SCI_TOGGLEFOLDSHOWTEXT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5600,7 +5600,7 @@ void send_SCI_FOLDDISPLAYTEXTSETSTYLE(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5620,7 +5620,7 @@ void send_SCI_FOLDLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5640,7 +5640,7 @@ void send_SCI_FOLDCHILDREN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5660,7 +5660,7 @@ void send_SCI_EXPANDCHILDREN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5680,7 +5680,7 @@ void send_SCI_FOLDALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5699,7 +5699,7 @@ void send_SCI_ENSUREVISIBLE(core.sys.windows.windef.HWND _scintillaHandle, .line
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5718,7 +5718,7 @@ void send_SCI_SETAUTOMATICFOLD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5737,7 +5737,7 @@ core.stdc.stdint.intptr_t send_SCI_GETAUTOMATICFOLD(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5756,7 +5756,7 @@ void send_SCI_SETFOLDFLAGS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5776,7 +5776,7 @@ void send_SCI_ENSUREVISIBLEENFORCEPOLICY(core.sys.windows.windef.HWND _scintilla
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5796,7 +5796,7 @@ void send_SCI_SETTABINDENTS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5815,7 +5815,7 @@ bool send_SCI_GETTABINDENTS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5834,7 +5834,7 @@ void send_SCI_SETBACKSPACEUNINDENTS(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5853,7 +5853,7 @@ bool send_SCI_GETBACKSPACEUNINDENTS(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5872,7 +5872,7 @@ void send_SCI_SETMOUSEDWELLTIME(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5891,7 +5891,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMOUSEDWELLTIME(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5909,7 +5909,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMOUSEDWELLTIME(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5927,7 +5927,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMOUSEDWELLTIME(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5945,7 +5945,7 @@ bool send_SCI_ISRANGEWORD(core.sys.windows.windef.HWND _scintillaHandle, .positi
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5964,7 +5964,7 @@ void send_SCI_SETIDLESTYLING(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -5983,7 +5983,7 @@ core.stdc.stdint.intptr_t send_SCI_GETIDLESTYLING(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6002,7 +6002,7 @@ void send_SCI_SETWRAPMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6021,7 +6021,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWRAPMODE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6040,7 +6040,7 @@ void send_SCI_SETWRAPVISUALFLAGS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6059,7 +6059,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWRAPVISUALFLAGS(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6078,7 +6078,7 @@ void send_SCI_SETWRAPVISUALFLAGSLOCATION(core.sys.windows.windef.HWND _scintilla
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6097,7 +6097,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWRAPVISUALFLAGSLOCATION(core.sys.windows.w
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6116,7 +6116,7 @@ void send_SCI_SETWRAPSTARTINDENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6135,7 +6135,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWRAPSTARTINDENT(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6154,7 +6154,7 @@ void send_SCI_SETWRAPINDENTMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6173,7 +6173,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWRAPINDENTMODE(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6192,7 +6192,7 @@ void send_SCI_SETLAYOUTCACHE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6211,7 +6211,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLAYOUTCACHE(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6230,7 +6230,7 @@ void send_SCI_SETSCROLLWIDTH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6249,7 +6249,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSCROLLWIDTH(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6268,7 +6268,7 @@ void send_SCI_SETSCROLLWIDTHTRACKING(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6287,7 +6287,7 @@ bool send_SCI_GETSCROLLWIDTHTRACKING(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6305,7 +6305,7 @@ core.stdc.stdint.intptr_t send_SCI_TEXTWIDTH(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6324,7 +6324,7 @@ void send_SCI_SETENDATLASTLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6343,7 +6343,7 @@ bool send_SCI_GETENDATLASTLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6361,7 +6361,7 @@ core.stdc.stdint.intptr_t send_SCI_TEXTHEIGHT(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6380,7 +6380,7 @@ void send_SCI_SETVSCROLLBAR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6399,7 +6399,7 @@ bool send_SCI_GETVSCROLLBAR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6417,7 +6417,7 @@ void send_SCI_APPENDTEXT(core.sys.windows.windef.HWND _scintillaHandle, .positio
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6435,7 +6435,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPHASESDRAW(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6454,7 +6454,7 @@ void send_SCI_SETPHASESDRAW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6474,7 +6474,7 @@ void send_SCI_SETFONTQUALITY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6493,7 +6493,7 @@ core.stdc.stdint.intptr_t send_SCI_GETFONTQUALITY(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6512,7 +6512,7 @@ void send_SCI_SETFIRSTVISIBLELINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6532,7 +6532,7 @@ void send_SCI_SETMULTIPASTE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6551,7 +6551,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMULTIPASTE(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6569,7 +6569,7 @@ core.stdc.stdint.intptr_t send_SCI_GETTAG(core.sys.windows.windef.HWND _scintill
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6588,7 +6588,7 @@ void send_SCI_LINESJOIN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6608,7 +6608,7 @@ void send_SCI_LINESSPLIT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6628,7 +6628,7 @@ void send_SCI_SETFOLDMARGINCOLOUR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6648,7 +6648,7 @@ void send_SCI_SETFOLDMARGINHICOLOUR(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6668,7 +6668,7 @@ void send_SCI_SETACCESSIBILITY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6687,7 +6687,7 @@ core.stdc.stdint.intptr_t send_SCI_GETACCESSIBILITY(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6706,7 +6706,7 @@ void send_SCI_LINEDOWN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6726,7 +6726,7 @@ void send_SCI_LINEDOWNEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6746,7 +6746,7 @@ void send_SCI_LINEUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6766,7 +6766,7 @@ void send_SCI_LINEUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6786,7 +6786,7 @@ void send_SCI_CHARLEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6806,7 +6806,7 @@ void send_SCI_CHARLEFTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6826,7 +6826,7 @@ void send_SCI_CHARRIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6846,7 +6846,7 @@ void send_SCI_CHARRIGHTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6866,7 +6866,7 @@ void send_SCI_WORDLEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6886,7 +6886,7 @@ void send_SCI_WORDLEFTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6906,7 +6906,7 @@ void send_SCI_WORDRIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6926,7 +6926,7 @@ void send_SCI_WORDRIGHTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6946,7 +6946,7 @@ void send_SCI_HOME(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6966,7 +6966,7 @@ void send_SCI_HOMEEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -6986,7 +6986,7 @@ void send_SCI_LINEEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7006,7 +7006,7 @@ void send_SCI_LINEENDEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7026,7 +7026,7 @@ void send_SCI_DOCUMENTSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7046,7 +7046,7 @@ void send_SCI_DOCUMENTSTARTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7066,7 +7066,7 @@ void send_SCI_DOCUMENTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7086,7 +7086,7 @@ void send_SCI_DOCUMENTENDEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7106,7 +7106,7 @@ void send_SCI_PAGEUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7126,7 +7126,7 @@ void send_SCI_PAGEUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7146,7 +7146,7 @@ void send_SCI_PAGEDOWN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7166,7 +7166,7 @@ void send_SCI_PAGEDOWNEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7186,7 +7186,7 @@ void send_SCI_EDITTOGGLEOVERTYPE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7206,7 +7206,7 @@ void send_SCI_CANCEL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7226,7 +7226,7 @@ void send_SCI_DELETEBACK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7246,7 +7246,7 @@ void send_SCI_TAB(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7266,7 +7266,7 @@ void send_SCI_BACKTAB(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7286,7 +7286,7 @@ void send_SCI_NEWLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7306,7 +7306,7 @@ void send_SCI_FORMFEED(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7326,7 +7326,7 @@ void send_SCI_VCHOME(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7346,7 +7346,7 @@ void send_SCI_VCHOMEEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7366,7 +7366,7 @@ void send_SCI_ZOOMIN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7386,7 +7386,7 @@ void send_SCI_ZOOMOUT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7406,7 +7406,7 @@ void send_SCI_DELWORDLEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7426,7 +7426,7 @@ void send_SCI_DELWORDRIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7446,7 +7446,7 @@ void send_SCI_DELWORDRIGHTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7466,7 +7466,7 @@ void send_SCI_LINECUT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7486,7 +7486,7 @@ void send_SCI_LINEDELETE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7506,7 +7506,7 @@ void send_SCI_LINETRANSPOSE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7526,7 +7526,7 @@ void send_SCI_LINEREVERSE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7546,7 +7546,7 @@ void send_SCI_LINEDUPLICATE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7566,7 +7566,7 @@ void send_SCI_LOWERCASE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7586,7 +7586,7 @@ void send_SCI_UPPERCASE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7606,7 +7606,7 @@ void send_SCI_LINESCROLLDOWN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7626,7 +7626,7 @@ void send_SCI_LINESCROLLUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7646,7 +7646,7 @@ void send_SCI_DELETEBACKNOTLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7666,7 +7666,7 @@ void send_SCI_HOMEDISPLAY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7686,7 +7686,7 @@ void send_SCI_HOMEDISPLAYEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7706,7 +7706,7 @@ void send_SCI_LINEENDDISPLAY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7726,7 +7726,7 @@ void send_SCI_LINEENDDISPLAYEXTEND(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7746,7 +7746,7 @@ void send_SCI_HOMEWRAP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7766,7 +7766,7 @@ void send_SCI_HOMEWRAPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7786,7 +7786,7 @@ void send_SCI_LINEENDWRAP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7806,7 +7806,7 @@ void send_SCI_LINEENDWRAPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7826,7 +7826,7 @@ void send_SCI_VCHOMEWRAP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7846,7 +7846,7 @@ void send_SCI_VCHOMEWRAPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7866,7 +7866,7 @@ void send_SCI_LINECOPY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7886,7 +7886,7 @@ void send_SCI_MOVECARETINSIDEVIEW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7905,7 +7905,7 @@ void send_SCI_MOVECARETINSIDEVIEW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7924,7 +7924,7 @@ void send_SCI_BRACEHIGHLIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7944,7 +7944,7 @@ void send_SCI_BRACEHIGHLIGHTINDICATOR(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7964,7 +7964,7 @@ void send_SCI_BRACEBADLIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -7984,7 +7984,7 @@ void send_SCI_BRACEBADLIGHTINDICATOR(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8003,7 +8003,7 @@ void send_SCI_BRACEBADLIGHTINDICATOR(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8021,7 +8021,7 @@ bool send_SCI_GETVIEWEOL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8040,7 +8040,7 @@ void send_SCI_SETVIEWEOL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8059,7 +8059,7 @@ void send_SCI_SETVIEWEOL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8078,7 +8078,7 @@ void send_SCI_SETDOCPOINTER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8098,7 +8098,7 @@ void send_SCI_SETMODEVENTMASK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8117,7 +8117,7 @@ void send_SCI_SETMODEVENTMASK(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8136,7 +8136,7 @@ void send_SCI_SETEDGECOLUMN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8155,7 +8155,7 @@ core.stdc.stdint.intptr_t send_SCI_GETEDGEMODE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8174,7 +8174,7 @@ void send_SCI_SETEDGEMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8193,7 +8193,7 @@ void send_SCI_SETEDGEMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8212,7 +8212,7 @@ void send_SCI_SETEDGECOLOUR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8232,7 +8232,7 @@ void send_SCI_MULTIEDGEADDLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8252,7 +8252,7 @@ void send_SCI_MULTIEDGECLEARALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8272,7 +8272,7 @@ void send_SCI_SEARCHANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8291,7 +8291,7 @@ void send_SCI_SEARCHANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8309,7 +8309,7 @@ void send_SCI_SEARCHANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8327,7 +8327,7 @@ void send_SCI_SEARCHANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8346,7 +8346,7 @@ void send_SCI_USEPOPUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8365,7 +8365,7 @@ bool send_SCI_SELECTIONISRECTANGLE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8383,7 +8383,7 @@ void send_SCI_SETZOOM(core.sys.windows.windef.HWND _scintillaHandle, core.stdc.s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8401,7 +8401,7 @@ core.stdc.stdint.intptr_t send_SCI_GETZOOM(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8419,7 +8419,7 @@ core.stdc.stdint.intptr_t send_SCI_GETZOOM(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8438,7 +8438,7 @@ void send_SCI_ADDREFDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8458,7 +8458,7 @@ void send_SCI_RELEASEDOCUMENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8477,7 +8477,7 @@ core.stdc.stdint.intptr_t send_SCI_GETDOCUMENTOPTIONS(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8495,7 +8495,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMODEVENTMASK(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8514,7 +8514,7 @@ void send_SCI_SETCOMMANDEVENTS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8533,7 +8533,7 @@ bool send_SCI_GETCOMMANDEVENTS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8552,7 +8552,7 @@ void send_SCI_SETFOCUS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8571,7 +8571,7 @@ bool send_SCI_GETFOCUS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8590,7 +8590,7 @@ void send_SCI_SETSTATUS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8609,7 +8609,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSTATUS(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8628,7 +8628,7 @@ void send_SCI_SETMOUSEDOWNCAPTURES(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8647,7 +8647,7 @@ bool send_SCI_GETMOUSEDOWNCAPTURES(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8666,7 +8666,7 @@ void send_SCI_SETMOUSEWHEELCAPTURES(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8685,7 +8685,7 @@ bool send_SCI_GETMOUSEWHEELCAPTURES(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8704,7 +8704,7 @@ void send_SCI_SETCURSOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8723,7 +8723,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCURSOR(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8742,7 +8742,7 @@ void send_SCI_SETCONTROLCHARSYMBOL(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8761,7 +8761,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCONTROLCHARSYMBOL(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8780,7 +8780,7 @@ void send_SCI_WORDPARTLEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8800,7 +8800,7 @@ void send_SCI_WORDPARTLEFTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8820,7 +8820,7 @@ void send_SCI_WORDPARTRIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8840,7 +8840,7 @@ void send_SCI_WORDPARTRIGHTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8860,7 +8860,7 @@ void send_SCI_SETVISIBLEPOLICY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8880,7 +8880,7 @@ void send_SCI_DELLINELEFT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8900,7 +8900,7 @@ void send_SCI_DELLINERIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8920,7 +8920,7 @@ void send_SCI_SETXOFFSET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8939,7 +8939,7 @@ core.stdc.stdint.intptr_t send_SCI_GETXOFFSET(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8958,7 +8958,7 @@ void send_SCI_CHOOSECARETX(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8978,7 +8978,7 @@ void send_SCI_GRABFOCUS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -8998,7 +8998,7 @@ void send_SCI_SETXCARETPOLICY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9018,7 +9018,7 @@ void send_SCI_SETYCARETPOLICY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9038,7 +9038,7 @@ void send_SCI_SETPRINTWRAPMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9057,7 +9057,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRINTWRAPMODE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9076,7 +9076,7 @@ void send_SCI_SETHOTSPOTACTIVEFORE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9095,7 +9095,7 @@ void send_SCI_SETHOTSPOTACTIVEFORE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9114,7 +9114,7 @@ void send_SCI_SETHOTSPOTACTIVEBACK(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9133,7 +9133,7 @@ void send_SCI_SETHOTSPOTACTIVEBACK(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9152,7 +9152,7 @@ void send_SCI_SETHOTSPOTACTIVEUNDERLINE(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9171,7 +9171,7 @@ bool send_SCI_GETHOTSPOTACTIVEUNDERLINE(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9190,7 +9190,7 @@ void send_SCI_SETHOTSPOTSINGLELINE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9209,7 +9209,7 @@ bool send_SCI_GETHOTSPOTSINGLELINE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9228,7 +9228,7 @@ void send_SCI_PARADOWN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9248,7 +9248,7 @@ void send_SCI_PARADOWNEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9268,7 +9268,7 @@ void send_SCI_PARAUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9288,7 +9288,7 @@ void send_SCI_PARAUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9307,7 +9307,7 @@ void send_SCI_PARAUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9325,7 +9325,7 @@ void send_SCI_PARAUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9343,7 +9343,7 @@ void send_SCI_PARAUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9361,7 +9361,7 @@ void send_SCI_PARAUPEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9380,7 +9380,7 @@ void send_SCI_COPYRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9400,7 +9400,7 @@ void send_SCI_COPYTEXT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9420,7 +9420,7 @@ void send_SCI_SETSELECTIONMODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9439,7 +9439,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSELECTIONMODE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9457,7 +9457,7 @@ bool send_SCI_GETMOVEEXTENDSSELECTION(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9475,7 +9475,7 @@ bool send_SCI_GETMOVEEXTENDSSELECTION(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9493,7 +9493,7 @@ bool send_SCI_GETMOVEEXTENDSSELECTION(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9512,7 +9512,7 @@ void send_SCI_LINEDOWNRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9532,7 +9532,7 @@ void send_SCI_LINEUPRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9552,7 +9552,7 @@ void send_SCI_CHARLEFTRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9572,7 +9572,7 @@ void send_SCI_CHARRIGHTRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9592,7 +9592,7 @@ void send_SCI_HOMERECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9612,7 +9612,7 @@ void send_SCI_VCHOMERECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9632,7 +9632,7 @@ void send_SCI_LINEENDRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9652,7 +9652,7 @@ void send_SCI_PAGEUPRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9672,7 +9672,7 @@ void send_SCI_PAGEDOWNRECTEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9692,7 +9692,7 @@ void send_SCI_STUTTEREDPAGEUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9712,7 +9712,7 @@ void send_SCI_STUTTEREDPAGEUPEXTEND(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9732,7 +9732,7 @@ void send_SCI_STUTTEREDPAGEDOWN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9752,7 +9752,7 @@ void send_SCI_STUTTEREDPAGEDOWNEXTEND(core.sys.windows.windef.HWND _scintillaHan
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9772,7 +9772,7 @@ void send_SCI_WORDLEFTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9792,7 +9792,7 @@ void send_SCI_WORDLEFTENDEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9812,7 +9812,7 @@ void send_SCI_WORDRIGHTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9832,7 +9832,7 @@ void send_SCI_WORDRIGHTENDEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9852,7 +9852,7 @@ void send_SCI_SETWHITESPACECHARS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9871,7 +9871,7 @@ core.stdc.stdint.intptr_t send_SCI_GETWHITESPACECHARS(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9890,7 +9890,7 @@ void send_SCI_SETPUNCTUATIONCHARS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9909,7 +9909,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPUNCTUATIONCHARS(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9928,7 +9928,7 @@ void send_SCI_SETCHARSDEFAULT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9947,7 +9947,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETCURRENT(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9965,7 +9965,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETCURRENTTEXT(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -9984,7 +9984,7 @@ void send_SCI_AUTOCSETCASEINSENSITIVEBEHAVIOUR(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10003,7 +10003,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETCASEINSENSITIVEBEHAVIOUR(core.sys.win
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10022,7 +10022,7 @@ void send_SCI_AUTOCSETMULTI(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10041,7 +10041,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETMULTI(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10060,7 +10060,7 @@ void send_SCI_AUTOCSETORDER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10079,7 +10079,7 @@ core.stdc.stdint.intptr_t send_SCI_AUTOCGETORDER(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10098,7 +10098,7 @@ void send_SCI_ALLOCATE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10117,7 +10117,7 @@ void send_SCI_ALLOCATE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10136,7 +10136,7 @@ void send_SCI_SETLENGTHFORENCODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10155,7 +10155,7 @@ void send_SCI_SETLENGTHFORENCODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10173,7 +10173,7 @@ void send_SCI_SETLENGTHFORENCODE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10191,7 +10191,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETSTICKY(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10210,7 +10210,7 @@ void send_SCI_SETCARETSTICKY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10230,7 +10230,7 @@ void send_SCI_TOGGLECARETSTICKY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10250,7 +10250,7 @@ void send_SCI_SETPASTECONVERTENDINGS(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10269,7 +10269,7 @@ bool send_SCI_GETPASTECONVERTENDINGS(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10288,7 +10288,7 @@ void send_SCI_SELECTIONDUPLICATE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10308,7 +10308,7 @@ void send_SCI_SETCARETLINEBACKALPHA(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10327,7 +10327,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETLINEBACKALPHA(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10346,7 +10346,7 @@ void send_SCI_SETCARETSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10365,7 +10365,7 @@ core.stdc.stdint.intptr_t send_SCI_GETCARETSTYLE(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10384,7 +10384,7 @@ void send_SCI_SETINDICATORCURRENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10403,7 +10403,7 @@ core.stdc.stdint.intptr_t send_SCI_GETINDICATORCURRENT(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10422,7 +10422,7 @@ void send_SCI_SETINDICATORVALUE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10441,7 +10441,7 @@ core.stdc.stdint.intptr_t send_SCI_GETINDICATORVALUE(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10460,7 +10460,7 @@ void send_SCI_INDICATORFILLRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10480,7 +10480,7 @@ void send_SCI_INDICATORCLEARRANGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10499,7 +10499,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICATORALLONFOR(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10517,7 +10517,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICATORVALUEAT(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10535,7 +10535,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICATORSTART(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10553,7 +10553,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICATOREND(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10572,7 +10572,7 @@ void send_SCI_SETPOSITIONCACHE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10591,7 +10591,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPOSITIONCACHE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10610,7 +10610,7 @@ void send_SCI_COPYALLOWLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10629,7 +10629,7 @@ void send_SCI_COPYALLOWLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10647,7 +10647,7 @@ void send_SCI_COPYALLOWLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10665,7 +10665,7 @@ void send_SCI_COPYALLOWLINE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10684,7 +10684,7 @@ void send_SCI_INDICSETALPHA(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10703,7 +10703,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICGETALPHA(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10722,7 +10722,7 @@ void send_SCI_INDICSETOUTLINEALPHA(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10741,7 +10741,7 @@ core.stdc.stdint.intptr_t send_SCI_INDICGETOUTLINEALPHA(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10760,7 +10760,7 @@ void send_SCI_SETEXTRAASCENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10779,7 +10779,7 @@ core.stdc.stdint.intptr_t send_SCI_GETEXTRAASCENT(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10798,7 +10798,7 @@ void send_SCI_SETEXTRADESCENT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10817,7 +10817,7 @@ core.stdc.stdint.intptr_t send_SCI_GETEXTRADESCENT(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10835,7 +10835,7 @@ core.stdc.stdint.intptr_t send_SCI_MARKERSYMBOLDEFINED(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10854,7 +10854,7 @@ void send_SCI_MARGINSETTEXT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10873,7 +10873,7 @@ core.stdc.stdint.intptr_t send_SCI_MARGINGETTEXT(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10892,7 +10892,7 @@ void send_SCI_MARGINSETSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10911,7 +10911,7 @@ core.stdc.stdint.intptr_t send_SCI_MARGINGETSTYLE(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10930,7 +10930,7 @@ void send_SCI_MARGINSETSTYLES(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10949,7 +10949,7 @@ core.stdc.stdint.intptr_t send_SCI_MARGINGETSTYLES(core.sys.windows.windef.HWND 
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10968,7 +10968,7 @@ void send_SCI_MARGINTEXTCLEARALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -10988,7 +10988,7 @@ void send_SCI_MARGINSETSTYLEOFFSET(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11007,7 +11007,7 @@ core.stdc.stdint.intptr_t send_SCI_MARGINGETSTYLEOFFSET(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11026,7 +11026,7 @@ void send_SCI_SETMARGINOPTIONS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11045,7 +11045,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMARGINOPTIONS(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11064,7 +11064,7 @@ void send_SCI_ANNOTATIONSETTEXT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11083,7 +11083,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETTEXT(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11102,7 +11102,7 @@ void send_SCI_ANNOTATIONSETSTYLE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11121,7 +11121,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETSTYLE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11140,7 +11140,7 @@ void send_SCI_ANNOTATIONSETSTYLES(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11159,7 +11159,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETSTYLES(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11177,7 +11177,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETLINES(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11196,7 +11196,7 @@ void send_SCI_ANNOTATIONCLEARALL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11216,7 +11216,7 @@ void send_SCI_ANNOTATIONSETVISIBLE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11235,7 +11235,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETVISIBLE(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11254,7 +11254,7 @@ void send_SCI_ANNOTATIONSETSTYLEOFFSET(core.sys.windows.windef.HWND _scintillaHa
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11273,7 +11273,7 @@ core.stdc.stdint.intptr_t send_SCI_ANNOTATIONGETSTYLEOFFSET(core.sys.windows.win
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11292,7 +11292,7 @@ void send_SCI_RELEASEALLEXTENDEDSTYLES(core.sys.windows.windef.HWND _scintillaHa
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11311,7 +11311,7 @@ core.stdc.stdint.intptr_t send_SCI_ALLOCATEEXTENDEDSTYLES(core.sys.windows.winde
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11330,7 +11330,7 @@ void send_SCI_ADDUNDOACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11349,7 +11349,7 @@ void send_SCI_ADDUNDOACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11367,7 +11367,7 @@ void send_SCI_ADDUNDOACTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11386,7 +11386,7 @@ void send_SCI_SETMOUSESELECTIONRECTANGULARSWITCH(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11405,7 +11405,7 @@ bool send_SCI_GETMOUSESELECTIONRECTANGULARSWITCH(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11424,7 +11424,7 @@ void send_SCI_SETMULTIPLESELECTION(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11443,7 +11443,7 @@ bool send_SCI_GETMULTIPLESELECTION(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11462,7 +11462,7 @@ void send_SCI_SETADDITIONALSELECTIONTYPING(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11481,7 +11481,7 @@ bool send_SCI_GETADDITIONALSELECTIONTYPING(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11500,7 +11500,7 @@ void send_SCI_SETADDITIONALCARETSBLINK(core.sys.windows.windef.HWND _scintillaHa
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11519,7 +11519,7 @@ bool send_SCI_GETADDITIONALCARETSBLINK(core.sys.windows.windef.HWND _scintillaHa
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11538,7 +11538,7 @@ void send_SCI_SETADDITIONALCARETSVISIBLE(core.sys.windows.windef.HWND _scintilla
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11557,7 +11557,7 @@ bool send_SCI_GETADDITIONALCARETSVISIBLE(core.sys.windows.windef.HWND _scintilla
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11575,7 +11575,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSELECTIONS(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11593,7 +11593,7 @@ bool send_SCI_GETSELECTIONEMPTY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11612,7 +11612,7 @@ void send_SCI_CLEARSELECTIONS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11632,7 +11632,7 @@ void send_SCI_SETSELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11652,7 +11652,7 @@ void send_SCI_ADDSELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11672,7 +11672,7 @@ void send_SCI_DROPSELECTIONN(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11692,7 +11692,7 @@ void send_SCI_SETMAINSELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11711,7 +11711,7 @@ core.stdc.stdint.intptr_t send_SCI_GETMAINSELECTION(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11730,7 +11730,7 @@ void send_SCI_SETSELECTIONNCARET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11749,7 +11749,7 @@ void send_SCI_SETSELECTIONNCARET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11768,7 +11768,7 @@ void send_SCI_SETSELECTIONNANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11787,7 +11787,7 @@ void send_SCI_SETSELECTIONNANCHOR(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11806,7 +11806,7 @@ void send_SCI_SETSELECTIONNCARETVIRTUALSPACE(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11825,7 +11825,7 @@ void send_SCI_SETSELECTIONNCARETVIRTUALSPACE(core.sys.windows.windef.HWND _scint
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11844,7 +11844,7 @@ void send_SCI_SETSELECTIONNANCHORVIRTUALSPACE(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11863,7 +11863,7 @@ void send_SCI_SETSELECTIONNANCHORVIRTUALSPACE(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11882,7 +11882,7 @@ void send_SCI_SETSELECTIONNSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11901,7 +11901,7 @@ void send_SCI_SETSELECTIONNSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11920,7 +11920,7 @@ void send_SCI_SETSELECTIONNEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11939,7 +11939,7 @@ void send_SCI_SETSELECTIONNEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11958,7 +11958,7 @@ void send_SCI_SETRECTANGULARSELECTIONCARET(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11977,7 +11977,7 @@ void send_SCI_SETRECTANGULARSELECTIONCARET(core.sys.windows.windef.HWND _scintil
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -11996,7 +11996,7 @@ void send_SCI_SETRECTANGULARSELECTIONANCHOR(core.sys.windows.windef.HWND _scinti
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12015,7 +12015,7 @@ void send_SCI_SETRECTANGULARSELECTIONANCHOR(core.sys.windows.windef.HWND _scinti
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12034,7 +12034,7 @@ void send_SCI_SETRECTANGULARSELECTIONCARETVIRTUALSPACE(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12053,7 +12053,7 @@ void send_SCI_SETRECTANGULARSELECTIONCARETVIRTUALSPACE(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12072,7 +12072,7 @@ void send_SCI_SETRECTANGULARSELECTIONANCHORVIRTUALSPACE(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12091,7 +12091,7 @@ void send_SCI_SETRECTANGULARSELECTIONANCHORVIRTUALSPACE(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12110,7 +12110,7 @@ void send_SCI_SETVIRTUALSPACEOPTIONS(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12129,7 +12129,7 @@ core.stdc.stdint.intptr_t send_SCI_GETVIRTUALSPACEOPTIONS(core.sys.windows.winde
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12148,7 +12148,7 @@ void send_SCI_SETRECTANGULARSELECTIONMODIFIER(core.sys.windows.windef.HWND _scin
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12167,7 +12167,7 @@ core.stdc.stdint.intptr_t send_SCI_GETRECTANGULARSELECTIONMODIFIER(core.sys.wind
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12186,7 +12186,7 @@ void send_SCI_SETADDITIONALSELFORE(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12206,7 +12206,7 @@ void send_SCI_SETADDITIONALSELBACK(core.sys.windows.windef.HWND _scintillaHandle
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12226,7 +12226,7 @@ void send_SCI_SETADDITIONALSELALPHA(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12245,7 +12245,7 @@ core.stdc.stdint.intptr_t send_SCI_GETADDITIONALSELALPHA(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12264,7 +12264,7 @@ void send_SCI_SETADDITIONALCARETFORE(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12283,7 +12283,7 @@ void send_SCI_SETADDITIONALCARETFORE(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12302,7 +12302,7 @@ void send_SCI_ROTATESELECTION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12322,7 +12322,7 @@ void send_SCI_SWAPMAINANCHORCARET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12342,7 +12342,7 @@ void send_SCI_MULTIPLESELECTADDNEXT(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12362,7 +12362,7 @@ void send_SCI_MULTIPLESELECTADDEACH(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12381,7 +12381,7 @@ core.stdc.stdint.intptr_t send_SCI_CHANGELEXERSTATE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12399,7 +12399,7 @@ core.stdc.stdint.intptr_t send_SCI_CHANGELEXERSTATE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12418,7 +12418,7 @@ void send_SCI_VERTICALCENTRECARET(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12438,7 +12438,7 @@ void send_SCI_MOVESELECTEDLINESUP(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12458,7 +12458,7 @@ void send_SCI_MOVESELECTEDLINESDOWN(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12478,7 +12478,7 @@ void send_SCI_SETIDENTIFIER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12497,7 +12497,7 @@ core.stdc.stdint.intptr_t send_SCI_GETIDENTIFIER(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12516,7 +12516,7 @@ void send_SCI_RGBAIMAGESETWIDTH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12536,7 +12536,7 @@ void send_SCI_RGBAIMAGESETHEIGHT(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12556,7 +12556,7 @@ void send_SCI_RGBAIMAGESETSCALE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12576,7 +12576,7 @@ void send_SCI_MARKERDEFINERGBAIMAGE(core.sys.windows.windef.HWND _scintillaHandl
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12596,7 +12596,7 @@ void send_SCI_REGISTERRGBAIMAGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12616,7 +12616,7 @@ void send_SCI_SCROLLTOSTART(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12636,7 +12636,7 @@ void send_SCI_SCROLLTOEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12656,7 +12656,7 @@ void send_SCI_SETTECHNOLOGY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12675,7 +12675,7 @@ core.stdc.stdint.intptr_t send_SCI_GETTECHNOLOGY(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12693,7 +12693,7 @@ core.stdc.stdint.intptr_t send_SCI_GETTECHNOLOGY(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12712,7 +12712,7 @@ void send_SCI_FINDINDICATORSHOW(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12732,7 +12732,7 @@ void send_SCI_FINDINDICATORFLASH(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12752,7 +12752,7 @@ void send_SCI_FINDINDICATORHIDE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12772,7 +12772,7 @@ void send_SCI_VCHOMEDISPLAY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12792,7 +12792,7 @@ void send_SCI_VCHOMEDISPLAYEXTEND(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12811,7 +12811,7 @@ bool send_SCI_GETCARETLINEVISIBLEALWAYS(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12830,7 +12830,7 @@ void send_SCI_SETCARETLINEVISIBLEALWAYS(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12850,7 +12850,7 @@ void send_SCI_SETLINEENDTYPESALLOWED(core.sys.windows.windef.HWND _scintillaHand
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12869,7 +12869,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEENDTYPESALLOWED(core.sys.windows.winde
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12887,7 +12887,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEENDTYPESACTIVE(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12906,7 +12906,7 @@ void send_SCI_SETREPRESENTATION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12925,7 +12925,7 @@ core.stdc.stdint.intptr_t send_SCI_GETREPRESENTATION(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12944,7 +12944,7 @@ void send_SCI_CLEARREPRESENTATION(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12964,7 +12964,7 @@ void send_SCI_STARTRECORD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -12984,7 +12984,7 @@ void send_SCI_STOPRECORD(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13004,7 +13004,7 @@ void send_SCI_SETLEXER(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13023,7 +13023,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLEXER(core.sys.windows.windef.HWND _scinti
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13042,7 +13042,7 @@ void send_SCI_COLOURISE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13062,7 +13062,7 @@ void send_SCI_SETPROPERTY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13083,7 +13083,7 @@ void send_SCI_SETKEYWORDS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13103,7 +13103,7 @@ void send_SCI_SETLEXERLANGUAGE(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13123,7 +13123,7 @@ void send_SCI_LOADLEXERLIBRARY(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13142,7 +13142,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPROPERTY(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13160,7 +13160,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPROPERTYEXPANDED(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13178,7 +13178,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPROPERTYINT(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13196,7 +13196,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLEXERLANGUAGE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13214,7 +13214,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLEXERLANGUAGE(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13232,7 +13232,7 @@ core.stdc.stdint.intptr_t send_SCI_PROPERTYNAMES(core.sys.windows.windef.HWND _s
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13250,7 +13250,7 @@ core.stdc.stdint.intptr_t send_SCI_PROPERTYTYPE(core.sys.windows.windef.HWND _sc
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13268,7 +13268,7 @@ core.stdc.stdint.intptr_t send_SCI_DESCRIBEPROPERTY(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13286,7 +13286,7 @@ core.stdc.stdint.intptr_t send_SCI_DESCRIBEKEYWORDSETS(core.sys.windows.windef.H
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13304,7 +13304,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINEENDTYPESSUPPORTED(core.sys.windows.win
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13322,7 +13322,7 @@ core.stdc.stdint.intptr_t send_SCI_ALLOCATESUBSTYLES(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13340,7 +13340,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSUBSTYLESSTART(core.sys.windows.windef.HWN
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13358,7 +13358,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSUBSTYLESLENGTH(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13376,7 +13376,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSTYLEFROMSUBSTYLE(core.sys.windows.windef.
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13394,7 +13394,7 @@ core.stdc.stdint.intptr_t send_SCI_GETPRIMARYSTYLEFROMSTYLE(core.sys.windows.win
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13413,7 +13413,7 @@ void send_SCI_FREESUBSTYLES(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13433,7 +13433,7 @@ void send_SCI_SETIDENTIFIERS(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13452,7 +13452,7 @@ core.stdc.stdint.intptr_t send_SCI_DISTANCETOSECONDARYSTYLES(core.sys.windows.wi
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13470,7 +13470,7 @@ core.stdc.stdint.intptr_t send_SCI_GETSUBSTYLEBASES(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13488,7 +13488,7 @@ core.stdc.stdint.intptr_t send_SCI_GETNAMEDSTYLES(core.sys.windows.windef.HWND _
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13506,7 +13506,7 @@ core.stdc.stdint.intptr_t send_SCI_NAMEOFSTYLE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13524,7 +13524,7 @@ core.stdc.stdint.intptr_t send_SCI_TAGSOFSTYLE(core.sys.windows.windef.HWND _sci
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13542,7 +13542,7 @@ core.stdc.stdint.intptr_t send_SCI_DESCRIPTIONOFSTYLE(core.sys.windows.windef.HW
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13561,7 +13561,7 @@ core.stdc.stdint.intptr_t send_SCI_GETBIDIRECTIONAL(core.sys.windows.windef.HWND
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13580,7 +13580,7 @@ void send_SCI_SETBIDIRECTIONAL(core.sys.windows.windef.HWND _scintillaHandle)
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13599,7 +13599,7 @@ core.stdc.stdint.intptr_t send_SCI_GETLINECHARACTERINDEX(core.sys.windows.windef
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13618,7 +13618,7 @@ void send_SCI_ALLOCATELINECHARACTERINDEX(core.sys.windows.windef.HWND _scintilla
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13638,7 +13638,7 @@ void send_SCI_RELEASELINECHARACTERINDEX(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13657,7 +13657,7 @@ void send_SCI_RELEASELINECHARACTERINDEX(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -13675,7 +13675,7 @@ void send_SCI_RELEASELINECHARACTERINDEX(core.sys.windows.windef.HWND _scintillaH
 		assert(_scintillaHandle != core.sys.windows.windef.NULL);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;

@@ -109,7 +109,7 @@ mixin template npp_DLLMain()
 				pure nothrow @safe @nogc
 				export core.sys.windows.windef.BOOL DllMain(core.sys.windows.basetsd.HANDLE hModule, core.sys.windows.windef.DWORD reasonForCall, core.sys.windows.winnt.LPVOID lpReserved)
 
-					body
+					do
 					{
 						static import core.sys.windows.windef;
 
@@ -121,7 +121,7 @@ mixin template npp_DLLMain()
 				nothrow @nogc
 				export core.sys.windows.windef.BOOL DllMain(core.sys.windows.basetsd.HANDLE hModule, core.sys.windows.windef.DWORD reasonForCall, core.sys.windows.winnt.LPVOID lpReserved)
 
-					body
+					do
 					{
 						static import core.sys.windows.windef;
 						static import core.sys.windows.winnt;
@@ -160,7 +160,7 @@ mixin template npp_DLLMain()
 			extern (Windows)
 			export core.sys.windows.windef.BOOL DllMain(core.sys.windows.basetsd.HANDLE hModule, core.sys.windows.windef.DWORD reasonForCall, core.sys.windows.winnt.LPVOID lpReserved)
 
-				body
+				do
 				{
 					static import core.sys.windows.dll;
 					static import core.sys.windows.windef;
@@ -216,7 +216,7 @@ mixin template npp_getName()
 		pure nothrow @safe @nogc
 		export const (core.sys.windows.winnt.WCHAR)* getName()
 
-			body
+			do
 			{
 				static import core.sys.windows.windef;
 
@@ -238,7 +238,7 @@ mixin template npp_getName(wstring plugin_name)
 		pure nothrow @safe @nogc
 		export const (core.sys.windows.winnt.WCHAR)* getName()
 
-			body
+			do
 			{
 				static import core.sys.windows.windef;
 				static import npp_api.pluginfunc.string;
@@ -273,7 +273,7 @@ npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem[main_menu_lengt
 		assert(main_menu_length == menu_def.length);
 	}
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.plugininterface;
 		static import npp_api.pluginfunc.string;
@@ -301,7 +301,7 @@ mixin template npp_getFuncsArray()
 		pure nothrow @nogc
 		export const (npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem)* getFuncsArray(int* nbF)
 
-			body
+			do
 			{
 				/+
 				if (nbF == null) {
@@ -346,7 +346,7 @@ mixin template npp_getFuncsArray(alias func_list)
 				assert(int.max >= func_list.length);
 			}
 
-			body
+			do
 			{
 				static import std.traits;
 				static import npp_api.pluginfunc.basic_interface;
@@ -385,7 +385,7 @@ mixin template npp_isUnicode()
 		pure nothrow @safe @nogc
 		export core.sys.windows.windef.BOOL isUnicode()
 
-			body
+			do
 			{
 				static import core.sys.windows.windef;
 
@@ -406,7 +406,7 @@ mixin template npp_setInfo()
 			pure nothrow @safe @nogc
 			export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-				body
+				do
 				{
 				}
 		} else static if (std.traits.hasFunctionAttributes!(.pluginSetInfo, "@nogc")) {
@@ -415,7 +415,7 @@ mixin template npp_setInfo()
 			nothrow @nogc
 			export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-				body
+				do
 				{
 					static if (__traits(compiles, .nppData)) {
 						.nppData = notpadPlusData;
@@ -433,7 +433,7 @@ mixin template npp_setInfo()
 			nothrow
 			export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-				body
+				do
 				{
 					static if (__traits(compiles, .nppData)) {
 						.nppData = notpadPlusData;
@@ -462,7 +462,7 @@ mixin template npp_setInfo(alias nppData)
 			nothrow @nogc
 			export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-				body
+				do
 				{
 					nppData = notpadPlusData;
 
@@ -480,7 +480,7 @@ mixin template npp_setInfo(alias nppData)
 			nothrow
 			export void setInfo(npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData notpadPlusData)
 
-				body
+				do
 				{
 					nppData = notpadPlusData;
 
@@ -538,7 +538,7 @@ mixin template npp_setInfo(alias nppData, alias main_menu, alias menu_def)
 					assert(menu_def.length >= main_menu.length);
 				}
 
-				body
+				do
 				{
 					nppData = notpadPlusData;
 
@@ -561,7 +561,7 @@ mixin template npp_setInfo(alias nppData, alias main_menu, alias menu_def)
 					assert(menu_def.length >= main_menu.length);
 				}
 
-				body
+				do
 				{
 					nppData = notpadPlusData;
 
@@ -590,7 +590,7 @@ mixin template npp_beNotified()
 			pure nothrow @safe @nogc
 			export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-				body
+				do
 				{
 					/+
 					static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
@@ -641,7 +641,7 @@ mixin template npp_beNotified()
 			nothrow @nogc
 			export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-				body
+				do
 				{
 					/+
 					if (notifyCode == null) {
@@ -657,7 +657,7 @@ mixin template npp_beNotified()
 			nothrow
 			export void beNotified(npp_api.scintilla.scintilla.SCNotification* notifyCode)
 
-				body
+				do
 				{
 					/+
 					if (notifyCode == null) {
@@ -684,7 +684,7 @@ mixin template npp_messageProc()
 			pure nothrow @safe @nogc
 			export core.sys.windows.windef.LRESULT messageProc(core.sys.windows.windef.UINT Message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-				body
+				do
 				{
 					static import core.sys.windows.windef;
 
@@ -708,7 +708,7 @@ mixin template npp_messageProc()
 			nothrow @nogc
 			export core.sys.windows.windef.LRESULT messageProc(core.sys.windows.windef.UINT Message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-				body
+				do
 				{
 					static import core.sys.windows.windef;
 
@@ -724,7 +724,7 @@ mixin template npp_messageProc()
 			nothrow
 			export core.sys.windows.windef.LRESULT messageProc(core.sys.windows.windef.UINT Message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-				body
+				do
 				{
 					static import core.sys.windows.windef;
 

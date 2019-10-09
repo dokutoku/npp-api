@@ -44,7 +44,7 @@ void to_c_wstring(size_t LENGTH)(const wchar[] input, ref wchar[LENGTH] buffer)
 		assert(LENGTH >= (input.length + 1));
 	}
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -56,7 +56,7 @@ pure nothrow @safe @nogc
 size_t count_string(S)(const S c_wstring)
 	if (std.traits.isStaticArray!(S))
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -94,7 +94,7 @@ void copy_string(S_array, T_array)(ref S_array output_string, const T_array inpu
 		assert(output_string[$ - 1] == '\0');
 	}
 
-	body
+	do
 	{
 		output_string[] = '\0';
 		size_t c_max = output_string.length - 1;
@@ -116,7 +116,7 @@ wchar[LENGTH] copy_string(size_t LENGTH)(const wchar[LENGTH] input_string)
 		assert(result[$ - 1] == '\0');
 	}
 
-	body
+	do
 	{
 		wchar[LENGTH] output_string;
 		output_string[] = '\0';
@@ -134,7 +134,7 @@ version (Not_betterC):
 pure nothrow @safe
 wstring to_c_wstring(const wchar[] input)
 
-	body
+	do
 	{
 		return (input ~ '\0').idup;
 	}
@@ -148,7 +148,7 @@ immutable (C)[] from_stringz(C, size_t INPUT_LENGTH)(const ref C[INPUT_LENGTH] i
 		static assert(INPUT_LENGTH >= 1);
 	}
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -167,7 +167,7 @@ immutable (C)[] from_stringz(C)(const ref C[] input)
 		assert(input.length >= 1);
 	}
 
-	body
+	do
 	{
 		size_t i = 0;
 
@@ -181,7 +181,7 @@ pure nothrow @trusted
 immutable (C)[] from_stringz(C)(const C* input)
 	if (std.traits.isSomeChar!(C))
 
-	body
+	do
 	{
 		size_t i = 0;
 		C[] output_buf;
@@ -199,7 +199,7 @@ pure nothrow @trusted
 immutable (C)[] from_stringz(C)(const C* input, size_t max_length)
 	if (std.traits.isSomeChar!(C))
 
-	body
+	do
 	{
 		if (max_length == 0) {
 			return null;
@@ -224,7 +224,7 @@ immutable (C)[] to_cstring(C, size_t INPUT_LENGTH)(const ref C[INPUT_LENGTH] inp
 		static assert(INPUT_LENGTH >= 2);
 	}
 
-	body
+	do
 	{
 		enum size_t c_max = INPUT_LENGTH - 1;
 		size_t i = 0;
@@ -250,7 +250,7 @@ immutable (C)[] to_cstring(C, size_t INPUT_LENGTH, size_t OUTPUT_LENGTH)(const r
 		static assert(OUTPUT_LENGTH >= INPUT_LENGTH);
 	}
 
-	body
+	do
 	{
 		size_t i = 0;
 		size_t c_max = INPUT_LENGTH - 1;
@@ -269,7 +269,7 @@ pure nothrow @trusted
 immutable (C)[] to_cstring(C)(const C* input, size_t max_length)
 	if (std.traits.isSomeChar!(C))
 
-	body
+	do
 	{
 		if (max_length == 0) {
 			return null;

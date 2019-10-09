@@ -34,7 +34,7 @@ extern (C)
 pure nothrow @safe @nogc
 void dummy_func()
 
-	body
+	do
 	{
 	}
 

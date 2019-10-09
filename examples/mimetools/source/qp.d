@@ -40,7 +40,7 @@ public:
 			}
 		}
 
-		body
+		do
 		{
 			this.initVar();
 			this._bufLen = str.length * 2;
@@ -73,7 +73,7 @@ public:
 			}
 		}
 
-		body
+		do
 		{
 			this.initVar();
 			char[.line_buf_length] line;
@@ -114,7 +114,7 @@ private:
 			assert(pStr[$ - 1] == '\0');
 		}
 
-		body
+		do
 		{
 			size_t i = 0;
 			size_t len = core.stdc.string.strlen(&(pStr[j]));
@@ -187,7 +187,7 @@ private:
 			assert(is_null_found);
 		}
 
-		body
+		do
 		{
 			size_t len = core.stdc.string.strlen(&(line2Trans[0]));
 
@@ -221,7 +221,7 @@ private:
 	pure nothrow @safe
 	void putQPChar()
 
-		body
+		do
 		{
 			// it happens rarely, but it happens
 			if (this._i >= this._bufLen) {
@@ -245,7 +245,7 @@ private:
 	pure nothrow @safe @nogc
 	void getQPChar(char c)
 
-		body
+		do
 		{
 			bool crlf = false;
 
@@ -283,7 +283,7 @@ private:
 	pure nothrow @safe @nogc
 	int charToDigit(char c) const
 
-		body
+		do
 		{
 			if ((c >= '0') && (c <= '9')) {
 				return (c - '0');
@@ -299,7 +299,7 @@ private:
 	pure nothrow @safe @nogc
 	ubyte makeChar(char hiChar, char loChar) const
 
-		body
+		do
 		{
 			auto hi = this.charToDigit(hiChar);
 
@@ -319,7 +319,7 @@ private:
 	pure nothrow @safe @nogc
 	void initVar()
 
-		body
+		do
 		{
 			if (this._buffer != null) {
 				this._buffer = null;
@@ -339,7 +339,7 @@ private:
 			assert(i >= 0);
 		}
 
-		body
+		do
 		{
 			if (i < 10) {
 				return cast(char)('0' + i);

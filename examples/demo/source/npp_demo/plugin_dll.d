@@ -65,7 +65,7 @@ void pluginInit(core.sys.windows.basetsd.HANDLE hModule)
 	{
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import core.sys.windows.windef;
@@ -81,7 +81,7 @@ pragma(inline, true)
 nothrow
 void pluginBeNotified(ref npp_api.scintilla.scintilla.SCNotification notifyCode)
 
-	body
+	do
 	{
 		static import core.stdc.ctype;
 		static import core.stdc.string;

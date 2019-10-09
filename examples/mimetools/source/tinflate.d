@@ -123,7 +123,7 @@ private static immutable ubyte[] clcidx =
 pure nothrow @safe @nogc
 private void tinf_build_bits_base(ref ubyte[30] bits, ref ushort[30] base, int delta, int first)
 
-	body
+	do
 	{
 		size_t i;
 		int sum;
@@ -150,7 +150,7 @@ private void tinf_build_bits_base(ref ubyte[30] bits, ref ushort[30] base, int d
 pure nothrow @safe @nogc
 private void tinf_build_fixed_trees(ref .TINF_TREE lt, ref .TINF_TREE dt)
 
-	body
+	do
 	{
 		size_t i;
 
@@ -197,7 +197,7 @@ private void tinf_build_fixed_trees(ref .TINF_TREE lt, ref .TINF_TREE dt)
 pure nothrow @safe @nogc
 private void tinf_build_tree(ref .TINF_TREE t, const ubyte[] lengths, uint num)
 
-	body
+	do
 	{
 		ushort[16] offs;
 		size_t i;
@@ -239,7 +239,7 @@ private void tinf_build_tree(ref .TINF_TREE t, const ubyte[] lengths, uint num)
 pure nothrow @nogc
 private int tinf_getbit(ref .TINF_DATA d)
 
-	body
+	do
 	{
 		uint bit;
 
@@ -263,7 +263,7 @@ private int tinf_getbit(ref .TINF_DATA d)
 pure nothrow @nogc
 private uint tinf_read_bits(ref .TINF_DATA d, int num, int base)
 
-	body
+	do
 	{
 		uint val = 0;
 
@@ -287,7 +287,7 @@ private uint tinf_read_bits(ref .TINF_DATA d, int num, int base)
 pure nothrow @nogc
 private int tinf_decode_symbol(ref .TINF_DATA d, ref .TINF_TREE t)
 
-	body
+	do
 	{
 		int sum = 0;
 		int cur = 0;
@@ -312,7 +312,7 @@ private int tinf_decode_symbol(ref .TINF_DATA d, ref .TINF_TREE t)
 nothrow @nogc
 private void tinf_decode_trees(ref .TINF_DATA d, ref .TINF_TREE lt, ref .TINF_TREE dt)
 
-	body
+	do
 	{
 		.TINF_TREE code_tree;
 		ubyte[288 + 32] lengths;
@@ -403,7 +403,7 @@ private void tinf_decode_trees(ref .TINF_DATA d, ref .TINF_TREE lt, ref .TINF_TR
 nothrow @nogc
 private int tinf_inflate_block_data(ref .TINF_DATA d, ref .TINF_TREE lt, ref .TINF_TREE dt)
 
-	body
+	do
 	{
 		/* remember current output position */
 		ubyte* start = d.dest;
@@ -452,7 +452,7 @@ private int tinf_inflate_block_data(ref .TINF_DATA d, ref .TINF_TREE lt, ref .TI
 pure nothrow @nogc
 private int tinf_inflate_uncompressed_block(ref .TINF_DATA d)
 
-	body
+	do
 	{
 		uint length;
 		uint invlength;
@@ -492,7 +492,7 @@ private int tinf_inflate_uncompressed_block(ref .TINF_DATA d)
 nothrow @nogc
 private int tinf_inflate_fixed_block(ref .TINF_DATA d)
 
-	body
+	do
 	{
 		/* decode block using fixed trees */
 		return .tinf_inflate_block_data(d, .sltree, .sdtree);
@@ -504,7 +504,7 @@ private int tinf_inflate_fixed_block(ref .TINF_DATA d)
 nothrow @nogc
 private int tinf_inflate_dynamic_block(ref .TINF_DATA d)
 
-	body
+	do
 	{
 		/* decode trees from stream */
 		.tinf_decode_trees(d, d.ltree, d.dtree);
@@ -523,7 +523,7 @@ private int tinf_inflate_dynamic_block(ref .TINF_DATA d)
 nothrow @nogc
 void tinf_init()
 
-	body
+	do
 	{
 		/* build fixed huffman trees */
 		.tinf_build_fixed_trees(.sltree, .sdtree);
@@ -543,7 +543,7 @@ void tinf_init()
 nothrow @nogc
 int tinf_uncompress(void[] dest, ref uint destLen, const void[] source)
 
-	body
+	do
 	{
 		.TINF_DATA d;
 		int bfinal;

@@ -148,7 +148,7 @@ enum npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem[] main_men
 nothrow @nogc
 core.sys.windows.windef.HWND getCurrentScintillaHandle()
 
-	body
+	do
 	{
 		static import npp_api.pluginfunc.npp_msgs;
 
@@ -161,7 +161,7 @@ core.sys.windows.windef.HWND getCurrentScintillaHandle()
 nothrow
 void convertAsciiToBase64(size_t wrapLength, bool padFlag, bool byLineFlag)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.pluginfunc.scintilla_msg;
@@ -197,7 +197,7 @@ extern (C)
 nothrow
 void convertToBase64FromAscii()
 
-	body
+	do
 	{
 		.convertAsciiToBase64(0, false, false);
 	}
@@ -206,7 +206,7 @@ extern (C)
 nothrow
 void convertToBase64FromAscii_pad()
 
-	body
+	do
 	{
 		.convertAsciiToBase64(0, true, false);
 	}
@@ -215,7 +215,7 @@ extern (C)
 nothrow
 void convertToBase64FromAscii_B64Format()
 
-	body
+	do
 	{
 		.convertAsciiToBase64(64, true, false);
 	}
@@ -224,7 +224,7 @@ extern (C)
 nothrow
 void convertToBase64FromAscii_byline()
 
-	body
+	do
 	{
 		.convertAsciiToBase64(0, false, true);
 	}
@@ -232,7 +232,7 @@ void convertToBase64FromAscii_byline()
 nothrow
 void convertBase64ToAscii(bool strictFlag, bool whitespaceReset)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -268,7 +268,7 @@ extern (C)
 nothrow
 void convertToAsciiFromBase64()
 
-	body
+	do
 	{
 		.convertBase64ToAscii(false, false);
 	}
@@ -277,7 +277,7 @@ extern (C)
 nothrow
 void convertToAsciiFromBase64_strict()
 
-	body
+	do
 	{
 		.convertBase64ToAscii(true, false);
 	}
@@ -286,7 +286,7 @@ extern (C)
 nothrow
 void convertToAsciiFromBase64_whitespaceReset()
 
-	body
+	do
 	{
 		.convertBase64ToAscii(false, true);
 	}
@@ -295,7 +295,7 @@ extern (C)
 nothrow
 void convertURLMinEncode()
 
-	body
+	do
 	{
 		.convertURLEncode(false);
 	}
@@ -304,7 +304,7 @@ extern (C)
 nothrow
 void convertURLFullEncode()
 
-	body
+	do
 	{
 		.convertURLEncode(true);
 	}
@@ -312,7 +312,7 @@ void convertURLFullEncode()
 nothrow
 void convertURLEncode(bool encodeAll)
 
-	body
+	do
 	{
 		static import core.stdc.string;
 		static import core.sys.windows.windef;
@@ -350,7 +350,7 @@ extern (C)
 nothrow
 void convertURLDecode()
 
-	body
+	do
 	{
 		static import core.stdc.string;
 		static import core.sys.windows.windef;
@@ -400,7 +400,7 @@ enum qpOp
 nothrow
 void quotedPrintableConvert(.qpOp op)
 
-	body
+	do
 	{
 		static import core.stdc.string;
 		static import core.sys.windows.windef;
@@ -457,7 +457,7 @@ extern (C)
 nothrow
 void convertToAsciiFromQuotedPrintable()
 
-	body
+	do
 	{
 		.quotedPrintableConvert(.qpOp.qp_decode);
 	}
@@ -466,7 +466,7 @@ extern (C)
 nothrow
 void convertToQuotedPrintable()
 
-	body
+	do
 	{
 		.quotedPrintableConvert(.qpOp.qp_encode);
 	}
@@ -475,7 +475,7 @@ extern (Windows)
 nothrow @nogc
 core.sys.windows.windef.BOOL dlgProc(core.sys.windows.windef.HWND hwnd, core.sys.windows.windef.UINT message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -505,7 +505,7 @@ extern (C)
 nothrow @nogc
 void about()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;
@@ -534,7 +534,7 @@ extern (C)
 nothrow
 void convertSamlDecode()
 
-	body
+	do
 	{
 		static import core.stdc.string;
 		static import core.sys.windows.windef;

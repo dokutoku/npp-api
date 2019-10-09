@@ -73,7 +73,7 @@ package core.sys.windows.windef.DWORD threadZoomer(void*)
 	{
 	}
 
-	body
+	do
 	{
 		static import core.stdc.stdint;
 		static import core.sys.windows.winbase;
@@ -133,7 +133,7 @@ package core.sys.windows.windef.DWORD threadTextPlayer(void* text2display)
 	{
 	}
 
-	body
+	do
 	{
 		static import core.stdc.string;
 		static import core.stdc.time;
@@ -185,7 +185,7 @@ extern (C)
 nothrow @nogc
 void hello()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import npp_api.pluginfunc.npp_msgs;
@@ -218,7 +218,7 @@ extern (C)
 nothrow @nogc
 void helloFX()
 
-	body
+	do
 	{
 		static import core.sys.windows.basetsd;
 		static import core.sys.windows.winbase;
@@ -236,7 +236,7 @@ extern (C)
 nothrow @nogc
 void WhatIsNpp()
 
-	body
+	do
 	{
 		static import core.sys.windows.basetsd;
 		static import core.sys.windows.winbase;
@@ -258,7 +258,7 @@ By optimizing as many routines as possible without losing user friendliness, Not
 nothrow @nogc
 void insertCurrentPath(int which)
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winnls;
@@ -312,7 +312,7 @@ extern (C)
 nothrow @nogc
 void insertCurrentFullPath()
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -326,7 +326,7 @@ extern (C)
 nothrow @nogc
 void insertCurrentFileName()
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -340,7 +340,7 @@ extern (C)
 nothrow
 void insertCurrentDirectory()
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -353,7 +353,7 @@ void insertCurrentDirectory()
 nothrow @nogc
 void insertDateTime(bool format)
 
-	body
+	do
 	{
 		static import core.sys.windows.winbase;
 		static import core.sys.windows.windef;
@@ -392,7 +392,7 @@ extern (C)
 nothrow @nogc
 void insertShortDateTime()
 
-	body
+	do
 	{
 		.insertDateTime(.shortDate);
 	}
@@ -404,7 +404,7 @@ extern (C)
 nothrow @nogc
 void insertLongDateTime()
 
-	body
+	do
 	{
 		.insertDateTime(.longDate);
 	}
@@ -416,7 +416,7 @@ extern (C)
 nothrow @nogc
 void getFileNamesDemo()
 
-	body
+	do
 	{
 		static import core.stdc.stdio;
 		static import core.stdc.stdlib;
@@ -483,7 +483,7 @@ extern (C)
 nothrow @nogc
 void getSessionFileNamesDemo()
 
-	body
+	do
 	{
 		static import core.stdc.stdio;
 		static import core.stdc.stdlib;
@@ -553,7 +553,7 @@ extern (C)
 nothrow @nogc
 void saveCurrentSessionDemo()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winnt;
@@ -581,7 +581,7 @@ extern (C)
 nothrow
 void DockableDlgDemo()
 
-	body
+	do
 	{
 		static import core.sys.windows.windef;
 		static import core.sys.windows.winuser;

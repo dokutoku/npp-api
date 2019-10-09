@@ -33,7 +33,7 @@ private static import npp_api.pluginfunc.menu;
 pure nothrow @safe @nogc
 void set_ACCEL(ref core.sys.windows.winuser.ACCEL HACCEL_shortcut, const ref npp_api.powereditor.misc.pluginsmanager.plugininterface.ShortcutKey npp_shortcut, core.sys.windows.windef.WORD cmd = 0)
 
-	body
+	do
 	{
 		HACCEL_shortcut.cmd = cmd;
 		HACCEL_shortcut.key = npp_shortcut._key;
@@ -49,7 +49,7 @@ version (Not_betterC):
 pure nothrow @safe @nogc
 size_t sub_menu_shortcuts_length(const npp_api.pluginfunc.menu.sub_menu_index[] menu_list)
 
-	body
+	do
 	{
 		size_t length;
 
@@ -70,7 +70,7 @@ core.sys.windows.winuser.ACCEL[shortcut_length] create_sub_menu_shortcuts(size_t
 		assert(shortcut_length == sub_menu_shortcuts_length(menu_list));
 	}
 
-	body
+	do
 	{
 		core.sys.windows.winuser.ACCEL[shortcut_length] output;
 

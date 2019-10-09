@@ -80,7 +80,7 @@ public:
 	pure nothrow @safe @nogc
 	this()
 
-		body
+		do
 		{
 			super();
 		}
@@ -88,7 +88,7 @@ public:
 	pure nothrow @safe @nogc
 	this(int dlgID)
 
-		body
+		do
 		{
 			super();
 			this._dlgID = dlgID;
@@ -97,7 +97,7 @@ public:
 	nothrow @nogc
 	override void initialize(core.sys.windows.windef.HINSTANCE hInst, core.sys.windows.windef.HWND parent)
 
-		body
+		do
 		{
 			static import std.path;
 
@@ -121,7 +121,7 @@ public:
 			assert(dialog_p != null);
 		}
 
-		body
+		do
 		{
 			super.create(dialog_p, this._dlgID, isRTL);
 			core.sys.windows.winnt.WCHAR[core.sys.windows.windef.MAX_PATH] temp;
@@ -148,7 +148,7 @@ public:
 			assert(dialog_p != null);
 		}
 
-		body
+		do
 		{
 			super.create(dialog_p, dialogID, isRTL, msgDestParent);
 		}
@@ -156,7 +156,7 @@ public:
 	nothrow @nogc
 	void updateDockingDlg()
 
-		body
+		do
 		{
 			npp_api.pluginfunc.npp_msgs.send_NPPM_DMMUPDATEDISPINFO(this._hParent, this._hSelf);
 		}
@@ -164,7 +164,7 @@ public:
 	pure nothrow @safe @nogc
 	override void destroy()
 
-		body
+		do
 		{
 		}
 
@@ -174,7 +174,7 @@ public:
 	nothrow @nogc
 	override void display(bool toShow = true)
 
-		body
+		do
 		{
 			core.sys.windows.winuser.SendMessageW(this._hParent, (toShow) ? (npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.NPPM_DMMSHOW) : (npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.NPPM_DMMHIDE), 0, cast(core.sys.windows.windef.LPARAM)(this._hSelf));
 		}
@@ -182,7 +182,7 @@ public:
 	pure nothrow @safe @nogc
 	bool isClosed() const
 
-		body
+		do
 		{
 			return this._isClosed;
 		}
@@ -190,7 +190,7 @@ public:
 	pure nothrow @safe @nogc
 	void setClosed(bool toClose)
 
-		body
+		do
 		{
 			this._isClosed = toClose;
 		}
@@ -198,7 +198,7 @@ public:
 	pure nothrow @safe @nogc
 	const (core.sys.windows.winnt.WCHAR)* getPluginFileName() const
 
-		body
+		do
 		{
 			return &(this._moduleName[0]);
 		}
@@ -208,7 +208,7 @@ protected:
 	nothrow @nogc
 	override core.sys.windows.basetsd.INT_PTR run_dlgProc(core.sys.windows.windef.UINT message, core.sys.windows.windef.WPARAM wParam, core.sys.windows.windef.LPARAM lParam)
 
-		body
+		do
 		{
 			switch (message) {
 				case core.sys.windows.winuser.WM_NOTIFY:

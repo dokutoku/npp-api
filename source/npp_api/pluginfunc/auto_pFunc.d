@@ -47,7 +47,7 @@ npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData nppData;
 pure nothrow @safe @nogc
 void auto_dummy_func()
 
-	body
+	do
 	{
 	}
 
@@ -61,7 +61,7 @@ void auto_message_box(alias message, alias title)()
 		static assert(title.length != 0);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.winuser;
 		static import std.utf;
@@ -82,7 +82,7 @@ void auto_open_uri(alias uri)()
 		static assert(uri.length != 0);
 	}
 
-	body
+	do
 	{
 		static import core.sys.windows.shellapi;
 		static import core.sys.windows.windef;
@@ -115,7 +115,7 @@ mixin template mixin_main_menu_change_check(immutable string change_identifier, 
 			}
 		}
 
-		body
+		do
 		{
 			static import npp_api.pluginfunc.menu;
 
@@ -154,7 +154,7 @@ mixin template mixin_menu_index_change_check(immutable string change_identifier,
 			}
 		}
 
-		body
+		do
 		{
 			static import npp_api.pluginfunc.menu;
 
@@ -184,7 +184,7 @@ mixin template mixin_group_menu_checked(immutable string change_identifier)
 	nothrow @nogc
 	void auto_change_check()
 
-		body
+		do
 		{
 			enum size_t pos = search_index!(change_identifier);
 			enum size_t start = npp_api.pluginfunc.menu.same_menu_start_pos(menu_index_def, pos);

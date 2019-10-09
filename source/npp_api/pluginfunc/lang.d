@@ -39,7 +39,7 @@ pragma(inline, true)
 pure nothrow @safe @nogc
 bool is_known_lang(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-	body
+	do
 	{
 		return (lang != npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_EXTERNAL) && (lang != npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_JS);
 	}
@@ -52,7 +52,7 @@ pragma(inline, true)
 pure nothrow @safe @nogc
 bool is_p_lang(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-	body
+	do
 	{
 		switch (lang) {
 			//case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_TEXT:
@@ -160,7 +160,7 @@ pragma(inline, true)
 pure nothrow @safe @nogc
 npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType from_IDM_LANG(int IDM_LANG)
 
-	body
+	do
 	{
 		static import npp_api.powereditor.menucmdid;
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
@@ -431,7 +431,7 @@ pragma(inline, true)
 pure nothrow @safe @nogc
 int to_IDM_LANG(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-	body
+	do
 	{
 		static import npp_api.powereditor.menucmdid;
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
@@ -707,7 +707,7 @@ pragma(inline, true)
 pure nothrow @safe @nogc
 bool is_extended_path_supported(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -1152,7 +1152,7 @@ pure nothrow @safe @nogc
 bool is_extended_path_supported(S)(S ext)
 	if (std.traits.isSomeString!(S))
 
-	body
+	do
 	{
 		switch (ext) {
 			case ".d":
@@ -1177,7 +1177,7 @@ bool is_extended_path_supported(S)(S ext)
 pure nothrow @safe @nogc
 S lang_to_ext(S)(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -1466,7 +1466,7 @@ npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType ext_to_lang(C
 		}
 	}
 
-	body
+	do
 	{
 		static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -1912,7 +1912,7 @@ version (Windows) {
 	immutable (C)[] default_lang_path(C)(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 		if (std.traits.isSomeChar!(C))
 
-		body
+		do
 		{
 			static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -2186,7 +2186,7 @@ version (Windows) {
 	immutable (C)[] default_lang_path(C)(const (C)[] extension)
 		if (std.traits.isSomeChar!(C))
 
-		body
+		do
 		{
 			static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
@@ -2224,7 +2224,7 @@ version (Windows) {
 	nothrow @nogc
 	void set_lang(core.sys.windows.windef.HWND _nppHandle, npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType lang)
 
-		body
+		do
 		{
 			static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 			static import npp_api.pluginfunc.npp_msgs;
@@ -2239,7 +2239,7 @@ version (Windows) {
 	void set_lang(C)(core.sys.windows.windef.HWND _nppHandle, const (C)[] extension)
 		if (std.traits.isSomeChar!(C))
 
-		body
+		do
 		{
 			static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 			static import npp_api.pluginfunc.npp_msgs;
@@ -2254,7 +2254,7 @@ version (Windows) {
 	version (Not_betterC) {
 		wstring replace_lang_variable(wstring path)
 
-		body
+		do
 		{
 			static import core.sys.windows.winbase;
 			static import std.algorithm;
@@ -2279,7 +2279,7 @@ version (Windows) {
 		wstring lang_path(lang_identifier)(lang_identifier lang)
 			if (is(lang_identifier : npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType) || is(lang_identifier : const wchar[]))
 
-			body
+			do
 			{
 				static import std.algorithm;
 				static import std.path;
