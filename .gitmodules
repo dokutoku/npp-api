@@ -1,0 +1,3 @@
+[submodule "dlang-deploy"]
+	path = dlang-deploy
+	url = https://gitlab.com/dokutoku/dlang-deploy.git
