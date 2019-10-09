@@ -24,16 +24,16 @@
 			"platforms": ["windows"],
 			"targetType": "dynamicLibrary",
 			"versions": ["betterC_test1"],
-			"targetPath": "plugins/betterC_test1",
-			"targetName": "betterC_test1"
+			"targetPath": "plugins/betterC-test1",
+			"targetName": "betterC-test1"
 		},
 		{
 			"name": "betterC_test2",
 			"platforms": ["windows"],
 			"targetType": "dynamicLibrary",
 			"versions": ["betterC_test2"],
-			"targetPath": "plugins/betterC_test2",
-			"targetName": "betterC_test2"
+			"targetPath": "plugins/betterC-test2",
+			"targetName": "betterC-test2"
 		}
 	]
 }
