@@ -1,4 +1,3 @@
-[![pipeline status](https://gitlab.com/dokutoku/npp-api/badges/master/pipeline.svg)](https://gitlab.com/dokutoku/npp-api/commits/master)
 # NPP API
 NPP APIはD言語製のNotepad++のプラグイン開発ライブラリです。
 
