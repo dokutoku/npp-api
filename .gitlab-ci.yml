@@ -1,0 +1,82 @@
+stages:
+    - test
+    - deploy
+
+cache:
+    paths:
+        - ./cache/
+
+before_script:
+    - apt-get update -yqq
+    - apt-get install -yqq curl gnupg p7zip-full
+    - git submodule init
+    - git submodule update
+    - cp -f './dlang-deploy/get_ldc2.sh' './get_ldc2.sh'
+    - if [ ! -d './ldc2-conf' ]; then    mkdir './ldc2-conf';fi
+    - cp -f './dlang-deploy/ldc2-conf/linux-x64.conf' './ldc2-conf/linux-x64.conf'
+    - sh './get_ldc2.sh'
+
+test:
+    stage: test
+    only:
+        - master
+
+    script:
+        - cd './examples/betterC_test/'
+        - ../../ldc2/bin/dub test --compiler='../../ldc2/bin/ldc2' --arch=i686-windows-msvc --combined --config=betterC_test1 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub test --compiler='../../ldc2/bin/ldc2' --arch=i686-windows-msvc --combined --config=betterC_test2 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub test --compiler='../../ldc2/bin/ldc2' --arch=x86_64-windows-msvc --combined --config=betterC_test1 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub test --compiler='../../ldc2/bin/ldc2' --arch=x86_64-windows-msvc --combined --config=betterC_test2 --override-config=npp_api/betterC_library
+
+        - cd '../converter/'
+        - ../../ldc2/bin/dub test --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2'
+        - ../../ldc2/bin/dub test --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2'
+
+        - cd '../demo/'
+        - ../../ldc2/bin/dub test --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2'
+        - ../../ldc2/bin/dub test --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2'
+
+        - cd '../hello/'
+        - ../../ldc2/bin/dub test --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2'
+        - ../../ldc2/bin/dub test --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2'
+
+        - cd '../mimetools/'
+        - ../../ldc2/bin/dub test --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2'
+        - ../../ldc2/bin/dub test --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2'
+
+create_plugin:
+    stage: deploy
+    only:
+        - master
+
+    when: manual
+
+    script:
+        - cd './examples/betterC_test/'
+        - ../../ldc2/bin/dub build --compiler='../../ldc2/bin/ldc2' --arch=i686-windows-msvc --combined --build=release_sample --config=betterC_test1 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub build --compiler='../../ldc2/bin/ldc2' --arch=i686-windows-msvc --combined --build=release_sample --config=betterC_test2 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub build --compiler='../../ldc2/bin/ldc2' --arch=x86_64-windows-msvc --combined --build=release_sample --config=betterC_test1 --override-config=npp_api/betterC_library
+        - ../../ldc2/bin/dub build --compiler='../../ldc2/bin/ldc2' --arch=x86_64-windows-msvc --combined --build=release_sample --config=betterC_test2 --override-config=npp_api/betterC_library
+
+        - cd '../converter/'
+        - ../../ldc2/bin/dub build --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+        - ../../ldc2/bin/dub build --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+
+        - cd '../demo/'
+        - ../../ldc2/bin/dub build --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+        - ../../ldc2/bin/dub build --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+
+        - cd '../hello/'
+        - ../../ldc2/bin/dub build --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+        - ../../ldc2/bin/dub build --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+
+        - cd '../mimetools/'
+        - ../../ldc2/bin/dub build --arch=i686-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+        - ../../ldc2/bin/dub build --arch=x86_64-windows-msvc --compiler='../../ldc2/bin/ldc2' --build=release
+
+        - if [ ! -d '../public' ]; then    mkdir '../public';fi
+        - ls -als './public'
+
+    artifacts:
+        paths:
+            - public
