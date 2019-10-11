@@ -28,7 +28,7 @@
  * notepad_plus_msgs wrapper
  *
  * See_Also:
- *      https://web.archive.org/web/20190325050754/http://docs.notepad-plus-plus.org/index.php/Messages_And_Notifications
+ *      https://npp-user-manual.org/docs/plugin-communication/
  *
  * ToDo: recheck
  * Author: dokutoku, https://twitter.com/dokutoku3
