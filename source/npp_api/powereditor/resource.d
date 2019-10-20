@@ -37,12 +37,12 @@ version (Windows):
 private static import core.sys.windows.winuser;
 private static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
-enum NOTEPAD_PLUS_VERSION = "Notepad++ v7.7.1";
+enum NOTEPAD_PLUS_VERSION = "Notepad++ v7.8";
 
 // should be X.Y : ie. if VERSION_DIGITALVALUE == 4, 7, 1, 0 , then X = 4, Y = 71
 // ex : #define VERSION_VALUE TEXT("5.63\0")
-enum VERSION_VALUE = "7.71\0";
-//#define VERSION_DIGITALVALUE 7, 7, 1, 0
+enum VERSION_VALUE = "7.8\0";
+//#define VERSION_DIGITALVALUE 7, 8, 0, 0
 
 //#ifndef IDC_STATIC
 	enum IDC_STATIC = -1;
@@ -308,6 +308,9 @@ enum IDC_VERSION_BIT = 1707;
 enum IDD_DEBUGINFOBOX = 1750;
 enum IDC_DEBUGINFO_EDIT = 1751;
 enum IDC_DEBUGINFO_COPYLINK = 1752;
+
+enum IDD_DOSAVEORNOTBOX = 1760;
+enum IDC_DOSAVEORNOTTEX = 1761;
 
 //enum IDD_USER_DEFINE_BOX = 1800;
 //enum IDD_RUN_DLG = 1900;

@@ -160,7 +160,6 @@ enum Platform
 
 version (Windows):
 
-//Here you can find how to use these messages : https://npp-user-manual.org/docs/plugin-communication/
 enum NPPMSG = core.sys.windows.winuser.WM_USER + 1000;
 
 enum NPPM_GETCURRENTSCINTILLA = .NPPMSG + 4;
