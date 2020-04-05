@@ -6,6 +6,7 @@
 	"description": "",
 	"copyright": "Copyright © 2019, dokutoku",
 	"license": "GPL-2.0 or later",
+	"libs": ["kernel32", "user32"],
 	"dependencies": {
 		"npp-api": {
 			"path": "../../"

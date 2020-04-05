@@ -49,8 +49,8 @@ private static import npp_demo.plugin_dll;
 
 version (Windows):
 
-pragma(lib, "kernel32.lib");
-pragma(lib, "user32.lib");
+//pragma(lib, "kernel32");
+//pragma(lib, "user32");
 
 enum DOCKABLE_DEMO_INDEX = 15;
 enum bool shortDate = true;

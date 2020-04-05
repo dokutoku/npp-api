@@ -35,8 +35,8 @@ module npp_api.powereditor.wincontrols.staticdialog.staticdialog;
 version (Windows):
 version (Not_betterC):
 
-pragma(lib, "kernel32.lib");
-pragma(lib, "user32.lib");
+//pragma(lib, "kernel32");
+//pragma(lib, "user32");
 
 private static import core.sys.windows.basetsd;
 private static import core.sys.windows.winbase;

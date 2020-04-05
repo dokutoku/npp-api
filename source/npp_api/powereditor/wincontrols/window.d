@@ -35,7 +35,7 @@ module npp_api.powereditor.wincontrols.window;
 version (Windows):
 version (Not_betterC):
 
-pragma(lib, "user32.lib");
+//pragma(lib, "user32");
 
 private static import core.sys.windows.windef;
 private static import core.sys.windows.winuser;

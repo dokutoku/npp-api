@@ -35,7 +35,7 @@ module npp_api.powereditor.scitillacomponent.gotolinedlg;
 version (Windows):
 version (Not_betterC):
 
-pragma(lib, "user32.lib");
+//pragma(lib, "user32");
 
 private static import core.sys.windows.basetsd;
 private static import core.sys.windows.windef;

@@ -39,7 +39,7 @@ module npp_api.pluginfunc.npp_msgs;
 
 version (Windows):
 
-pragma(lib, "user32.lib");
+//pragma(lib, "user32");
 
 private static import core.stdc.config;
 private static import core.sys.windows.windef;

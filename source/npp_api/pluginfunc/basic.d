@@ -25,8 +25,8 @@ module npp_api.pluginfunc.basic;
 
 version (Windows):
 
-pragma(lib, "kernel32.lib");
-pragma(lib, "user32.lib");
+//pragma(lib, "kernel32");
+//pragma(lib, "user32");
 
 private static import core.sys.windows.winbase;
 private static import core.sys.windows.windef;
