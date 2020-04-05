@@ -1253,7 +1253,7 @@ struct SCNotification
 	int modifiers;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	int modificationType;
 
@@ -1263,77 +1263,77 @@ struct SCNotification
 	const (char)* text;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	npp_api.scintilla.Sci_Position.Sci_Position length;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	npp_api.scintilla.Sci_Position.Sci_Position linesAdded;
 
 	/**
-	 * SCN_MACRORECORD 
+	 * SCN_MACRORECORD
 	 */
 	int message;
 
 	/**
-	 * SCN_MACRORECORD 
+	 * SCN_MACRORECORD
 	 */
 	.uptr_t wParam;
 
 	/**
-	 * SCN_MACRORECORD 
+	 * SCN_MACRORECORD
 	 */
 	.sptr_t lParam;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	npp_api.scintilla.Sci_Position.Sci_Position line;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	int foldLevelNow;
 
 	/**
-	 * SCN_MODIFIED 
+	 * SCN_MODIFIED
 	 */
 	int foldLevelPrev;
 
 	/**
-	 * SCN_MARGINCLICK 
+	 * SCN_MARGINCLICK
 	 */
 	int margin;
 
 	/**
-	 * SCN_USERLISTSELECTION 
+	 * SCN_USERLISTSELECTION
 	 */
 	int listType;
 
 	/**
-	 * SCN_DWELLSTART, SCN_DWELLEND 
+	 * SCN_DWELLSTART, SCN_DWELLEND
 	 */
 	int x;
 
 	/**
-	 * SCN_DWELLSTART, SCN_DWELLEND 
+	 * SCN_DWELLSTART, SCN_DWELLEND
 	 */
 	int y;
 
 	/**
-	 * SCN_MODIFIED with SC_MOD_CONTAINER 
+	 * SCN_MODIFIED with SC_MOD_CONTAINER
 	 */
 	int token;
 
 	/**
-	 * SCN_MODIFIED with SC_MOD_CHANGEANNOTATION 
+	 * SCN_MODIFIED with SC_MOD_CHANGEANNOTATION
 	 */
 	npp_api.scintilla.Sci_Position.Sci_Position annotationLinesAdded;
 
 	/**
-	 * SCN_UPDATEUI 
+	 * SCN_UPDATEUI
 	 */
 	int updated;
 

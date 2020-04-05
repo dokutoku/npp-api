@@ -123,7 +123,7 @@ mixin template npp_menu_index(npp_api.pluginfunc.menu.menu_item_t[] menu_contain
 		 *
 		 */
 		enum menu_index_length = npp_api.pluginfunc.menu.count_all_menu_items(menu_container);
-		enum npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index_def = npp_api.pluginfunc.menu.create_menu_index!(menu_index_length)(menu_container); 
+		enum npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index_def = npp_api.pluginfunc.menu.create_menu_index!(menu_index_length)(menu_container);
 		npp_api.pluginfunc.menu.sub_menu_index[menu_index_length] menu_index = .menu_index_def;
 
 		/*

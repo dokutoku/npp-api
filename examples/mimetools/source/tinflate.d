@@ -51,12 +51,12 @@ enum TINF_DATA_ERROR = -3;
 struct TINF_TREE
 {
 	/**
-	 * table of code length counts 
+	 * table of code length counts
 	 */
 	ushort[16] table;
 
 	/**
-	 * code -> symbol translation table 
+	 * code -> symbol translation table
 	 */
 	ushort[288] trans;
 }
@@ -71,12 +71,12 @@ struct TINF_DATA
 	uint destLen;
 
 	/**
-	 * dynamic length/symbol tree 
+	 * dynamic length/symbol tree
 	 */
 	.TINF_TREE ltree;
 
 	/**
-	 * dynamic distance tree 
+	 * dynamic distance tree
 	 */
 	.TINF_TREE dtree;
 }
@@ -86,12 +86,12 @@ struct TINF_DATA
  * --------------------------------------------------- */
 
 /**
- * fixed length/symbol tree 
+ * fixed length/symbol tree
  */
 .TINF_TREE sltree;
 
 /**
- * fixed distance tree 
+ * fixed distance tree
  */
 .TINF_TREE sdtree;
 

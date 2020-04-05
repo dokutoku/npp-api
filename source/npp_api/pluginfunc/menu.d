@@ -886,7 +886,7 @@ bool is_chid_menu_checked(const .sub_menu_index[] menu_index_list, size_t parent
 
 	do
 	{
-		size_t i = parent_menu_pos + 1; 
+		size_t i = parent_menu_pos + 1;
 
 		if (i >= menu_index_list.length) {
 			return false;

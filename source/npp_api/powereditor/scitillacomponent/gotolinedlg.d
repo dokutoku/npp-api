@@ -214,7 +214,7 @@ private:
 		{
 			uint current = 0;
 			uint limit = 0;
-			
+
 			version (none) {
 				if (this._mode == this.mode.go2line) {
 					current = cast(uint)((*this._ppEditView).getCurrentLineNumber() + 1);
