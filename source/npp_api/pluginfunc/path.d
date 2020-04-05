@@ -113,8 +113,11 @@ private immutable (C)[][] c_names(C)(const C[][] input)
 		return output;
 	}
 
+deprecated
+alias create_variable_identifiers = .create_variable_ids;
+
 pure nothrow @safe
-private immutable (C)[][] create_variable_identifiers(C)(const C[][] input)
+private immutable (C)[][] create_variable_ids(C)(const C[][] input)
 
 	do
 	{
@@ -171,7 +174,7 @@ enum wstring[] windows_variable_names =
 ];
 
 enum wstring[] windows_variable_wnames = c_names!(wchar)(windows_variable_names);
-enum wstring[] windows_variables = create_variable_identifiers!(wchar)(windows_variable_names);
+enum wstring[] windows_variables = create_variable_ids!(wchar)(windows_variable_names);
 
 pure nothrow @safe @nogc
 private size_t max_length(wstring[] list)

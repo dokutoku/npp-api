@@ -223,8 +223,8 @@ public:
 		do
 		{
 			for (size_t i = 0; i < menu_index.length; i++) {
-				if (menu_index[i].menu_checked_identifier.length != 0) {
-					menu_index[i].func_item._init2Check = this.is_mfs_checked(menu_index[i].menu_checked_identifier, menu_index[i].func_item._init2Check);
+				if (menu_index[i].menu_checked_id.length != 0) {
+					menu_index[i].func_item._init2Check = this.is_mfs_checked(menu_index[i].menu_checked_id, menu_index[i].func_item._init2Check);
 				}
 			}
 		}
@@ -347,8 +347,8 @@ public:
 		do
 		{
 			for (size_t i = 0; i < menu_index.length; i++) {
-				if (menu_index[i].menu_checked_identifier.length != 0) {
-					this.write_menu_checked(menu_index[i].menu_checked_identifier, menu_index[i].func_item._init2Check);
+				if (menu_index[i].menu_checked_id.length != 0) {
+					this.write_menu_checked(menu_index[i].menu_checked_id, menu_index[i].func_item._init2Check);
 				}
 			}
 		}

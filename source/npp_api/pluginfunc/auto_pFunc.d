@@ -98,7 +98,7 @@ void auto_open_uri(alias uri)()
 /**
  * メインメニューのチェックを変える
  */
-mixin template mixin_main_menu_change_check(immutable string change_identifier, disable_identifiers...)
+mixin template mixin_main_menu_change_check(immutable string change_id, disable_ids...)
 {
 	private static import npp_api.pluginfunc.menu;
 
@@ -110,8 +110,8 @@ mixin template mixin_main_menu_change_check(immutable string change_identifier, 
 		{
 			assert(.main_menu_def.length == .main_menu.length);
 
-			foreach (disable_identifier; disable_identifiers) {
-				static assert(is(typeof(disable_identifier) : immutable string));
+			foreach (disable_id; disable_ids) {
+				static assert(is(typeof(disable_id) : immutable string));
 			}
 		}
 
@@ -119,13 +119,13 @@ mixin template mixin_main_menu_change_check(immutable string change_identifier, 
 		{
 			static import npp_api.pluginfunc.menu;
 
-			enum change_pos = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, change_identifier);
+			enum change_pos = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, change_id);
 			static assert(.main_menu_def.length > change_pos);
 			npp_api.pluginfunc.menu.change_check(.nppData._nppHandle, .main_menu[change_pos]);
 
-			static if (disable_identifiers.length != 0) {
-				foreach (disable_identifier; disable_identifiers) {
-					enum disable_menu_pos = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, disable_identifier);
+			static if (disable_ids.length != 0) {
+				foreach (disable_id; disable_ids) {
+					enum disable_menu_pos = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, disable_id);
 					static assert(change_pos != disable_menu_pos);
 					static assert(.main_menu_def.length > disable_menu_pos);
 					npp_api.pluginfunc.menu.disable_check(.nppData._nppHandle, .main_menu[disable_menu_pos]);
@@ -137,11 +137,11 @@ mixin template mixin_main_menu_change_check(immutable string change_identifier, 
 /**
  * メニューのチェックを変える
  */
-mixin template mixin_menu_index_change_check(immutable string change_identifier, disable_identifiers...)
+mixin template mixin_menu_index_change_check(immutable string change_id, disable_ids...)
 {
 	private static import npp_api.pluginfunc.menu;
 
-	pragma(mangle, change_identifier ~ "_auto_change_check_item")
+	pragma(mangle, change_id ~ "_auto_change_check_item")
 	extern (C)
 	nothrow @nogc
 	void auto_change_check()
@@ -150,8 +150,8 @@ mixin template mixin_menu_index_change_check(immutable string change_identifier,
 		{
 			assert(.menu_index_def.length == .menu_index.length);
 
-			foreach (disable_identifier; disable_identifiers) {
-				static assert(is(typeof(disable_identifier) : immutable string));
+			foreach (disable_id; disable_ids) {
+				static assert(is(typeof(disable_id) : immutable string));
 			}
 		}
 
@@ -159,13 +159,13 @@ mixin template mixin_menu_index_change_check(immutable string change_identifier,
 		{
 			static import npp_api.pluginfunc.menu;
 
-			enum change_pos = npp_api.pluginfunc.menu.search_index(.menu_index_def, change_identifier);
+			enum change_pos = npp_api.pluginfunc.menu.search_index(.menu_index_def, change_id);
 			static assert(.menu_index_def.length > change_pos);
 			npp_api.pluginfunc.menu.change_check(.nppData._nppHandle, .menu_index[change_pos].func_item);
 
-			static if (disable_identifiers.length != 0) {
-				foreach (disable_identifier; disable_identifiers) {
-					enum disable_menu_pos = npp_api.pluginfunc.menu.search_index(.menu_index_def, disable_identifier);
+			static if (disable_ids.length != 0) {
+				foreach (disable_id; disable_ids) {
+					enum disable_menu_pos = npp_api.pluginfunc.menu.search_index(.menu_index_def, disable_id);
 					static assert(change_pos != disable_menu_pos);
 					static assert(.menu_index_def.length > disable_menu_pos);
 					npp_api.pluginfunc.menu.disable_check(.nppData._nppHandle, .menu_index[disable_menu_pos].func_item);
@@ -177,18 +177,18 @@ mixin template mixin_menu_index_change_check(immutable string change_identifier,
 /**
  * 同階層のメニューのチェックを変える
  */
-mixin template mixin_group_menu_checked(immutable string change_identifier)
+mixin template mixin_group_menu_checked(immutable string change_id)
 {
 	private static import npp_api.pluginfunc.menu;
 
-	pragma(mangle, change_identifier ~ "auto_change_check")
+	pragma(mangle, change_id ~ "auto_change_check")
 	extern (C)
 	nothrow @nogc
 	void auto_change_check()
 
 		do
 		{
-			enum size_t pos = search_index!(change_identifier);
+			enum size_t pos = search_index!(change_id);
 			enum size_t start = npp_api.pluginfunc.menu.same_menu_start_pos(menu_index_def, pos);
 			enum size_t end = npp_api.pluginfunc.menu.same_menu_end_pos(menu_index_def, pos);
 

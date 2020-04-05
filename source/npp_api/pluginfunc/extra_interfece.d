@@ -109,7 +109,7 @@ mixin template npp_menu_actions(npp_api.pluginfunc.menu.menu_item_t[] menu_conta
 		 * sub menu actions
 		 */
 		enum sub_menu_actions_def = npp_api.pluginfunc.menu.create_sub_menu_actions(menu_container);
-		static assert(sub_menu_actions_def.length == npp_api.pluginfunc.menu.count_sub_menu_identifiers(menu_container));
+		static assert(sub_menu_actions_def.length == npp_api.pluginfunc.menu.count_sub_menu_ids(menu_container));
 		npp_api.pluginfunc.menu.menu_action[sub_menu_actions_def.length] sub_menu_actions = .sub_menu_actions_def;
 	}
 }
@@ -129,14 +129,14 @@ mixin template npp_menu_index(npp_api.pluginfunc.menu.menu_item_t[] menu_contain
 		/*
 		 * メニュー部分のインデックスを返す
 		 */
-		template search_menu_index(string identifier)
+		template search_menu_index(string id)
 		{
-			enum size_t search_menu_index = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, identifier);
+			enum size_t search_menu_index = npp_api.pluginfunc.menu.search_menu_index(.menu_index_def, id);
 		}
 
-		template search_index(string identifier)
+		template search_index(string id)
 		{
-			enum size_t search_index = npp_api.pluginfunc.menu.search_index(.menu_index_def, identifier);
+			enum size_t search_index = npp_api.pluginfunc.menu.search_index(.menu_index_def, id);
 			static assert(menu_index_length >= search_index);
 		}
 	}
@@ -154,14 +154,20 @@ mixin template npp_autoload(npp_api.pluginfunc.config_file.config_type_t config_
 		static if (config_type == npp_api.pluginfunc.config_file.config_type_t.ini) {
 			enum auto_settings_def = npp_api.pluginfunc.ini_setting.convert_setting!(settings.length)(settings);
 			npp_api.pluginfunc.ini_setting.ini_setting_item[settings.length] auto_settings = auto_settings_def;
-			enum wstring[] setting_identifiers = npp_api.pluginfunc.ini_setting.create_setting_idetifiers(auto_settings_def);
+			enum wstring[] setting_ids = npp_api.pluginfunc.ini_setting.create_setting_idetifiers(auto_settings_def);
 
-			size_t search_setting_identifier_index(wstring[] identifier_list, wstring identifier)
+			deprecated
+			alias setting_identifiers = .setting_ids;
+
+			deprecated
+			alias search_setting_identifier_index = .search_setting_id_index;
+
+			size_t search_setting_id_index(wstring[] id_list, wstring id)
 
 				do
 				{
-					for (size_t i = 0; i < identifier_list.length; i++) {
-						if (std.algorithm.cmp(identifier_list[i], identifier) == 0) {
+					for (size_t i = 0; i < id_list.length; i++) {
+						if (std.algorithm.cmp(id_list[i], id) == 0) {
 							return i;
 						}
 					}
@@ -169,10 +175,13 @@ mixin template npp_autoload(npp_api.pluginfunc.config_file.config_type_t config_
 					assert(0);
 				}
 
-			template search_setting_identifier(wstring identifier)
+			deprecated
+			alias search_setting_identifier = .search_setting_id;
+
+			template search_setting_id(wstring id)
 			{
-				enum search_setting_identifier = search_setting_identifier_index(.setting_identifiers, identifier);
-				static assert(auto_settings_def.length > search_setting_identifier);
+				enum search_setting_id = search_setting_id_index(.setting_ids, id);
+				static assert(auto_settings_def.length > search_setting_id);
 			}
 		} else static if (config_type == npp_api.pluginfunc.config_file.config_type_t.none) {
 		} else {
@@ -186,8 +195,14 @@ mixin template menu_checked_list(size_t main_menu_length, npp_api.pluginfunc.men
 	private static import npp_api.pluginfunc.menu;
 
 	static if (!__traits(compiles, .menu_index_checked_def)) {
-		enum wstring[] menu_index_checked_identifiers = npp_api.pluginfunc.menu.create_menu_index_checked_identifier(menu_index);
-		enum wstring[] main_menu_checked_identifiers = npp_api.pluginfunc.menu.create_main_menu_checked_identifier(menu_index);
+		deprecated
+		alias menu_index_checked_identifiers = .menu_index_checked_ids;
+
+		deprecated
+		alias main_menu_checked_identifiers = .main_menu_checked_ids;
+
+		enum wstring[] menu_index_checked_ids = npp_api.pluginfunc.menu.create_menu_index_checked_id(menu_index);
+		enum wstring[] main_menu_checked_ids = npp_api.pluginfunc.menu.create_main_menu_checked_id(menu_index);
 	}
 }
 
@@ -223,7 +238,7 @@ mixin template npp_plugin_config(npp_api.pluginfunc.config_file.config_type_t ty
 	}
 }
 
-mixin template npp_DLLMain(npp_api.pluginfunc.config_file.config_type_t type, wstring[] menu_index_checked_identifiers, alias menu_index)
+mixin template npp_DLLMain(npp_api.pluginfunc.config_file.config_type_t type, wstring[] menu_index_checked_ids, alias menu_index)
 {
 	private static import core.sys.windows.basetsd;
 	private static import core.sys.windows.dll;
@@ -253,7 +268,7 @@ mixin template npp_DLLMain(npp_api.pluginfunc.config_file.config_type_t type, ws
 						break;
 
 					case core.sys.windows.winnt.DLL_PROCESS_DETACH:
-						static if ((type != npp_api.pluginfunc.config_file.config_type_t.none) && (menu_index_checked_identifiers.length != 0)) {
+						static if ((type != npp_api.pluginfunc.config_file.config_type_t.none) && (menu_index_checked_ids.length != 0)) {
 							plugin_config_file.write_menu_checked(menu_index);
 						}
 
@@ -474,7 +489,7 @@ mixin template npp_plugin_interface(.npp_plugin_definition plugin_def)
 	mixin npp_api.pluginfunc.extra_interfece.npp_autoload!(plugin_def.config_info.type, plugin_def.config_info.settings);
 	mixin npp_api.pluginfunc.extra_interfece.menu_checked_list!(.main_menu.length, .menu_index_def);
 	mixin npp_api.pluginfunc.extra_interfece.npp_plugin_config!(plugin_def.config_info.type);
-	mixin npp_api.pluginfunc.extra_interfece.npp_DLLMain!(plugin_def.config_info.type, .menu_index_checked_identifiers, .menu_index);
+	mixin npp_api.pluginfunc.extra_interfece.npp_DLLMain!(plugin_def.config_info.type, .menu_index_checked_ids, .menu_index);
 
 	//ToDo:
 	static if (__traits(compiles, .plugin_config_file) && __traits(compiles, .auto_settings)) {

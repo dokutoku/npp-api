@@ -61,7 +61,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 	menu_items:
 	[
 		{
-			identifier: `Hello Notepad++`,
+			id: `Hello Notepad++`,
 			func_item:
 			{
 				_itemName: "Hello Notepad++"w,
@@ -71,7 +71,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Hello (with FX)`,
+			id: `Hello (with FX)`,
 			func_item:
 			{
 				_itemName: "Hello (with FX)"w,
@@ -81,7 +81,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `What is Notepad++?`,
+			id: `What is Notepad++?`,
 			func_item:
 			{
 				_itemName: "What is Notepad++?"w,
@@ -97,7 +97,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Current Full Path`,
+			id: `Current Full Path`,
 			func_item:
 			{
 				_itemName: "Current Full Path"w,
@@ -107,7 +107,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Current File Name`,
+			id: `Current File Name`,
 			func_item:
 			{
 				_itemName: "Current File Name"w,
@@ -117,7 +117,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Current Directory`,
+			id: `Current Directory`,
 			func_item:
 			{
 				_itemName: "Current Directory"w,
@@ -127,7 +127,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Date & Time - short format`,
+			id: `Date & Time - short format`,
 			func_item:
 			{
 				_itemName: "Date & Time - short format"w,
@@ -137,7 +137,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Date & Time - long format`,
+			id: `Date & Time - long format`,
 			func_item:
 			{
 				_itemName: "Date & Time - long format"w,
@@ -147,8 +147,8 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Close_HTML_XML_tag_automatically`,
-			menu_checked_identifier: `doCloseTag`,
+			id: `Close_HTML_XML_tag_automatically`,
+			menu_checked_id: `doCloseTag`,
 			func_item:
 			{
 				_itemName: "Close HTML/XML tag automatically"w,
@@ -164,7 +164,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Get File Names Demo`,
+			id: `Get File Names Demo`,
 			func_item:
 			{
 				_itemName: "Get File Names Demo"w,
@@ -174,7 +174,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Get Session File Names Demo`,
+			id: `Get Session File Names Demo`,
 			func_item:
 			{
 				_itemName: "Get Session File Names Demo"w,
@@ -184,7 +184,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Save Current Session Demo`,
+			id: `Save Current Session Demo`,
 			func_item:
 			{
 				_itemName: "Save Current Session Demo"w,
@@ -200,7 +200,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Dockable Dialog Demo`,
+			id: `Dockable Dialog Demo`,
 			func_item:
 			{
 				_itemName: "Dockable Dialog Demo"w,

@@ -82,7 +82,7 @@ pure nothrow @safe
 
 	do
 	{
-		.menu_action[] output = new .menu_action[.count_sub_menu_identifiers(menu_container)];
+		.menu_action[] output = new .menu_action[.count_sub_menu_ids(menu_container)];
 
 		size_t i = 0;
 
@@ -121,22 +121,28 @@ bool sub_menu_action(size_t actions_length)(const int cmdID, const ref .menu_act
  */
 struct menu_item_t
 {
-	string identifier = null;
-	string menu_checked_identifier = null;
+	string id = null;
+	string menu_checked_id = null;
 	core.sys.windows.windef.HMENU menu_handle = core.sys.windows.windef.NULL;
 	npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem func_item = void;
 	.menu_item_t[] sub_menu = null;
 
+	deprecated
+	alias identifier = id;
+
+	deprecated
+	alias menu_checked_identifier = menu_checked_id;
+
 	invariant
 	{
-		if (this.menu_checked_identifier != null) {
-			assert(this.identifier != null);
+		if (this.menu_checked_id != null) {
+			assert(this.id != null);
 		}
 
-		if (this.identifier != null) {
+		if (this.id != null) {
 			assert((npp_api.powereditor.misc.pluginsmanager.plugininterface.nbChar - 1) >= npp_api.pluginfunc.string.count_string(this.func_item._itemName));
 		} else {
-			assert(this.menu_checked_identifier == null);
+			assert(this.menu_checked_id == null);
 			assert(this.menu_handle == core.sys.windows.windef.NULL);
 			assert(this.sub_menu == null);
 		}
@@ -144,12 +150,15 @@ struct menu_item_t
 
 	invariant
 	{
-		assert(this.menu_checked_identifier.length <= 63);
+		assert(this.menu_checked_id.length <= 63);
 	}
 }
 
+deprecated
+alias max_identifier_length = .max_id_length;
+
 pure nothrow @safe @nogc
-size_t max_identifier_length(bool is_c_string)(const .menu_item_t[] menu_container)
+size_t max_id_length(bool is_c_string)(const .menu_item_t[] menu_container)
 
 	in
 	{
@@ -158,21 +167,21 @@ size_t max_identifier_length(bool is_c_string)(const .menu_item_t[] menu_contain
 
 	do
 	{
-		void max_identifier_length_internal(const .menu_item_t[] menu_items, ref size_t i)
+		void max_id_length_internal(const .menu_item_t[] menu_items, ref size_t i)
 
 			do
 			{
 				foreach (menu_item; menu_items) {
-					i = (menu_item.identifier.length > i) ? (menu_item.identifier.length) : (i);
+					i = (menu_item.id.length > i) ? (menu_item.id.length) : (i);
 
 					if (menu_item.sub_menu != null) {
-						max_identifier_length_internal(menu_item.sub_menu, i);
+						max_id_length_internal(menu_item.sub_menu, i);
 					}
 				}
 			}
 
 		size_t max_length = 0;
-		max_identifier_length_internal(menu_container, max_length);
+		max_id_length_internal(menu_container, max_length);
 
 		static if (is_c_string) {
 			max_length++;
@@ -190,8 +199,8 @@ struct sub_menu_index
 	size_t parent_cmdID = 0;
 	size_t depth = 0;
 	size_t menu_index = 0;
-	string identifier = null;
-	wstring menu_checked_identifier = null;
+	string id = null;
+	wstring menu_checked_id = null;
 	npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem func_item;
 
 	/**
@@ -201,15 +210,15 @@ struct sub_menu_index
 
 	invariant
 	{
-		if (this.menu_checked_identifier != null) {
-			assert(this.identifier != null);
+		if (this.menu_checked_id != null) {
+			assert(this.id != null);
 		}
 	}
 }
 
 /**
  * メモリ確保するための、サブメニューの数をカウントする
- * identifierがnullでもカウントする。
+ * idがnullでもカウントする。
  */
 pure nothrow @safe @nogc
 int allocate_sub_menu_length(const .sub_menu_index[] menu_index)
@@ -260,13 +269,13 @@ private void create_menu_index_internal(size_t OUTPUT_LENGTH)(.menu_item_t[] men
 
 		foreach (menu_item; menu_items) {
 			index_temp.menu_index = index;
-			index_temp.identifier = menu_item.identifier;
-			index_temp.menu_checked_identifier = std.utf.toUTF16(menu_item.menu_checked_identifier);
+			index_temp.id = menu_item.id;
+			index_temp.menu_checked_id = std.utf.toUTF16(menu_item.menu_checked_id);
 			index_temp.func_item = menu_item.func_item;
 
 			/+
 			//ToDo:
-			if ((index_temp.menu_checked_identifier != null) && ((index_temp.func_item._pFunc == null) || (index_temp.func_item._pFunc == &npp_api.pluginfunc.auto_pFunc.auto_dummy_func))) {
+			if ((index_temp.menu_checked_id != null) && ((index_temp.func_item._pFunc == null) || (index_temp.func_item._pFunc == &npp_api.pluginfunc.auto_pFunc.auto_dummy_func))) {
 				index_temp.func_item._pFunc = ;
 			}
 			+/
@@ -307,7 +316,7 @@ private void create_menu_index_internal(size_t OUTPUT_LENGTH)(.menu_item_t[] men
 	}
 
 pure nothrow @safe @nogc
-size_t search_menu_index(menu_t)(const menu_t menu_index, string identifier)
+size_t search_menu_index(menu_t)(const menu_t menu_index, string id)
 	if (std.traits.isArray!(menu_t))
 
 	do
@@ -315,11 +324,11 @@ size_t search_menu_index(menu_t)(const menu_t menu_index, string identifier)
 		size_t i = 0;
 
 		for (; i < menu_index.length; i++) {
-			if (menu_index[i].identifier.length == 0) {
+			if (menu_index[i].id.length == 0) {
 				continue;
 			}
 
-			if (std.algorithm.cmp(menu_index[i].identifier, identifier) == 0) {
+			if (std.algorithm.cmp(menu_index[i].id, id) == 0) {
 				return menu_index[i].menu_index;
 			}
 		}
@@ -328,12 +337,12 @@ size_t search_menu_index(menu_t)(const menu_t menu_index, string identifier)
 	}
 
 pure nothrow @safe @nogc
-size_t search_index(menu_t)(const menu_t menu_index, string identifier)
+size_t search_index(menu_t)(const menu_t menu_index, string id)
 	if (std.traits.isArray!(menu_t))
 
 	in
 	{
-		assert(identifier.length != 0);
+		assert(id.length != 0);
 	}
 
 	do
@@ -341,11 +350,11 @@ size_t search_index(menu_t)(const menu_t menu_index, string identifier)
 		size_t i = 0;
 
 		for (; i < menu_index.length; i++) {
-			if (menu_index[i].identifier.length == 0) {
+			if (menu_index[i].id.length == 0) {
 				continue;
 			}
 
-			if (std.algorithm.cmp(menu_index[i].identifier, identifier) == 0) {
+			if (std.algorithm.cmp(menu_index[i].id, id) == 0) {
 				return i;
 			}
 		}
@@ -399,7 +408,7 @@ int allocate_sub_menu_length(const .menu_item_t[] menu_container)
 	}
 
 /**
- * identifierがnullでもカウントする。
+ * idがnullでもカウントする。
  */
 pure nothrow @safe @nogc
 int count_all_menu_items(const .menu_item_t[] menu_container)
@@ -447,11 +456,14 @@ int count_all_menu_items(const .menu_item_t[] menu_container)
 		return cast(int)(count);
 	}
 
+deprecated
+alias count_menu_identifiers = .count_menu_ids;
+
 /**
- * identifierがnullでないすべてのメニューの数をカウントする
+ * idがnullでないすべてのメニューの数をカウントする
  */
 pure nothrow @safe @nogc
-size_t count_menu_identifiers(const .menu_item_t[] menu_container)
+size_t count_menu_ids(const .menu_item_t[] menu_container)
 
 	in
 	{
@@ -465,7 +477,7 @@ size_t count_menu_identifiers(const .menu_item_t[] menu_container)
 			do
 			{
 				foreach (menu; menu_list) {
-					if (menu.identifier != null) {
+					if (menu.id != null) {
 						i++;
 
 						if (menu.sub_menu != null) {
@@ -482,11 +494,14 @@ size_t count_menu_identifiers(const .menu_item_t[] menu_container)
 		return count;
 	}
 
+deprecated
+alias count_sub_menu_identifiers = .count_sub_menu_ids;
+
 /**
- * identifierがnullでないサブメニューの数をカウントする
+ * idがnullでないサブメニューの数をカウントする
  */
 pure nothrow @safe @nogc
-size_t count_sub_menu_identifiers(const .menu_item_t[] menu_container)
+size_t count_sub_menu_ids(const .menu_item_t[] menu_container)
 
 	in
 	{
@@ -500,7 +515,7 @@ size_t count_sub_menu_identifiers(const .menu_item_t[] menu_container)
 			do
 			{
 				foreach (menu; menu_list) {
-					if (menu.identifier != null) {
+					if (menu.id != null) {
 						i++;
 
 						if (menu.sub_menu != null) {
@@ -591,32 +606,39 @@ bool[output_length] create_menu_index_checked(size_t output_length)(const .sub_m
 		return output;
 	}
 
+
+deprecated
+alias create_main_menu_checked_identifier = .create_main_menu_checked_id;
+
 pure nothrow @safe
-wstring[] create_main_menu_checked_identifier(const .sub_menu_index[] menu_index)
+wstring[] create_main_menu_checked_id(const .sub_menu_index[] menu_index)
 
 	do
 	{
 		wstring[] output;
 
 		for (size_t i = 0; i < menu_index.length; i++) {
-			if ((menu_index[i].depth == 1) && (menu_index[i].menu_checked_identifier.length != 0)) {
-				output ~= menu_index[i].menu_checked_identifier;
+			if ((menu_index[i].depth == 1) && (menu_index[i].menu_checked_id.length != 0)) {
+				output ~= menu_index[i].menu_checked_id;
 			}
 		}
 
 		return output;
 	}
 
+deprecated
+alias create_menu_index_checked_identifier = .create_menu_index_checked_id;
+
 pure nothrow @safe
-wstring[] create_menu_index_checked_identifier(const .sub_menu_index[] menu_index)
+wstring[] create_menu_index_checked_id(const .sub_menu_index[] menu_index)
 
 	do
 	{
 		wstring[] output;
 
 		for (size_t i = 0; i < menu_index.length; i++) {
-			if (menu_index[i].menu_checked_identifier.length != 0) {
-				output ~= menu_index[i].menu_checked_identifier;
+			if (menu_index[i].menu_checked_id.length != 0) {
+				output ~= menu_index[i].menu_checked_id;
 			}
 		}
 
@@ -624,16 +646,16 @@ wstring[] create_menu_index_checked_identifier(const .sub_menu_index[] menu_inde
 	}
 
 pure nothrow @safe @nogc
-size_t first_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string identifier)
+size_t first_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string id)
 
 	in
 	{
-		assert(LENGTH >= (search_index(menu_index, identifier)));
+		assert(LENGTH >= (search_index(menu_index, id)));
 	}
 
 	do
 	{
-		size_t i = search_index(menu_index, identifier);
+		size_t i = search_index(menu_index, id);
 		size_t depth = menu_index[i].depth;
 
 		if (i == 0) {
@@ -651,16 +673,16 @@ size_t first_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_inde
 	}
 
 pure nothrow @safe @nogc
-size_t end_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string identifier)
+size_t end_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string id)
 
 	in
 	{
-		assert(LENGTH >= (search_index(menu_index, identifier)));
+		assert(LENGTH >= (search_index(menu_index, id)));
 	}
 
 	do
 	{
-		size_t i = search_index(menu_index, identifier);
+		size_t i = search_index(menu_index, id);
 		size_t depth = menu_index[i].depth;
 
 		if ((i + 1) >= LENGTH) {
@@ -678,16 +700,16 @@ size_t end_sub_menu_pos(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index,
 	}
 
 pure nothrow @safe @nogc
-size_t sub_menu_length(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string identifier)
+size_t sub_menu_length(size_t LENGTH)(const .sub_menu_index[LENGTH] menu_index, string id)
 
 	in
 	{
-		assert(LENGTH >= (search_index(menu_index, identifier)));
+		assert(LENGTH >= (search_index(menu_index, id)));
 	}
 
 	do
 	{
-		size_t i = search_index(menu_index, identifier);
+		size_t i = search_index(menu_index, id);
 		size_t depth = menu_index[i].depth;
 		size_t count = 0;
 
@@ -807,18 +829,18 @@ void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .menu_item_t
 
 pragma(inline, true)
 nothrow @nogc
-void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .sub_menu_index[] index_list, string enable_identifier)
+void change_sub_menu_check(core.sys.windows.windef.HWND _nppHandle, .sub_menu_index[] index_list, string enable_id)
 
 	in
 	{
 		assert(index_list.length != 0);
 		assert(size_t.max > index_list.length);
-		assert(index_list.length >= search_index(index_list, enable_identifier));
+		assert(index_list.length >= search_index(index_list, enable_id));
 	}
 
 	do
 	{
-		size_t index = search_index(index_list, enable_identifier);
+		size_t index = search_index(index_list, enable_id);
 		size_t depth = index_list[index].depth;
 
 		change_check(_nppHandle, index_list[index].func_item);

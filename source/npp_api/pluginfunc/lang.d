@@ -2276,8 +2276,8 @@ version (Windows) {
 		}
 
 		nothrow
-		wstring lang_path(lang_identifier)(lang_identifier lang)
-			if (is(lang_identifier : npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType) || is(lang_identifier : const wchar[]))
+		wstring lang_path(lang_id)(lang_id lang)
+			if (is(lang_id : npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType) || is(lang_id : const wchar[]))
 
 			do
 			{
