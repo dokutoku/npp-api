@@ -141,6 +141,7 @@ mixin template mixin_menu_index_change_check(immutable string change_identifier,
 {
 	private static import npp_api.pluginfunc.menu;
 
+	pragma(mangle, change_identifier ~ "_auto_change_check_item")
 	extern (C)
 	nothrow @nogc
 	void auto_change_check()
@@ -180,6 +181,7 @@ mixin template mixin_group_menu_checked(immutable string change_identifier)
 {
 	private static import npp_api.pluginfunc.menu;
 
+	pragma(mangle, change_identifier ~ "auto_change_check")
 	extern (C)
 	nothrow @nogc
 	void auto_change_check()

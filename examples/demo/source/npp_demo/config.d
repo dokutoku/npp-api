@@ -147,7 +147,7 @@ enum npp_api.pluginfunc.extra_interfece.npp_plugin_definition plugin_def =
 			},
 		},
 		{
-			identifier: `Close HTML/XML tag automatically`,
+			identifier: `Close_HTML_XML_tag_automatically`,
 			menu_checked_identifier: `doCloseTag`,
 			func_item:
 			{

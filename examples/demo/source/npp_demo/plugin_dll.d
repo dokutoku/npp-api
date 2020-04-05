@@ -48,7 +48,7 @@ private static import npp_api.scintilla.scintilla;
 private static import npp_demo.commands;
 private static import npp_demo.config;
 
-mixin npp_api.pluginfunc.auto_pFunc.mixin_menu_index_change_check!(`Close HTML/XML tag automatically`) insertHtmlCloseTag;
+mixin npp_api.pluginfunc.auto_pFunc.mixin_menu_index_change_check!(`Close_HTML_XML_tag_automatically`) insertHtmlCloseTag;
 
 extern (C)
 __gshared npp_api.powereditor.misc.pluginsmanager.plugininterface.NppData gshared_nppData;
@@ -101,7 +101,7 @@ void pluginBeNotified(ref npp_api.scintilla.scintilla.SCNotification notifyCode)
 				npp_api.pluginfunc.npp_msgs.send_NPPM_GETCURRENTLANGTYPE(.nppData._nppHandle, docType);
 				bool isDocTypeHTML = ((docType == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_HTML) || (docType == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_XML) || (docType == npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_PHP));
 
-				if (.menu_index[.search_index!(`Close HTML/XML tag automatically`)].func_item._init2Check && isDocTypeHTML) {
+				if (.menu_index[.search_index!(`Close_HTML_XML_tag_automatically`)].func_item._init2Check && isDocTypeHTML) {
 					if (notifyCode.ch == '>') {
 						char[512] buf;
 						int currentEdit;
