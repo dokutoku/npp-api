@@ -1109,10 +1109,8 @@ bool is_extended_path_supported(npp_api.powereditor.misc.pluginsmanager.notepad_
 				return false;
 			*/
 
-			/*
 			case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_RUST:
-				return false;
-			*/
+				return true;
 
 			/*
 			case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_SPICE:
@@ -1157,6 +1155,7 @@ bool is_extended_path_supported(S)(S ext)
 		switch (ext) {
 			case ".d":
 			case ".go":
+			case ".rs":
 				return true;
 
 			//case ".php":
@@ -1426,7 +1425,7 @@ S lang_to_ext(S)(npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangT
 				return null;
 
 			case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_RUST:
-				return null;
+				return ".rs";
 
 			case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_SPICE:
 				return null;
@@ -1861,10 +1860,8 @@ npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType ext_to_lang(C
 				return npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_REGISTRY;
 			*/
 
-			/*
-			case ".":
+			case ".rs":
 				return npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_RUST;
-			*/
 
 			/*
 			case ".":
@@ -2161,7 +2158,7 @@ version (Windows) {
 					return null;
 
 				case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_RUST:
-					return null;
+					return "rustc.exe";
 
 				case npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs.LangType.L_SPICE:
 					return null;
