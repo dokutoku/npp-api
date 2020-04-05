@@ -26,7 +26,8 @@
 // Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 
-#pragma once
+#ifndef MENUCMDID_H
+#define MENUCMDID_H
 
 #define    IDM    40000
 
@@ -521,8 +522,7 @@
 
     #define    IDM_LANG_USER               (IDM_LANG + 180)     //46180: Used for translation
     #define    IDM_LANG_USER_LIMIT         (IDM_LANG + 210)     //46210: Ajust with IDM_LANG_USER
-    #define    IDM_LANG_USER_DLG           (IDM_LANG + 250)     //46250: Used for translation
-    #define    IDM_LANG_OPENUDLDIR         (IDM_LANG + 300)
+    #define    IDM_LANG_USER_DLG           (IDM_LANG + 250)     //46250: Used for translation 
 
 
     
@@ -575,3 +575,5 @@
     #define IDM_SYSTRAYPOPUP_NEW_AND_PASTE    (IDM_SYSTRAYPOPUP + 3)
     #define IDM_SYSTRAYPOPUP_OPENFILE         (IDM_SYSTRAYPOPUP + 4)
     #define IDM_SYSTRAYPOPUP_CLOSE            (IDM_SYSTRAYPOPUP + 5)
+
+#endif //MENUCMDID_H

@@ -60,9 +60,7 @@ public :
 
 	void goToCenter();
 
-	void display(bool toShow = true, bool enhancedPositioningCheckWhenShowing = false) const;
-
-	RECT getViewablePositionRect(RECT testRc) const;
+	void display(bool toShow = true) const;
 
 	POINT getTopPoint(HWND hwnd, bool isLeft = true) const;
 

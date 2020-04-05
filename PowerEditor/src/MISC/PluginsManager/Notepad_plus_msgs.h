@@ -26,7 +26,8 @@
 // Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 
-#pragma once
+#ifndef NOTEPAD_PLUS_MSGS_H
+#define NOTEPAD_PLUS_MSGS_H
 
 #include <windows.h>
 #include <tchar.h>
@@ -376,7 +377,7 @@ enum Platform { PF_UNKNOWN, PF_X86, PF_X64, PF_IA64 };
 	// by passing allocated buffer as argument langDesc
 
 	#define NPPM_SHOWDOCSWITCHER    (NPPMSG + 85)
-	// VOID NPPM_SHOWDOCSWITCHER(0, BOOL toShowOrNot)
+	// VOID NPPM_ISDOCSWITCHERSHOWN(0, BOOL toShowOrNot)
 	// Send this message to show or hide doc switcher.
 	// if toShowOrNot is TRUE then show doc switcher, otherwise hide it.
 
@@ -610,3 +611,5 @@ enum Platform { PF_UNKNOWN, PF_X86, PF_X64, PF_IA64 };
 	//scnNotification->nmhdr.code = NPPN_FILEDELETED;
 	//scnNotification->nmhdr.hwndFrom = hwndNpp;
 	//scnNotification->nmhdr.idFrom = BufferID;
+
+#endif //NOTEPAD_PLUS_MSGS_H
