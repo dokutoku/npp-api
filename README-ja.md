@@ -111,10 +111,10 @@ JSONファイルをダウンロードしたらあなたのプラグインの情�
 JSONファイルを作成したらデバッグ用のNotepad++でテストします。
 デバッグ用のファイルをダウンロードします。
 
-- [Notepad++ 7.6.1.0 32bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x86.zip)(Wayback Machine)
-- [Notepad++ 7.6.1.0 64bit](https://web.archive.org/web/20190523164709/https://notepad-plus-plus.org/pluginListTestTools/notepad++.debug.x64.zip)(Wayback Machine)
-- [wingup 32bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.zip)
-- [wingup 64bit](https://github.com/notepad-plus-plus/wingup/releases/download/v5.1/wingup.v5.1.bin.x64.zip)
+- [Notepad++.exe 32bit debug](https://notepad-plus-plus.org/assets/pluginListTestTools/npp.debug.x32.zip)
+- [Notepad++.exe 64bit debug](https://notepad-plus-plus.org/assets/pluginListTestTools/npp.debug.x64.zip)
+- [wingup 32bit](https://notepad-plus-plus.org/assets/pluginListTestTools/wingup.release.x64.zip)
+- [wingup 64bit](https://notepad-plus-plus.org/assets/pluginListTestTools/wingup.release.x64.zip)
 
 ダウンロードしたファイルと生成したJSONファイルをNotepad++のフォルダに配置します。
 
