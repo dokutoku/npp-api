@@ -27,12 +27,12 @@
 
 #pragma once
 
-#define NOTEPAD_PLUS_VERSION TEXT("Notepad++ v7.8")
+#define NOTEPAD_PLUS_VERSION TEXT("Notepad++ v7.8.5")
 
 // should be X.Y : ie. if VERSION_DIGITALVALUE == 4, 7, 1, 0 , then X = 4, Y = 71
 // ex : #define VERSION_VALUE TEXT("5.63\0")
-#define VERSION_VALUE TEXT("7.8\0")
-#define VERSION_DIGITALVALUE 7, 8, 0, 0
+#define VERSION_VALUE TEXT("7.85\0")
+#define VERSION_DIGITALVALUE 7, 8, 5, 0
 
 
 
@@ -144,6 +144,9 @@
 #define IDI_PROJECT_FILEINVALID        607
 #define IDI_FB_ROOTOPEN        608
 #define IDI_FB_ROOTCLOSE        609
+#define IDI_FB_SELECTCURRENTFILE        610
+#define IDI_FB_FOLDALL                  611
+#define IDI_FB_EXPANDALL                612
 
 #define IDI_FUNCLIST_ROOT            620
 #define IDI_FUNCLIST_NODE            621
