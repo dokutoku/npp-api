@@ -203,6 +203,12 @@ struct sub_menu_index
 	wstring menu_checked_id = null;
 	npp_api.powereditor.misc.pluginsmanager.plugininterface.FuncItem func_item;
 
+	deprecated
+	alias identifier = id;
+
+	deprecated
+	alias menu_checked_identifier = menu_checked_id;
+
 	/**
 	 * サブメニュー用のハンドル
 	 */
