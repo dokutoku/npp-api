@@ -21,7 +21,7 @@
 	[
 		{
 			"name": "betterC_test1",
-			"platforms": ["windows"],
+			"platforms": ["windows-x86", "windows-x86_mscoff"],
 			"targetType": "dynamicLibrary",
 			"versions": ["betterC_test1"],
 			"targetPath": "plugins/betterC-test1",
@@ -29,7 +29,7 @@
 		},
 		{
 			"name": "betterC_test2",
-			"platforms": ["windows"],
+			"platforms": ["windows-x86", "windows-x86_mscoff"],
 			"targetType": "dynamicLibrary",
 			"versions": ["betterC_test2"],
 			"targetPath": "plugins/betterC-test2",

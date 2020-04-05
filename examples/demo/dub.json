@@ -17,7 +17,7 @@
 		{
 			"name": "x86",
 			"targetType": "dynamicLibrary",
-			"platforms": ["windows-x86"],
+			"platforms": ["windows-x86", "windows-x86_mscoff"],
 			"targetPath": "plugins/demo-x86",
 			"targetName": "demo-x86",
 			"sourceFiles":["./NppPluginDemo.res"]
