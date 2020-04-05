@@ -49,7 +49,7 @@ class demo_dlg : npp_api.powereditor.wincontrols.dockingwnd.dockingdlginterface.
 		}
 
 	nothrow @nogc
-	override void display(bool toShow = true)
+	override void display(bool toShow = true, bool enhancedPositioningCheckWhenShowing = false)
 
 		do
 		{

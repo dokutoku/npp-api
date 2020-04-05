@@ -87,7 +87,7 @@ public:
 	void destroy();
 
 	nothrow @nogc
-	void display(bool toShow = true)
+	void display(bool toShow = true, bool enhancedPositioningCheckWhenShowing = false)
 
 		in
 		{

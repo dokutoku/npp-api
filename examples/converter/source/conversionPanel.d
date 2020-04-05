@@ -52,7 +52,7 @@ public:
 		}
 
 	nothrow @nogc
-	override void display(bool toShow = true)
+	override void display(bool toShow = true, bool enhancedPositioningCheckWhenShowing = false)
 
 		do
 		{

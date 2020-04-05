@@ -168,45 +168,121 @@ public:
 		}
 
 	nothrow @nogc
-	override void display(bool toShow)
+	override void display(bool toShow, bool enhancedPositioningCheckWhenShowing = false)
 
 		do
 		{
 			if (toShow) {
-				// If the user has switched from a dual monitor to a single monitor since we last
-				// displayed the dialog, then ensure that it's still visible on the single monitor.
-				core.sys.windows.windef.RECT workAreaRect = {0};
-				core.sys.windows.windef.RECT rc = {0};
-				core.sys.windows.winuser.SystemParametersInfoW(core.sys.windows.winuser.SPI_GETWORKAREA, 0, &workAreaRect, 0);
-				core.sys.windows.winuser.GetWindowRect(this._hSelf, &rc);
-				int newLeft = rc.left;
-				int newTop = rc.top;
-				int margin = core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYSMCAPTION);
+				if (enhancedPositioningCheckWhenShowing) {
+					core.sys.windows.windef.RECT testPositionRc;
+					super.getWindowRect(testPositionRc);
 
-				if (newLeft > core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CXVIRTUALSCREEN) - margin) {
-					newLeft -= rc.right - workAreaRect.right;
-				}
+					core.sys.windows.windef.RECT candidateRc = this.getViewablePositionRect(testPositionRc);
 
-				if (newLeft + (rc.right - rc.left) < core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_XVIRTUALSCREEN) + margin) {
-					newLeft = workAreaRect.left;
-				}
+					if ((testPositionRc.left != candidateRc.left) || (testPositionRc.top != candidateRc.top)) {
+						core.sys.windows.winuser.MoveWindow(_hSelf, candidateRc.left, candidateRc.top, candidateRc.right - candidateRc.left, candidateRc.bottom - candidateRc.top, core.sys.windows.windef.TRUE);
+					}
+				} else {
+					// If the user has switched from a dual monitor to a single monitor since we last
+					// displayed the dialog, then ensure that it's still visible on the single monitor.
+					core.sys.windows.windef.RECT workAreaRect;
+					core.sys.windows.windef.RECT rc;
+					core.sys.windows.winuser.SystemParametersInfoW(core.sys.windows.winuser.SPI_GETWORKAREA, 0, &workAreaRect, 0);
+					core.sys.windows.winuser.GetWindowRect(_hSelf, &rc);
+					int newLeft = rc.left;
+					int newTop = rc.top;
+					int margin = core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYSMCAPTION);
 
-				if (newTop > core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYVIRTUALSCREEN) - margin) {
-					newTop -= rc.bottom - workAreaRect.bottom;
-				}
+					if (newLeft > core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CXVIRTUALSCREEN) - margin) {
+						newLeft -= rc.right - workAreaRect.right;
+					}
 
-				if (newTop + (rc.bottom - rc.top) < core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_YVIRTUALSCREEN) + margin) {
-					newTop = workAreaRect.top;
-				}
+					if ((newLeft + (rc.right - rc.left)) < (core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_XVIRTUALSCREEN) + margin)) {
+						newLeft = workAreaRect.left;
+					}
 
-				if ((newLeft != rc.left) || (newTop != rc.top)) // then the virtual screen size has shrunk
-					// Remember that core.sys.windows.winuser.MoveWindow wants width/height.
-				{
-					core.sys.windows.winuser.MoveWindow(this._hSelf, newLeft, newTop, rc.right - rc.left, rc.bottom - rc.top, core.sys.windows.windef.TRUE);
+					if (newTop > (core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYVIRTUALSCREEN) - margin)) {
+						newTop -= rc.bottom - workAreaRect.bottom;
+					}
+
+					if ((newTop + (rc.bottom - rc.top)) < (core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_YVIRTUALSCREEN) + margin)) {
+						newTop = workAreaRect.top;
+					}
+
+					if ((newLeft != rc.left) || (newTop != rc.top)) {
+						// then the virtual screen size has shrunk
+						// Remember that core.sys.windows.winuser.MoveWindow wants width/height.
+						core.sys.windows.winuser.MoveWindow(_hSelf, newLeft, newTop, rc.right - rc.left, rc.bottom - rc.top, core.sys.windows.windef.TRUE);
+					}
 				}
 			}
 
 			super.display(toShow);
+		}
+
+	nothrow @nogc
+	core.sys.windows.windef.RECT getViewablePositionRect(core.sys.windows.windef.RECT testPositionRc) const
+
+		do
+		{
+			core.sys.windows.windef.HMONITOR hMon = core.sys.windows.winuser.MonitorFromRect(&testPositionRc, core.sys.windows.winuser.MONITOR_DEFAULTTONULL);
+
+			core.sys.windows.winuser.MONITORINFO mi =
+			{
+				cbSize: core.sys.windows.winuser.MONITORINFO.sizeof,
+			};
+
+			bool rectPosViewableWithoutChange = false;
+
+			if (hMon != core.sys.windows.windef.NULL) {
+				// rect would be at least partially visible on a monitor
+
+				core.sys.windows.winuser.GetMonitorInfoW(hMon, &mi);
+
+				int margin = core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYBORDER) + core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYSIZEFRAME) + core.sys.windows.winuser.GetSystemMetrics(core.sys.windows.winuser.SM_CYCAPTION);
+
+				// require that the title bar of the window be in a viewable place so the user can see it to grab it with the mouse
+				if ((testPositionRc.top >= mi.rcWork.top) && ((testPositionRc.top + margin) <= mi.rcWork.bottom) &&
+						// require that some reasonable amount of width of the title bar be in the viewable area:
+						((testPositionRc.right - (margin * 2)) > mi.rcWork.left) && ((testPositionRc.left + (margin * 2)) < mi.rcWork.right)) {
+					rectPosViewableWithoutChange = true;
+				}
+			} else {
+				// rect would not have been visible on a monitor; get info about the nearest monitor to it
+
+				hMon = core.sys.windows.winuser.MonitorFromRect(&testPositionRc, core.sys.windows.winuser.MONITOR_DEFAULTTONEAREST);
+
+				core.sys.windows.winuser.GetMonitorInfoW(hMon, &mi);
+			}
+
+			core.sys.windows.windef.RECT returnRc = testPositionRc;
+
+			if (!rectPosViewableWithoutChange) {
+				// reposition rect so that it would be viewable on current/nearest monitor, centering if reasonable
+
+				core.sys.windows.windef.LONG testRectWidth = testPositionRc.right - testPositionRc.left;
+				core.sys.windows.windef.LONG testRectHeight = testPositionRc.bottom - testPositionRc.top;
+				core.sys.windows.windef.LONG monWidth = mi.rcWork.right - mi.rcWork.left;
+				core.sys.windows.windef.LONG monHeight = mi.rcWork.bottom - mi.rcWork.top;
+
+				returnRc.left = mi.rcWork.left;
+
+				if (testRectWidth < monWidth) {
+					returnRc.left += (monWidth - testRectWidth) / 2;
+				}
+
+				returnRc.right = returnRc.left + testRectWidth;
+
+				returnRc.top = mi.rcWork.top;
+
+				if (testRectHeight < monHeight) {
+					returnRc.top += (monHeight - testRectHeight) / 2;
+				}
+
+				returnRc.bottom = returnRc.top + testRectHeight;
+			}
+
+			return returnRc;
 		}
 
 	nothrow @nogc

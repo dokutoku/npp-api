@@ -172,7 +172,7 @@ public:
 	void setForegroundColor(core.sys.windows.windef.COLORREF bgColour) = 0;
 
 	nothrow @nogc
-	override void display(bool toShow = true)
+	override void display(bool toShow = true, bool enhancedPositioningCheckWhenShowing = false)
 
 		do
 		{

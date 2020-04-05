@@ -493,7 +493,7 @@ enum NPPM_GETLANGUAGENAME = .NPPMSG + 83;
 // by passing allocated buffer as argument langDesc
 enum NPPM_GETLANGUAGEDESC = .NPPMSG + 84;
 
-// core.sys.windows.winnt.VOID NPPM_ISDOCSWITCHERSHOWN(0, core.sys.windows.windef.BOOL toShowOrNot)
+// core.sys.windows.winnt.VOID NPPM_SHOWDOCSWITCHER(0, core.sys.windows.windef.BOOL toShowOrNot)
 // Send this message to show or hide doc switcher.
 // if toShowOrNot is core.sys.windows.windef.TRUE then show doc switcher, otherwise hide it.
 enum NPPM_SHOWDOCSWITCHER = .NPPMSG + 85;
