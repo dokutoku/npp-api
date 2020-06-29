@@ -1,5 +1,5 @@
 // This file is part of Notepad++ project
-// Copyright (C)2003 Don HO <don.h@free.fr>
+// Copyright (C)2020 Don HO <don.h@free.fr>
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -27,12 +27,12 @@
 
 #pragma once
 
-#define NOTEPAD_PLUS_VERSION TEXT("Notepad++ v7.8.5")
+#define NOTEPAD_PLUS_VERSION TEXT("Notepad++ v7.8.7")
 
 // should be X.Y : ie. if VERSION_DIGITALVALUE == 4, 7, 1, 0 , then X = 4, Y = 71
 // ex : #define VERSION_VALUE TEXT("5.63\0")
-#define VERSION_VALUE TEXT("7.85\0")
-#define VERSION_DIGITALVALUE 7, 8, 5, 0
+#define VERSION_VALUE TEXT("7.87\0")
+#define VERSION_DIGITALVALUE 7, 8, 7, 0
 
 
 
@@ -419,7 +419,7 @@
 	#define NPPM_INTERNAL_RELOADNATIVELANG          (NOTEPADPLUS_USER_INTERNAL + 25)
 	#define NPPM_INTERNAL_PLUGINSHORTCUTMOTIFIED    (NOTEPADPLUS_USER_INTERNAL + 26)
 	#define NPPM_INTERNAL_SCINTILLAFINFERCLEARALL   (NOTEPADPLUS_USER_INTERNAL + 27)
-	#define NPPM_INTERNAL_SETTING_EDGE_SIZE         (NOTEPADPLUS_USER_INTERNAL + 28)
+	//#define NPPM_INTERNAL_         (NOTEPADPLUS_USER_INTERNAL + 28)
 	#define NPPM_INTERNAL_SETTING_TAB_REPLCESPACE   (NOTEPADPLUS_USER_INTERNAL + 29)
 	#define NPPM_INTERNAL_SETTING_TAB_SIZE          (NOTEPADPLUS_USER_INTERNAL + 30)
 	#define NPPM_INTERNAL_RELOADSTYLERS             (NOTEPADPLUS_USER_INTERNAL + 31)
@@ -441,9 +441,10 @@
 	#define NPPM_INTERNAL_PRNTANDQUIT               (NOTEPADPLUS_USER_INTERNAL + 47)
 	#define NPPM_INTERNAL_SAVEBACKUP        		(NOTEPADPLUS_USER_INTERNAL + 48)
 	#define NPPM_INTERNAL_STOPMONITORING            (NOTEPADPLUS_USER_INTERNAL + 49) // Used by Monitoring feature
+	#define NPPM_INTERNAL_EDGEBACKGROUND            (NOTEPADPLUS_USER_INTERNAL + 50)
+	#define NPPM_INTERNAL_EDGEMULTISETSIZE          (NOTEPADPLUS_USER_INTERNAL + 51)
+	#define NPPM_INTERNAL_UPDATECLICKABLELINKS      (NOTEPADPLUS_USER_INTERNAL + 52)
 
-    //wParam: 0
-    //lParam: document new index
 // See Notepad_plus_msgs.h
 //#define NOTEPADPLUS_USER   (WM_USER + 1000)
 
