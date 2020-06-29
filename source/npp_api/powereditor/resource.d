@@ -1,5 +1,5 @@
 // This file is part of Notepad++ project
-// Copyright (C)2003 Don HO <don.h@free.fr>
+// Copyright (C)2020 Don HO <don.h@free.fr>
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -37,12 +37,12 @@ version (Windows):
 private static import core.sys.windows.winuser;
 private static import npp_api.powereditor.misc.pluginsmanager.notepad_plus_msgs;
 
-enum NOTEPAD_PLUS_VERSION = "Notepad++ v7.8.5";
+enum NOTEPAD_PLUS_VERSION = "Notepad++ v7.8.7";
 
 // should be X.Y : ie. if VERSION_DIGITALVALUE == 4, 7, 1, 0 , then X = 4, Y = 71
 // ex : #define VERSION_VALUE TEXT("5.63\0")
-enum VERSION_VALUE = "7.85\0";
-//#define VERSION_DIGITALVALUE 7, 8, 5, 0
+enum VERSION_VALUE = "7.87\0";
+//#define VERSION_DIGITALVALUE 7, 8, 7, 0
 
 //#ifndef IDC_STATIC
 	enum IDC_STATIC = -1;
@@ -424,7 +424,7 @@ enum NOTEPADPLUS_USER_INTERNAL = core.sys.windows.winuser.WM_USER + 0000;
 	enum NPPM_INTERNAL_RELOADNATIVELANG = .NOTEPADPLUS_USER_INTERNAL + 25;
 	enum NPPM_INTERNAL_PLUGINSHORTCUTMOTIFIED = .NOTEPADPLUS_USER_INTERNAL + 26;
 	enum NPPM_INTERNAL_SCINTILLAFINFERCLEARALL = .NOTEPADPLUS_USER_INTERNAL + 27;
-	enum NPPM_INTERNAL_SETTING_EDGE_SIZE = .NOTEPADPLUS_USER_INTERNAL + 28;
+	//enum NPPM_INTERNAL_ = .NOTEPADPLUS_USER_INTERNAL + 28;
 	enum NPPM_INTERNAL_SETTING_TAB_REPLCESPACE = .NOTEPADPLUS_USER_INTERNAL + 29;
 	enum NPPM_INTERNAL_SETTING_TAB_SIZE = .NOTEPADPLUS_USER_INTERNAL + 30;
 	enum NPPM_INTERNAL_RELOADSTYLERS = .NOTEPADPLUS_USER_INTERNAL + 31;
@@ -452,8 +452,10 @@ enum NOTEPADPLUS_USER_INTERNAL = core.sys.windows.winuser.WM_USER + 0000;
 	// Used by Monitoring feature
 	enum NPPM_INTERNAL_STOPMONITORING = .NOTEPADPLUS_USER_INTERNAL + 49;
 
-	//wParam: 0
-	//lParam: document new index
+	enum NPPM_INTERNAL_EDGEBACKGROUND = NOTEPADPLUS_USER_INTERNAL + 50;
+	enum NPPM_INTERNAL_EDGEMULTISETSIZE = NOTEPADPLUS_USER_INTERNAL + 51;
+	enum NPPM_INTERNAL_UPDATECLICKABLELINKS = NOTEPADPLUS_USER_INTERNAL + 52;
+
 // See Notepad_plus_msgs.h
 //enum NOTEPADPLUS_USER = core.sys.windows.winuser.WM_USER + 1000;
 
