@@ -5,7 +5,7 @@
 		"dokutoku"
 	],
 	"description": "Notepad++ plugin betterC test",
-	"copyright": "Copyright © 2019, dokutoku",
+	"copyright": "Copyright © 2019-2020, dokutoku",
 	"license": "GPL-2.0 or later",
 	"dependencies": {
 		"npp-api": {
