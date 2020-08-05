@@ -30,7 +30,7 @@ version (Not_betterC):
 
 private static import std.array;
 private static import std.ascii;
-private static import std.digest.digest;
+private static import std.digest;
 private static import std.digest.sha;
 private static import std.file;
 private static import std.json;
@@ -100,7 +100,7 @@ struct npp_plugin_info_item
 				throw new Exception(`Unknown input file.`);
 			}
 
-			this.id = std.digest.digest.toHexString!(std.ascii.LetterCase.lower)(std.digest.sha.sha256Of(std.file.read(input_file))).idup;
+			this.id = std.digest.toHexString!(std.ascii.LetterCase.lower)(std.digest.sha.sha256Of(std.file.read(input_file))).idup;
 		}
 
 	@disable
