@@ -14,7 +14,7 @@ before_script:
     - cp -f './dlang-deploy/get_ldc2.sh' './get_ldc2.sh'
     - if [ ! -d './ldc2-conf' ]; then    mkdir './ldc2-conf';fi
     - cp -f './dlang-deploy/ldc2-conf/linux-x64.conf' './ldc2-conf/linux-x64.conf'
-    - sh './get_ldc2.sh'
+    - sh './get_ldc2.sh' Windows
 
 test:
     stage: test
