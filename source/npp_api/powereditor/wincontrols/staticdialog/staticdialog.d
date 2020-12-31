@@ -307,6 +307,14 @@ public:
 			return p;
 		}
 
+	nothrow @nogc
+	void setChecked(int checkControlID, bool checkOrNot = true)
+
+		do
+		{
+			core.sys.windows.winuser.SendDlgItemMessageW(this._hSelf, checkControlID, core.sys.windows.winuser.BM_SETCHECK, (checkOrNot) ? (core.sys.windows.winuser.BST_CHECKED) : (core.sys.windows.winuser.BST_UNCHECKED), 0);
+		}
+
 protected:
 	core.sys.windows.windef.RECT _rc;
 
